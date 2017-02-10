@@ -1,0 +1,128 @@
+//
+//  PrefixHeader.pch
+//  BASEPRODUCT
+//
+//  Created by XIUDeveloper on 2016/12/28.
+//  Copyright © 201d6年 杨岫峰. All rights reserved.
+//
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "FileGlobalReference.h"
+
+
+
+//-------------网络参数设置----------------
+
+static NSString *const patchUpdateURL = @"http://112.74.28.179:8080/Chislim/apk/demo.js";
+
+static NSString *const KBASEURL = @"http://112.74.28.179:8080/Chislim/";
+//-------------网络参数设置----------------
+
+
+
+
+//------------屏幕尺寸---------------
+
+//屏幕高
+#define KHEIGHT [UIScreen mainScreen].bounds.size.height
+
+//屏幕宽
+#define KWIDTH [UIScreen mainScreen].bounds.size.width
+//------------屏幕尺寸---------------
+
+
+
+
+
+
+//------------TableView设置---------------
+
+//TableView—Frame
+#define UITableView_CGRect CGRectMake(0, 0, KWIDTH, KHEIGHT)
+#define kPaddingLeftWidth 15.0
+#define kLoginPaddingLeftWidth 18.0
+
+
+//TableView-加载xib
+#define TableView_ResignNib(Nib,identifier) [tableView registerNib:Nib forCellReuseIdentifier:identifier]
+
+#define TableView_ResignClass(cellName,identifier) [tableView registerClass:[cellName class] forCellReuseIdentifier:identifier]
+
+//------------TableView设置---------------
+
+
+
+
+
+
+
+//------------系统---------------
+
+//重写NSLog,Debug模式下打印日志和当前行数
+#define kKeyWindow [UIApplication sharedApplication].keyWindow
+
+#ifdef DEBUG
+#define NSLog(s, ... ) NSLog( @"[%@ in line %d]=>>%@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+#else
+#define NSLog(s, ... )
+#endif
+
+//获取系统版本
+#define IOS_VERSION ［[UIDevice currentDevice] systemVersion] floatValue]
+#define CurrentSystemVersion ［UIDevice currentDevice] systemVersion]
+
+//获取当前语言
+#define CURRENT_LANGUAGE (［NSLocale preferredLanguages] objectAtIndex:0])
+
+//检查系统版本
+#define SYSTEM_VERSION_EQUAL_TO(v) (［[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
+#define SYSTEM_VERSION_GREATER_THAN(v) (［[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v) (［[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v) (［[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v) (［[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
+
+
+//获取沙盒 Document
+#define kPathDocument [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]
+
+//获取沙盒 Cache
+#define kPathCache [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
+
+
+#define kKeyWindow [UIApplication sharedApplication].keyWindow
+
+//------------系统---------------
+
+
+//------massory--------
+//define this constant if you want to use Masonry without the 'mas_' prefix
+#define MAS_SHORTHAND
+//define this constant if you want to enable auto-boxing for default syntax
+#define MAS_SHORTHAND_GLOBALS
+
+#define SV self.view
+//----------------------
+
+
+//登录模块按钮宽度
+#define LAND_CONTORL_HEIGHT 50
+
+#endif /* PrefixHeader_pch */
+
+
+//-------------UM--------------
+#define USHARE_APPKEY @""
+
+//Social Data
+#define XIU_Social_WX_ID @""
+#define XIU_Social_WX_Secret @""
+
+#define XIU_Social_QQ_ID  @""
+#define XIU_Social_QQ_Secret @""
+
+#define XIU_Social_Sina_Select @""
+#define XIU_Social_Sina_ID @""
+
+#define XIU_Social_RedirectURL @""
+//-------------UM--------------
+
