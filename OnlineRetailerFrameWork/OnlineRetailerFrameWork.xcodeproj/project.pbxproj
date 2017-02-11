@@ -98,7 +98,6 @@
 		8341ABBF1E4DAB3500FDC5A4 /* XIU_MyCenterUserHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AA9E1E4DAB3500FDC5A4 /* XIU_MyCenterUserHeaderView.m */; };
 		8341ABC01E4DAB3500FDC5A4 /* XIU_MyCenterUtilitiesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AAA01E4DAB3500FDC5A4 /* XIU_MyCenterUtilitiesCell.m */; };
 		8341ABC11E4DAB3500FDC5A4 /* XIU_MyCenterUtilitiesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8341AAA11E4DAB3500FDC5A4 /* XIU_MyCenterUtilitiesCell.xib */; };
-		8341ABC21E4DAB3500FDC5A4 /* XIU_ShoppingCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AAA51E4DAB3500FDC5A4 /* XIU_ShoppingCartViewController.m */; };
 		8341ABC31E4DAB3500FDC5A4 /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AAAB1E4DAB3500FDC5A4 /* AbstractActionSheetPicker.m */; };
 		8341ABC41E4DAB3500FDC5A4 /* ActionSheetCustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AAAD1E4DAB3500FDC5A4 /* ActionSheetCustomPicker.m */; };
 		8341ABC51E4DAB3500FDC5A4 /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AAB01E4DAB3500FDC5A4 /* ActionSheetDatePicker.m */; };
@@ -161,7 +160,7 @@
 		8341ABFE1E4DAB3500FDC5A4 /* NSObject+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AB3A1E4DAB3500FDC5A4 /* NSObject+Common.m */; };
 		8341ABFF1E4DAB3500FDC5A4 /* NSString+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AB3C1E4DAB3500FDC5A4 /* NSString+Encryption.m */; };
 		8341AC001E4DAB3500FDC5A4 /* NSString+TextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AB3E1E4DAB3500FDC5A4 /* NSString+TextField.m */; };
-		8341AC011E4DAB3500FDC5A4 /* NSString+XIU_Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AB401E4DAB3500FDC5A4 /* NSString+XIU_Extras.m */; };
+		8341AC011E4DAB3500FDC5A4 /* NSString+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AB401E4DAB3500FDC5A4 /* NSString+Common.m */; };
 		8341AC021E4DAB3500FDC5A4 /* UIBarButtonItem+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AB421E4DAB3500FDC5A4 /* UIBarButtonItem+Common.m */; };
 		8341AC031E4DAB3500FDC5A4 /* UIColor+ColorStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AB441E4DAB3500FDC5A4 /* UIColor+ColorStyle.m */; };
 		8341AC041E4DAB3500FDC5A4 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AB461E4DAB3500FDC5A4 /* UIColor+Hex.m */; };
@@ -181,6 +180,22 @@
 		8341AC121E4DAB3500FDC5A4 /* XIU_NetWorkReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AB631E4DAB3500FDC5A4 /* XIU_NetWorkReachability.m */; };
 		8341AC131E4DAB3500FDC5A4 /* XIU_ShareModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AB651E4DAB3500FDC5A4 /* XIU_ShareModel.m */; };
 		8341AC141E4DAB3500FDC5A4 /* XIU_ShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AB671E4DAB3500FDC5A4 /* XIU_ShareView.m */; };
+		8341AC281E4EBC0F00FDC5A4 /* ShopCarNew.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8341AC271E4EBC0F00FDC5A4 /* ShopCarNew.plist */; };
+		8341AC2B1E4EBDD400FDC5A4 /* XIU_ShoppingCartHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AC2A1E4EBDD400FDC5A4 /* XIU_ShoppingCartHeaderView.m */; };
+		8341AC351E4EC24900FDC5A4 /* back_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8341AC2D1E4EC24900FDC5A4 /* back_button@2x.png */; };
+		8341AC361E4EC24900FDC5A4 /* cart_addBtn_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8341AC2E1E4EC24900FDC5A4 /* cart_addBtn_highlight@2x.png */; };
+		8341AC371E4EC24900FDC5A4 /* cart_addBtn_nomal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8341AC2F1E4EC24900FDC5A4 /* cart_addBtn_nomal@2x.png */; };
+		8341AC381E4EC24900FDC5A4 /* cart_cutBtn_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8341AC301E4EC24900FDC5A4 /* cart_cutBtn_highlight@2x.png */; };
+		8341AC391E4EC24900FDC5A4 /* cart_cutBtn_nomal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8341AC311E4EC24900FDC5A4 /* cart_cutBtn_nomal@2x.png */; };
+		8341AC3A1E4EC24A00FDC5A4 /* cart_default_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8341AC321E4EC24900FDC5A4 /* cart_default_bg.png */; };
+		8341AC3F1E4EECDD00FDC5A4 /* XIU_ShoppingCartCalculationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AC3E1E4EECDD00FDC5A4 /* XIU_ShoppingCartCalculationView.m */; };
+		8341AC421E4EFFBF00FDC5A4 /* cart_selected_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8341AC401E4EFFBF00FDC5A4 /* cart_selected_btn.png */; };
+		8341AC451E4F003000FDC5A4 /* cart_unSelect_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8341AC441E4F003000FDC5A4 /* cart_unSelect_btn.png */; };
+		8341AC4B1E4F389600FDC5A4 /* XIU_ShoppingCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AC4A1E4F389600FDC5A4 /* XIU_ShoppingCartViewController.m */; };
+		8341AC501E4F38A300FDC5A4 /* XIU_ShoppingCart_ShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AC4D1E4F38A300FDC5A4 /* XIU_ShoppingCart_ShopModel.m */; };
+		8341AC511E4F38A300FDC5A4 /* XIU_ShoppingCart_GoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AC4F1E4F38A300FDC5A4 /* XIU_ShoppingCart_GoodsModel.m */; };
+		8341AC571E4F390C00FDC5A4 /* XIU_ShoppingCartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AC561E4F390C00FDC5A4 /* XIU_ShoppingCartCell.m */; };
+		8341AC5D1E4F48ED00FDC5A4 /* XIU_EmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AC5C1E4F48ED00FDC5A4 /* XIU_EmptyView.m */; };
 		8386FC471E4DA7F90029E653 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8386FC461E4DA7F90029E653 /* main.m */; };
 		8386FC4A1E4DA7F90029E653 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8386FC491E4DA7F90029E653 /* AppDelegate.m */; };
 		8386FC4D1E4DA7F90029E653 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8386FC4C1E4DA7F90029E653 /* ViewController.m */; };
@@ -324,8 +339,6 @@
 		8341AA9F1E4DAB3500FDC5A4 /* XIU_MyCenterUtilitiesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_MyCenterUtilitiesCell.h; sourceTree = "<group>"; };
 		8341AAA01E4DAB3500FDC5A4 /* XIU_MyCenterUtilitiesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_MyCenterUtilitiesCell.m; sourceTree = "<group>"; };
 		8341AAA11E4DAB3500FDC5A4 /* XIU_MyCenterUtilitiesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XIU_MyCenterUtilitiesCell.xib; sourceTree = "<group>"; };
-		8341AAA41E4DAB3500FDC5A4 /* XIU_ShoppingCartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_ShoppingCartViewController.h; sourceTree = "<group>"; };
-		8341AAA51E4DAB3500FDC5A4 /* XIU_ShoppingCartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_ShoppingCartViewController.m; sourceTree = "<group>"; };
 		8341AAAA1E4DAB3500FDC5A4 /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractActionSheetPicker.h; sourceTree = "<group>"; };
 		8341AAAB1E4DAB3500FDC5A4 /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractActionSheetPicker.m; sourceTree = "<group>"; };
 		8341AAAC1E4DAB3500FDC5A4 /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetCustomPicker.h; sourceTree = "<group>"; };
@@ -459,8 +472,8 @@
 		8341AB3C1E4DAB3500FDC5A4 /* NSString+Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encryption.m"; sourceTree = "<group>"; };
 		8341AB3D1E4DAB3500FDC5A4 /* NSString+TextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TextField.h"; sourceTree = "<group>"; };
 		8341AB3E1E4DAB3500FDC5A4 /* NSString+TextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TextField.m"; sourceTree = "<group>"; };
-		8341AB3F1E4DAB3500FDC5A4 /* NSString+XIU_Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XIU_Extras.h"; sourceTree = "<group>"; };
-		8341AB401E4DAB3500FDC5A4 /* NSString+XIU_Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XIU_Extras.m"; sourceTree = "<group>"; };
+		8341AB3F1E4DAB3500FDC5A4 /* NSString+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Common.h"; sourceTree = "<group>"; };
+		8341AB401E4DAB3500FDC5A4 /* NSString+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Common.m"; sourceTree = "<group>"; };
 		8341AB411E4DAB3500FDC5A4 /* UIBarButtonItem+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Common.h"; sourceTree = "<group>"; };
 		8341AB421E4DAB3500FDC5A4 /* UIBarButtonItem+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Common.m"; sourceTree = "<group>"; };
 		8341AB431E4DAB3500FDC5A4 /* UIColor+ColorStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorStyle.h"; sourceTree = "<group>"; };
@@ -498,6 +511,29 @@
 		8341AB651E4DAB3500FDC5A4 /* XIU_ShareModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_ShareModel.m; sourceTree = "<group>"; };
 		8341AB661E4DAB3500FDC5A4 /* XIU_ShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_ShareView.h; sourceTree = "<group>"; };
 		8341AB671E4DAB3500FDC5A4 /* XIU_ShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_ShareView.m; sourceTree = "<group>"; };
+		8341AC271E4EBC0F00FDC5A4 /* ShopCarNew.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ShopCarNew.plist; sourceTree = "<group>"; };
+		8341AC291E4EBDD400FDC5A4 /* XIU_ShoppingCartHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_ShoppingCartHeaderView.h; sourceTree = "<group>"; };
+		8341AC2A1E4EBDD400FDC5A4 /* XIU_ShoppingCartHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_ShoppingCartHeaderView.m; sourceTree = "<group>"; };
+		8341AC2D1E4EC24900FDC5A4 /* back_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_button@2x.png"; sourceTree = "<group>"; };
+		8341AC2E1E4EC24900FDC5A4 /* cart_addBtn_highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cart_addBtn_highlight@2x.png"; sourceTree = "<group>"; };
+		8341AC2F1E4EC24900FDC5A4 /* cart_addBtn_nomal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cart_addBtn_nomal@2x.png"; sourceTree = "<group>"; };
+		8341AC301E4EC24900FDC5A4 /* cart_cutBtn_highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cart_cutBtn_highlight@2x.png"; sourceTree = "<group>"; };
+		8341AC311E4EC24900FDC5A4 /* cart_cutBtn_nomal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cart_cutBtn_nomal@2x.png"; sourceTree = "<group>"; };
+		8341AC321E4EC24900FDC5A4 /* cart_default_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cart_default_bg.png; sourceTree = "<group>"; };
+		8341AC3D1E4EECDD00FDC5A4 /* XIU_ShoppingCartCalculationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_ShoppingCartCalculationView.h; sourceTree = "<group>"; };
+		8341AC3E1E4EECDD00FDC5A4 /* XIU_ShoppingCartCalculationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_ShoppingCartCalculationView.m; sourceTree = "<group>"; };
+		8341AC401E4EFFBF00FDC5A4 /* cart_selected_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cart_selected_btn.png; sourceTree = "<group>"; };
+		8341AC441E4F003000FDC5A4 /* cart_unSelect_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cart_unSelect_btn.png; sourceTree = "<group>"; };
+		8341AC491E4F389600FDC5A4 /* XIU_ShoppingCartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_ShoppingCartViewController.h; sourceTree = "<group>"; };
+		8341AC4A1E4F389600FDC5A4 /* XIU_ShoppingCartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_ShoppingCartViewController.m; sourceTree = "<group>"; };
+		8341AC4C1E4F38A300FDC5A4 /* XIU_ShoppingCart_ShopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_ShoppingCart_ShopModel.h; sourceTree = "<group>"; };
+		8341AC4D1E4F38A300FDC5A4 /* XIU_ShoppingCart_ShopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_ShoppingCart_ShopModel.m; sourceTree = "<group>"; };
+		8341AC4E1E4F38A300FDC5A4 /* XIU_ShoppingCart_GoodsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_ShoppingCart_GoodsModel.h; sourceTree = "<group>"; };
+		8341AC4F1E4F38A300FDC5A4 /* XIU_ShoppingCart_GoodsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_ShoppingCart_GoodsModel.m; sourceTree = "<group>"; };
+		8341AC551E4F390C00FDC5A4 /* XIU_ShoppingCartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_ShoppingCartCell.h; sourceTree = "<group>"; };
+		8341AC561E4F390C00FDC5A4 /* XIU_ShoppingCartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_ShoppingCartCell.m; sourceTree = "<group>"; };
+		8341AC5B1E4F48ED00FDC5A4 /* XIU_EmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_EmptyView.h; sourceTree = "<group>"; };
+		8341AC5C1E4F48ED00FDC5A4 /* XIU_EmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_EmptyView.m; sourceTree = "<group>"; };
 		8386FC421E4DA7F90029E653 /* OnlineRetailerFrameWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineRetailerFrameWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8386FC461E4DA7F90029E653 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8386FC481E4DA7F90029E653 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -562,6 +598,7 @@
 		8341AA111E4DAB3500FDC5A4 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				8341AC2C1E4EC24900FDC5A4 /* icons */,
 				8341AA121E4DAB3500FDC5A4 /* arrow_buttom.png */,
 				8341AA131E4DAB3500FDC5A4 /* land_QQ.png */,
 				8341AA141E4DAB3500FDC5A4 /* land_wchat.png */,
@@ -852,8 +889,9 @@
 		8341AAA31E4DAB3500FDC5A4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8341AAA41E4DAB3500FDC5A4 /* XIU_ShoppingCartViewController.h */,
-				8341AAA51E4DAB3500FDC5A4 /* XIU_ShoppingCartViewController.m */,
+				8341AC491E4F389600FDC5A4 /* XIU_ShoppingCartViewController.h */,
+				8341AC4A1E4F389600FDC5A4 /* XIU_ShoppingCartViewController.m */,
+				8341AC271E4EBC0F00FDC5A4 /* ShopCarNew.plist */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -861,6 +899,10 @@
 		8341AAA61E4DAB3500FDC5A4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8341AC4C1E4F38A300FDC5A4 /* XIU_ShoppingCart_ShopModel.h */,
+				8341AC4D1E4F38A300FDC5A4 /* XIU_ShoppingCart_ShopModel.m */,
+				8341AC4E1E4F38A300FDC5A4 /* XIU_ShoppingCart_GoodsModel.h */,
+				8341AC4F1E4F38A300FDC5A4 /* XIU_ShoppingCart_GoodsModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -868,6 +910,12 @@
 		8341AAA71E4DAB3500FDC5A4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8341AC551E4F390C00FDC5A4 /* XIU_ShoppingCartCell.h */,
+				8341AC561E4F390C00FDC5A4 /* XIU_ShoppingCartCell.m */,
+				8341AC291E4EBDD400FDC5A4 /* XIU_ShoppingCartHeaderView.h */,
+				8341AC2A1E4EBDD400FDC5A4 /* XIU_ShoppingCartHeaderView.m */,
+				8341AC3D1E4EECDD00FDC5A4 /* XIU_ShoppingCartCalculationView.h */,
+				8341AC3E1E4EECDD00FDC5A4 /* XIU_ShoppingCartCalculationView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1145,8 +1193,8 @@
 				8341AB3C1E4DAB3500FDC5A4 /* NSString+Encryption.m */,
 				8341AB3D1E4DAB3500FDC5A4 /* NSString+TextField.h */,
 				8341AB3E1E4DAB3500FDC5A4 /* NSString+TextField.m */,
-				8341AB3F1E4DAB3500FDC5A4 /* NSString+XIU_Extras.h */,
-				8341AB401E4DAB3500FDC5A4 /* NSString+XIU_Extras.m */,
+				8341AB3F1E4DAB3500FDC5A4 /* NSString+Common.h */,
+				8341AB401E4DAB3500FDC5A4 /* NSString+Common.m */,
 				8341AB411E4DAB3500FDC5A4 /* UIBarButtonItem+Common.h */,
 				8341AB421E4DAB3500FDC5A4 /* UIBarButtonItem+Common.m */,
 				8341AB431E4DAB3500FDC5A4 /* UIColor+ColorStyle.h */,
@@ -1198,8 +1246,25 @@
 				8341AB651E4DAB3500FDC5A4 /* XIU_ShareModel.m */,
 				8341AB661E4DAB3500FDC5A4 /* XIU_ShareView.h */,
 				8341AB671E4DAB3500FDC5A4 /* XIU_ShareView.m */,
+				8341AC5B1E4F48ED00FDC5A4 /* XIU_EmptyView.h */,
+				8341AC5C1E4F48ED00FDC5A4 /* XIU_EmptyView.m */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		8341AC2C1E4EC24900FDC5A4 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				8341AC441E4F003000FDC5A4 /* cart_unSelect_btn.png */,
+				8341AC401E4EFFBF00FDC5A4 /* cart_selected_btn.png */,
+				8341AC2D1E4EC24900FDC5A4 /* back_button@2x.png */,
+				8341AC2E1E4EC24900FDC5A4 /* cart_addBtn_highlight@2x.png */,
+				8341AC2F1E4EC24900FDC5A4 /* cart_addBtn_nomal@2x.png */,
+				8341AC301E4EC24900FDC5A4 /* cart_cutBtn_highlight@2x.png */,
+				8341AC311E4EC24900FDC5A4 /* cart_cutBtn_nomal@2x.png */,
+				8341AC321E4EC24900FDC5A4 /* cart_default_bg.png */,
+			);
+			path = icons;
 			sourceTree = "<group>";
 		};
 		8386FC391E4DA7F90029E653 = {
@@ -1356,6 +1421,7 @@
 				8341AB831E4DAB3500FDC5A4 /* navigationbar_background.png in Resources */,
 				8341AB971E4DAB3500FDC5A4 /* XIU_LoginViewController.xib in Resources */,
 				8341AB991E4DAB3500FDC5A4 /* sortedChnames.plist in Resources */,
+				8341AC361E4EC24900FDC5A4 /* cart_addBtn_highlight@2x.png in Resources */,
 				8341AB7E1E4DAB3500FDC5A4 /* 隐藏.png in Resources */,
 				8341AB811E4DAB3500FDC5A4 /* first_selected.png in Resources */,
 				8341AB851E4DAB3500FDC5A4 /* navigationbar_background_tall.png in Resources */,
@@ -1368,22 +1434,30 @@
 				8341AB721E4DAB3500FDC5A4 /* share_btn_sina@2x.png in Resources */,
 				8341AB741E4DAB3500FDC5A4 /* share_btn_wxtimeline@2x.png in Resources */,
 				8386FC581E4DA7F90029E653 /* LaunchScreen.storyboard in Resources */,
+				8341AC391E4EC24900FDC5A4 /* cart_cutBtn_nomal@2x.png in Resources */,
+				8341AC351E4EC24900FDC5A4 /* back_button@2x.png in Resources */,
 				8341ABA01E4DAB3500FDC5A4 /* XIU_CommodityDetailBaseController.storyboard in Resources */,
 				8341AB821E4DAB3500FDC5A4 /* first_selected@2x.png in Resources */,
+				8341AC421E4EFFBF00FDC5A4 /* cart_selected_btn.png in Resources */,
 				8341AC0A1E4DAB3500FDC5A4 /* demo.js in Resources */,
 				8341AB921E4DAB3500FDC5A4 /* third_selected.png in Resources */,
 				8341AB761E4DAB3500FDC5A4 /* 店铺.png in Resources */,
 				8341AB6E1E4DAB3500FDC5A4 /* share_btn_copylink@2x.png in Resources */,
 				8341ABA71E4DAB3500FDC5A4 /* XIU_CommodityDetialBaseStoreInformationCell.xib in Resources */,
 				8341AB6D1E4DAB3500FDC5A4 /* land_weibo.png in Resources */,
+				8341AC281E4EBC0F00FDC5A4 /* ShopCarNew.plist in Resources */,
 				8341AB731E4DAB3500FDC5A4 /* share_btn_wxsession@2x.png in Resources */,
+				8341AC3A1E4EC24A00FDC5A4 /* cart_default_bg.png in Resources */,
 				8341AB871E4DAB3500FDC5A4 /* navigationbar_search_simulator.png in Resources */,
 				8341AB7F1E4DAB3500FDC5A4 /* first_normal.png in Resources */,
 				8341AB8A1E4DAB3500FDC5A4 /* second_selected.png in Resources */,
+				8341AC381E4EC24900FDC5A4 /* cart_cutBtn_highlight@2x.png in Resources */,
 				8341AB9A1E4DAB3500FDC5A4 /* sortedEnames.plist in Resources */,
 				8341AB901E4DAB3500FDC5A4 /* third_normal.png in Resources */,
 				8341AB801E4DAB3500FDC5A4 /* first_normal@2x.png in Resources */,
+				8341AC451E4F003000FDC5A4 /* cart_unSelect_btn.png in Resources */,
 				8386FC551E4DA7F90029E653 /* Assets.xcassets in Resources */,
+				8341AC371E4EC24900FDC5A4 /* cart_addBtn_nomal@2x.png in Resources */,
 				8341AB7B1E4DAB3500FDC5A4 /* 头像占位图.png in Resources */,
 				8341AB8E1E4DAB3500FDC5A4 /* tabbar_selected_background.png in Resources */,
 				8341AB881E4DAB3500FDC5A4 /* second_normal.png in Resources */,
@@ -1460,7 +1534,6 @@
 				8341AC141E4DAB3500FDC5A4 /* XIU_ShareView.m in Sources */,
 				8341ABC61E4DAB3500FDC5A4 /* ActionSheetDistancePicker.m in Sources */,
 				8341ABDB1E4DAB3500FDC5A4 /* View+MASAdditions.m in Sources */,
-				8341ABC21E4DAB3500FDC5A4 /* XIU_ShoppingCartViewController.m in Sources */,
 				8341AB961E4DAB3500FDC5A4 /* XIU_LoginViewController.m in Sources */,
 				8341ABB71E4DAB3500FDC5A4 /* XIU_SettingMineInfoVC.m in Sources */,
 				8341ABC01E4DAB3500FDC5A4 /* XIU_MyCenterUtilitiesCell.m in Sources */,
@@ -1481,9 +1554,11 @@
 				8341ABAD1E4DAB3500FDC5A4 /* XIU_SearchBarCell.m in Sources */,
 				8341ABAF1E4DAB3500FDC5A4 /* RDVTabBar.m in Sources */,
 				8341ABAC1E4DAB3500FDC5A4 /* SearchBarModel.m in Sources */,
+				8341AC4B1E4F389600FDC5A4 /* XIU_ShoppingCartViewController.m in Sources */,
 				8341AC0E1E4DAB3500FDC5A4 /* XIU_NetAPIManager.m in Sources */,
 				8341ABD21E4DAB3500FDC5A4 /* UIView+BlocksKit.m in Sources */,
 				8341ABEC1E4DAB3500FDC5A4 /* SDWebImageDecoder.m in Sources */,
+				8341AC5D1E4F48ED00FDC5A4 /* XIU_EmptyView.m in Sources */,
 				8341ABD71E4DAB3500FDC5A4 /* MASViewAttribute.m in Sources */,
 				8341ABF41E4DAB3500FDC5A4 /* UIImage+WebP.m in Sources */,
 				8341AC0D1E4DAB3500FDC5A4 /* XIU_NetAPIClient.m in Sources */,
@@ -1513,6 +1588,7 @@
 				8341ABB91E4DAB3500FDC5A4 /* SettingTextCell.m in Sources */,
 				8341AB941E4DAB3500FDC5A4 /* XIU_CountryCodeViewController.m in Sources */,
 				8341ABE61E4DAB3500FDC5A4 /* NSObject+MJProperty.m in Sources */,
+				8341AC571E4F390C00FDC5A4 /* XIU_ShoppingCartCell.m in Sources */,
 				8341ABB01E4DAB3500FDC5A4 /* RDVTabBarController.m in Sources */,
 				8341AB9E1E4DAB3500FDC5A4 /* XIU_GraphicVerificationView.m in Sources */,
 				8341AC101E4DAB3500FDC5A4 /* SMPageControl.m in Sources */,
@@ -1528,6 +1604,7 @@
 				8341ABEA1E4DAB3500FDC5A4 /* SDImageCache.m in Sources */,
 				8341AC031E4DAB3500FDC5A4 /* UIColor+ColorStyle.m in Sources */,
 				8341ABD81E4DAB3500FDC5A4 /* MASViewConstraint.m in Sources */,
+				8341AC3F1E4EECDD00FDC5A4 /* XIU_ShoppingCartCalculationView.m in Sources */,
 				8341AC021E4DAB3500FDC5A4 /* UIBarButtonItem+Common.m in Sources */,
 				8341ABC51E4DAB3500FDC5A4 /* ActionSheetDatePicker.m in Sources */,
 				8341ABDA1E4DAB3500FDC5A4 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
@@ -1536,7 +1613,10 @@
 				8341ABFE1E4DAB3500FDC5A4 /* NSObject+Common.m in Sources */,
 				8341AC121E4DAB3500FDC5A4 /* XIU_NetWorkReachability.m in Sources */,
 				8341ABCB1E4DAB3500FDC5A4 /* AFHTTPSessionManager.m in Sources */,
+				8341AC511E4F38A300FDC5A4 /* XIU_ShoppingCart_GoodsModel.m in Sources */,
+				8341AC501E4F38A300FDC5A4 /* XIU_ShoppingCart_ShopModel.m in Sources */,
 				8341ABEB1E4DAB3500FDC5A4 /* SDWebImageCompat.m in Sources */,
+				8341AC2B1E4EBDD400FDC5A4 /* XIU_ShoppingCartHeaderView.m in Sources */,
 				8341ABAA1E4DAB3500FDC5A4 /* XIU_CommodityDetialSelectTypeCell.m in Sources */,
 				8386FC471E4DA7F90029E653 /* main.m in Sources */,
 				8341ABEE1E4DAB3500FDC5A4 /* SDWebImageDownloaderOperation.m in Sources */,
@@ -1553,7 +1633,7 @@
 				8341AC001E4DAB3500FDC5A4 /* NSString+TextField.m in Sources */,
 				8341ABF91E4DAB3500FDC5A4 /* NSDate+Common.m in Sources */,
 				8341AB9B1E4DAB3500FDC5A4 /* XIU_Login.m in Sources */,
-				8341AC011E4DAB3500FDC5A4 /* NSString+XIU_Extras.m in Sources */,
+				8341AC011E4DAB3500FDC5A4 /* NSString+Common.m in Sources */,
 				8341ABCE1E4DAB3500FDC5A4 /* AFURLRequestSerialization.m in Sources */,
 				8341ABCC1E4DAB3500FDC5A4 /* AFNetworkReachabilityManager.m in Sources */,
 				8341ABDE1E4DAB3500FDC5A4 /* MJExtensionConst.m in Sources */,

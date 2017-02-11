@@ -6,7 +6,15 @@
 //  Copyright © 2016年 XIU. All rights reserved.
 //
 
+struct RGBcolor {
+    int red;
+    int green;
+    int blue;
+};
+typedef struct RGBcolor rgbColor;
+
 #import <UIKit/UIKit.h>
+
 
 @interface UIColor (Hex)
 
@@ -16,4 +24,6 @@
 //color:支持@“#123456”、 @“0X123456”、 @“123456”三种格式
 + (UIColor *)colorWithHexString:(NSString *)color alpha:(CGFloat)alpha;
 
+
++ (UIColor *)colorWithRGB:(rgbColor )color;
 @end

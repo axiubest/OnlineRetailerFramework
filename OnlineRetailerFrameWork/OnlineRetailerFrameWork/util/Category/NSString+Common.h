@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (XIU_Extras)
+@interface NSString (Common)
 
 - (NSString *)xiu_substringAfterString:(NSString *)string;
+
++ (NSMutableAttributedString*)SetStringOfShoppingCartPriceString:(NSString*)string;
 @end

@@ -8,6 +8,7 @@
 
 #import "XIU_MyCenterMainInterfaceVC.h"
 #import "XIU_SettingMineInfoVC.h"
+#import "XIU_ModifyAvatarViewController.h"
 
 //text
 #import "XIU_LoginViewController.h"
@@ -21,7 +22,7 @@
 
 #define NAVBAR_CHANGE_POINT 50
 
-@interface XIU_MyCenterMainInterfaceVC ()<UITableViewDelegate, UITableViewDataSource,SettingMineInfoDelegate, XIU_LoginViewControllerDelegate>
+@interface XIU_MyCenterMainInterfaceVC ()<UITableViewDelegate, UITableViewDataSource,SettingMineInfoDelegate, XIU_LoginViewControllerDelegate, XIU_MyCenterUserHeaderViewDelegate>
 {
     UIImageView *navBarHairlineImageView;
 
@@ -160,15 +161,22 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     if (section == 0) {
         XIU_MyCenterUserHeaderView *userHeaderView = [[XIU_MyCenterUserHeaderView alloc] initWithFrame:CGRectMake(0, 0, KWIDTH, KWIDTH * 0.4)];
-        __weak typeof(self) weakSelf = self;
-        [userHeaderView bk_whenTapped:^{
-            XIU_LoginViewController *login = [[XIU_LoginViewController alloc] init];
-            login.XIUDelegate = weakSelf;
-            [self.navigationController pushViewController:login animated:YES];
-        }];
+        userHeaderView.XIUDelegate = self;
         return userHeaderView;
     }
     return nil;
+}
+
+
+#pragma mark XIU_MyCenterUserHeaderView-Delegate
+-(void)pushToLogin {
+    XIU_LoginViewController *login = [[XIU_LoginViewController alloc] init];
+    login.XIUDelegate = self;
+    [self.navigationController pushViewController:login animated:YES];
+}
+
+- (void)pushToUserInformation {
+    [self.navigationController pushViewController:[[XIU_ModifyAvatarViewController alloc] init] animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {

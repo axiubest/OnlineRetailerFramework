@@ -32,6 +32,10 @@
 - (void)setUpUIWithLogin:(CGRect)frame {
     UIView *backView = [[UIView alloc] initWithFrame:frame];
     [self addSubview:backView];
+    [backView bk_whenTapped:^{
+        [_XIUDelegate pushToLogin];
+    }];
+    
     
     UIImageView *headerImage = [[UIImageView alloc] init];
 
@@ -60,6 +64,10 @@
 - (void)setUpUIWithUserInfoFrame:(CGRect)frame {
     UIView *backView = [[UIView alloc] initWithFrame:frame];
     [self addSubview:backView];
+    [backView bk_whenTapped:^{
+        [_XIUDelegate pushToUserInformation];
+    }];
+    
     
     UIImageView *headerImage = [[UIImageView alloc] init];
     [headerImage setImage:[UIImage imageNamed:@"first_normal"]];

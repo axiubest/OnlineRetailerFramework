@@ -33,7 +33,6 @@
     XIU_BaseNavgationController *secondNavigationController = [[XIU_BaseNavgationController alloc] initWithRootViewController:secondViewController];
 
     
-    
     XIU_MyCenterMainInterfaceVC *thirdViewController = [[XIU_MyCenterMainInterfaceVC alloc] init];
     XIU_BaseNavgationController *thirdNavigationController = [[XIU_BaseNavgationController alloc] initWithRootViewController:thirdViewController];
     
@@ -48,10 +47,6 @@
 
 
 #pragma mark - Methods
-
-
-
-
 
 + (void)customizeTabBarForController:(RDVTabBarController *)tabBarController {
     UIImage *finishedImage = [UIImage imageNamed:@"tabbar_selected_background"];

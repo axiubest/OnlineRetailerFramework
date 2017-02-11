@@ -7,7 +7,7 @@
 //
 
 #import "UIView+Common.h"
-#import "NSString+XIU_Extras.h"
+#import "NSString+Common.h"
 @implementation UIView (Common)
 
 - (void)doCircleFrame{

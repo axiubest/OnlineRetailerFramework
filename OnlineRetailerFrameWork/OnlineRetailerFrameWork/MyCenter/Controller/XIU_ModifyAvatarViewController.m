@@ -150,7 +150,7 @@
         
     }else if (indexPath.section == 1)  {
         switch (indexPath.row) {
-            case 0: {
+            case UserInformationItemStyle_userName: {
                 XIU_SettingTextViewController *vc = [XIU_SettingTextViewController settingTextVCWithTitle:@"昵称" textValue:_curUser.userName  doneBlock:^(NSString *textValue) {
                     NSString *preValue = weakSelf.curUser.userName;
                     weakSelf.curUser.userName = textValue;
@@ -161,7 +161,7 @@
                 [self.navigationController pushViewController:vc animated:YES];
             }
                 break;
-            case 1: {
+            case UserInformationItemStyle_sex: {
                 [ActionSheetStringPicker showPickerWithTitle:nil rows:@[@[@"男", @"女", @"未知"]] initialSelection:@[_curUser.userSex] doneBlock:^(ActionSheetStringPicker *picker, NSArray * selectedIndex, NSArray *selectedValue) {
                     
                     weakSelf.curUser.userSex = @"";
@@ -170,7 +170,7 @@
                 } cancelBlock:nil origin:self.view];
             }
                 break;
-            case 2: {
+            case UserInformationItemStyle_birthday: {
                 NSDate *curDate = [NSDate dateFromString:_curUser.userBirth withFormat:@"yyyy-MM-dd"];
                 if (!curDate) {
                     curDate = [NSDate dateFromString:@"1990-01-01" withFormat:@"yyyy-MM-dd"];
@@ -189,7 +189,7 @@
                 
             }
                 break;
-            case 3: {
+            case UserInformationItemStyle_hobby: {
                 XIU_SettingTextViewController *vc = [XIU_SettingTextViewController settingTextVCWithTitle:@"爱好" textValue:_curUser.hobby  doneBlock:^(NSString *textValue) {
                     NSString *preValue = weakSelf.curUser.hobby;
                     weakSelf.curUser.hobby = textValue;

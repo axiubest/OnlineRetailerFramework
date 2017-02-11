@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol XIU_MyCenterUserHeaderViewDelegate <NSObject>
 
+@required
+- (void)pushToLogin;
+- (void)pushToUserInformation;
+
+@end
 
 @interface XIU_MyCenterUserHeaderView : UIView
 
-
+@property (nonatomic, assign) id<XIU_MyCenterUserHeaderViewDelegate> XIUDelegate;
 @end
