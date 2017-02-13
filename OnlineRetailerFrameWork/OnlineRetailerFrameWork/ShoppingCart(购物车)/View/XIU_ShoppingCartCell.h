@@ -13,7 +13,7 @@ typedef void(^NumberChangedBlock)(NSInteger number);
 typedef void(^CellSelectedBlock)(BOOL select);
 @interface XIU_ShoppingCartCell : UITableViewCell
 //商品数量
-@property (assign,nonatomic)NSInteger xNumber;
+@property (assign,nonatomic)NSInteger lzNumber;
 @property (assign,nonatomic)BOOL isSelected;
 
 - (void)reloadDataWithModel:(XIU_ShoppingCart_GoodsModel*)model;

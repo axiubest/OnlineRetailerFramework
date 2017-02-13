@@ -17,19 +17,23 @@
 					<key>goodsId</key>
 					<string>11</string>
 					<key>goodsName</key>
-					<string>品质回馈1</string>
+					<string>3期免息【赠3款应用】HTC VIVE虚拟现实头盔vr游戏智能眼镜htcvr
+3期免息【赠3款应用】HTC VIVE虚拟现实头盔vr游戏智能眼镜htcvr
+</string>
 					<key>goodsType</key>
 					<integer>0</integer>
+					<key>New item</key>
+					<string></string>
 					<key>id</key>
 					<string>ff80808154ccbba30154ccf6bae90005</string>
 					<key>orginalPrice</key>
-					<integer>5320</integer>
+					<real>8288</real>
 					<key>realPrice</key>
-					<integer>5320</integer>
+					<real>6888</real>
 					<key>shopId</key>
 					<string>3</string>
 					<key>shopName</key>
-					<string>美年大健康旗舰店</string>
+					<string>htcvive官方旗舰店</string>
 					<key>sid</key>
 					<string>ff80808154ccbba30154ccf6bae90005</string>
 					<key>total</key>
@@ -45,19 +49,20 @@
 					<key>goodsId</key>
 					<string>11</string>
 					<key>goodsName</key>
-					<string>品质回馈1</string>
+					<string>短袖T恤女夏装2016韩版新款V领纯色体恤小衫修身半袖上衣服打底衫
+</string>
 					<key>goodsType</key>
 					<integer>0</integer>
 					<key>id</key>
 					<string>ff80808154ccbba30154ccf6bae90005</string>
 					<key>orginalPrice</key>
-					<integer>5320</integer>
+					<integer>38</integer>
 					<key>realPrice</key>
-					<integer>5320</integer>
+					<integer>19</integer>
 					<key>shopId</key>
 					<string>3</string>
 					<key>shopName</key>
-					<string>美年大健康旗舰店</string>
+					<string>htcvive官方旗舰店</string>
 					<key>sid</key>
 					<string>ff80808154ccbba30154ccf6bae90005</string>
 					<key>total</key>
@@ -73,19 +78,20 @@
 					<key>goodsId</key>
 					<string>11</string>
 					<key>goodsName</key>
-					<string>品质回馈1</string>
+					<string>韩版潮学生宽松卫衣女带帽套头加绒加厚连帽上衣服秋冬装新款外套
+</string>
 					<key>goodsType</key>
 					<integer>0</integer>
 					<key>id</key>
 					<string>ff80808154ccbba30154ccf6bae90005</string>
 					<key>orginalPrice</key>
-					<integer>5320</integer>
+					<integer>299</integer>
 					<key>realPrice</key>
-					<integer>5320</integer>
+					<integer>199</integer>
 					<key>shopId</key>
 					<string>3</string>
 					<key>shopName</key>
-					<string>美年大健康旗舰店</string>
+					<string>htcvive官方旗舰店</string>
 					<key>sid</key>
 					<string>ff80808154ccbba30154ccf6bae90005</string>
 					<key>total</key>
@@ -95,7 +101,7 @@
 				</dict>
 			</array>
 			<key>shopName</key>
-			<string>美年大健康旗舰店00</string>
+			<string>htcvive官方旗舰店</string>
 			<key>sid</key>
 			<string>3</string>
 		</dict>

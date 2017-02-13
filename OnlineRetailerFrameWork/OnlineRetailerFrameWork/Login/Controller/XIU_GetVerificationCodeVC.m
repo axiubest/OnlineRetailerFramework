@@ -164,6 +164,7 @@ static id _instance = nil;
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
     [self invaldateTimer];
 }
 

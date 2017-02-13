@@ -76,7 +76,7 @@ static NSInteger CartRowHeight = 100;
 #pragma mark - viewController life cicle
 - (void)viewWillAppear:(BOOL)animated {
     
-
+    [super viewWillAppear:animated];
     if (self.selectedArray.count > 0) {
         for (XIU_ShoppingCart_GoodsModel *model in self.selectedArray) {
             model.select = NO;//这个其实有点多余,提交订单后的数据源不会包含这些,保险起见,加上了
@@ -209,7 +209,7 @@ static NSInteger CartRowHeight = 100;
     __block typeof(cell)wsCell = cell;
     
     [cell numberAddWithBlock:^(NSInteger number) {
-        wsCell.xNumber = number;
+        wsCell.lzNumber = number;
         model.count = number;
         
         [shopModel.goodsArray replaceObjectAtIndex:indexPath.row withObject:model];
@@ -222,7 +222,7 @@ static NSInteger CartRowHeight = 100;
     
     [cell numberCutWithBlock:^(NSInteger number) {
         
-        wsCell.xNumber = number;
+        wsCell.lzNumber = number;
         model.count = number;
         
         [shopModel.goodsArray replaceObjectAtIndex:indexPath.row withObject:model];
@@ -406,10 +406,11 @@ static NSInteger CartRowHeight = 100;
             NSLog(@"选择的商品>>%@>>>%ld",model,(long)model.count);
         }
     } else {
+        
         NSLog(@"你还没有选择任何商品");
+        
     }
     
-
 }
 
 - (void)selectAllProduct:(UIButton *)sender {
