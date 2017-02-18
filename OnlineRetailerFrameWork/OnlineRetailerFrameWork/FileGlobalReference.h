@@ -15,6 +15,7 @@
 #import "XIU_NetAPIManager.h"
 #import "XIU_BaseNavgationController.h"
 #import "XIU_HiddenTabBarController.h"
+#import "XIU_LoginViewController.h"
 #import "UIImageView+WebCache.h"
 #import "XIU_ShareView.h"
 #import "Masonry.h"

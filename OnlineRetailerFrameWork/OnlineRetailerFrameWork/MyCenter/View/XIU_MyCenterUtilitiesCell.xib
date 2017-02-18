@@ -42,9 +42,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="obt-Pv-w5g">
                                 <rect key="frame" x="0.0" y="0.0" width="142.5" height="80"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZnI-QW-eal">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="goods.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZnI-QW-eal">
                                         <rect key="frame" x="53" y="12.5" width="35.5" height="35.5"/>
-                                        <color key="backgroundColor" red="0.94765633339999999" green="0.18864861129999999" blue="0.18500176069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ZnI-QW-eal" secondAttribute="height" multiplier="1:1" id="gPt-85-EVy"/>
                                         </constraints>
@@ -68,9 +68,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lck-2f-xHN">
                                 <rect key="frame" x="142.5" y="0.0" width="142" height="80"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ir7-KV-zfw">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shop.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ir7-KV-zfw">
                                         <rect key="frame" x="53" y="12.5" width="35.5" height="35.5"/>
-                                        <color key="backgroundColor" red="0.94765633339999999" green="0.18864861129999999" blue="0.18500176069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Ir7-KV-zfw" secondAttribute="height" multiplier="1:1" id="dpU-Cm-Del"/>
                                         </constraints>
@@ -92,9 +92,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fsS-6Q-Vga">
                                 <rect key="frame" x="284.5" y="0.0" width="142.5" height="80"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zLi-AO-Y1q">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="浏览记录.png" translatesAutoresizingMaskIntoConstraints="NO" id="zLi-AO-Y1q">
                                         <rect key="frame" x="53.5" y="12.5" width="35.5" height="35.5"/>
-                                        <color key="backgroundColor" red="0.94765633339999999" green="0.18864861129999999" blue="0.18500176069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="zLi-AO-Y1q" secondAttribute="height" multiplier="1:1" id="1S2-Ud-MbX"/>
                                         </constraints>
@@ -117,9 +117,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Qp-6T-Cva">
                                 <rect key="frame" x="0.0" y="80" width="142.5" height="80"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Zs-AE-L1m">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="客户服务.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Zs-AE-L1m">
                                         <rect key="frame" x="53" y="12" width="36" height="36"/>
-                                        <color key="backgroundColor" red="0.94765633339999999" green="0.18864861129999999" blue="0.18500176069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="2Zs-AE-L1m" secondAttribute="height" multiplier="1:1" id="ZbZ-En-WoB"/>
                                         </constraints>
@@ -143,9 +143,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZN-5Y-PXj">
                                 <rect key="frame" x="142" y="80" width="142.5" height="80"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tjo-79-ZBY">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="活动.png" translatesAutoresizingMaskIntoConstraints="NO" id="tjo-79-ZBY">
                                         <rect key="frame" x="53" y="12" width="36" height="36"/>
-                                        <color key="backgroundColor" red="0.94765633339999999" green="0.18864861129999999" blue="0.18500176069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="tjo-79-ZBY" secondAttribute="height" multiplier="1:1" id="Qsi-6m-ZsU"/>
                                         </constraints>
@@ -169,9 +169,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Woe-P6-Yeo">
                                 <rect key="frame" x="284" y="80" width="142.5" height="80"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n4i-wc-NFU">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="收货地址.png" translatesAutoresizingMaskIntoConstraints="NO" id="n4i-wc-NFU">
                                         <rect key="frame" x="53" y="12" width="36.5" height="36"/>
-                                        <color key="backgroundColor" red="0.94765633339999999" green="0.18864861129999999" blue="0.18500176069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="n4i-wc-NFU" secondAttribute="height" multiplier="1:1" id="Jjx-sC-qBd"/>
                                         </constraints>
@@ -242,4 +242,12 @@
             <point key="canvasLocation" x="300.5" y="10"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="goods.png" width="128" height="128"/>
+        <image name="shop.png" width="128" height="128"/>
+        <image name="客户服务.png" width="128" height="128"/>
+        <image name="收货地址.png" width="128" height="128"/>
+        <image name="活动.png" width="128" height="128"/>
+        <image name="浏览记录.png" width="128" height="128"/>
+    </resources>
 </document>

@@ -7,10 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-//控制器选择工具
+
+
+
 @interface XIU_BaseRootTool : NSObject
 
-+ (void)chooseRootViewController:(UIWindow *)window;
+
++(XIU_BaseRootTool *)TabBarRootTool;
+
+- (void)chooseRootViewController:(UIWindow *)window;
 
 
 @end

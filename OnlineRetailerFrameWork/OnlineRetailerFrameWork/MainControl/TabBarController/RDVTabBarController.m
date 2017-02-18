@@ -48,7 +48,16 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:[self contentView]];
     [self.view addSubview:[self tabBar]];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(dismissLogin:) name:@"dismissVC" object:nil];
+
 }
+
+-(void)dismissLogin:(NSNotification *)noti
+{
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+} 
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];

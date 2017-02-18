@@ -57,16 +57,17 @@
  */
 @property (nonatomic, getter=isTabBarHidden) BOOL tabBarHidden;
 
-/**
+/*
  * Changes the visibility of the tab bar.
  */
+
 - (void)setTabBarHidden:(BOOL)hidden animated:(BOOL)animated;
 
 @end
 
 @protocol RDVTabBarControllerDelegate <NSObject>
 @optional
-/**
+/*
  * Asks the delegate whether the specified view controller should be made active.
  */
 - (BOOL)tabBarController:(RDVTabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController;

@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface XIU_User : NSObject
-
-
-
+{
+//    NSString * _userName, *_userPhone, *_userImage, *_userPass, *_userEmail, *_userSex, *_userBirth, *_userIntru, *_channelId, *_hobby;
+}
 
 @property (readwrite, nonatomic, strong)NSString *userName, *userImage, *userPass, *userPhone, *userEmail, *userSex, *userBirth, *userIntru, *channelId, *hobby;
 

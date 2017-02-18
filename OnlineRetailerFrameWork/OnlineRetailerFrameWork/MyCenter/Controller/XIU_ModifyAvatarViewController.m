@@ -132,7 +132,6 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KWIDTH, 1)];
-    //    headerView.backgroundColor = kColorTableSectionBg;
     [headerView setHeight:20.0];
     return headerView;
 }
@@ -244,17 +243,6 @@
     [picker dismissViewControllerAnimated:YES completion:^{
         UIImage *editedImage, *originalImage;
         editedImage = [info objectForKey:UIImagePickerControllerEditedImage];
-//        __weak typeof(self) weakSelf = self;
-        
-        //        [[Coding_NetAPIManager sharedManager] request_UpdateUserIconImage:editedImage successBlock:^(id responseObj) {
-        //            weakSelf.curUser.avatar = responseObj;
-        //            [weakSelf.myTableView reloadData];
-        //        } failureBlock:^(NSError *error) {
-        //            [NSObject showError:error];
-        //        } progerssBlock:^(CGFloat progressValue) {
-        //        }];
-        
-        // 保存原图片到相册中
         if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
             originalImage = [info objectForKey:UIImagePickerControllerOriginalImage];
             UIImageWriteToSavedPhotosAlbum(originalImage, self, nil, NULL);

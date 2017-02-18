@@ -15,6 +15,7 @@
     BOOL IsPasswordHidden;
     BOOL _passwordIsValid;
     BOOL _usernameIsValid;
+    BOOL _isHasNavitationController;
 }
 
 
@@ -82,15 +83,39 @@
  */
 @property (weak, nonatomic) IBOutlet UIView *WeiboView;
 
+
+@property (nonatomic, strong) UIButton *back;
 @end
 
 @implementation XIU_LoginViewController
 
 
+-(UIButton *)back {
+    if (!_back) {
+        _back = [[UIButton alloc] initWithFrame:CGRectMake(20, 20, 20, 20)];
+        _back.backgroundColor = [UIColor redColor];
+//        [_back setImage:[UIImage imageNamed:@"land_QQ"] forState:UIControlStateNormal];
+        [_back addTarget:self action:@selector(chlickBackButton) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:_back];
+  
+    }
+    return _back;
+   }
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    
 }
 
+- (void)chlickBackButton {
+    if (![self isLogin]) {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    }else {
+//        self.navigationController pu
+    }
+
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
  
@@ -106,6 +131,9 @@
     
     [self.PasswordTextField addTarget:self action:@selector(passwordTextFieldChanged) forControlEvents:UIControlEventEditingChanged];
 
+    
+    !self.navigationController? [self back] : nil;
+    
 }
 
 - (void)updateUIState {
@@ -157,6 +185,10 @@
           __weak typeof(self) weakSelf = self;
           NSLog(@"login_success%@",kPathCache);
           [_XIUDelegate login];
+          
+#warning
+          [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissVC" object:nil];
+
           [weakSelf.navigationController popViewControllerAnimated:YES];
  
       }

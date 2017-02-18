@@ -26,7 +26,7 @@ static CGFloat const Section_HeaderHeight = 20.f;
 -(NSMutableArray *)titleArray {
     if (!_titleArray) {
         _titleArray = [[NSMutableArray alloc] initWithObjects:@"缓存清理", @"关于我们", @"帮助与反馈", @"分享", nil];
-        [XIU_Login isLogin] ? [_titleArray addObject:@"退出"]: _titleArray;
+        [self isLogin] ? [_titleArray addObject:@"退出"]: _titleArray;
     }
     return _titleArray;
 }
@@ -90,7 +90,7 @@ static CGFloat const Section_HeaderHeight = 20.f;
         {
             [XIU_Login doLogOut];
             NSLog(@"----login out success");
-            if (![XIU_Login isLogin]) {
+            if (![self isLogin]) {
                 [_MyDelegate loginOutDelegate];
                 [self.navigationController popViewControllerAnimated:YES];
             }

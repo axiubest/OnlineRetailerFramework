@@ -13,7 +13,9 @@
 #import "XIU_ShoppingCartHeaderView.h"
 #import "XIU_ShoppingCartCalculationView.h"
 #import "NSString+Common.h"
-#import "XIU_EmptyView.h"
+#import "XIU_ShoppingCartEmptyView.h"
+
+#import "XIU_CommodityDetailBaseController.h"
 
 static NSInteger TableViewHeaderHeight = 40;
 static NSInteger CartEmptyView = 100;
@@ -25,14 +27,14 @@ static NSInteger CartRowHeight = 100;
 @property (strong,nonatomic)UITableView *XIUTableView;
 @property (strong,nonatomic)UIButton *allSellectedButton;
 @property (strong,nonatomic)UILabel *totlePriceLabel;
-@property (nonatomic, assign) XIU_EmptyView *emptyView;
+@property (nonatomic, assign) XIU_ShoppingCartEmptyView *emptyView;
 @end
 
 @implementation XIU_ShoppingCartViewController
 
--(XIU_EmptyView *)emptyView {
+-(XIU_ShoppingCartEmptyView *)emptyView {
     if (!_emptyView) {
-        XIU_EmptyView *backgroundView = [[XIU_EmptyView alloc]initWithFrame:CGRectMake(0, NaigationBarHeight, KWIDTH, KHEIGHT - NaigationBarHeight)WithTitle:@"" ImageName:@""];
+        XIU_ShoppingCartEmptyView *backgroundView = [[XIU_ShoppingCartEmptyView alloc]initWithFrame:CGRectMake(0, NaigationBarHeight, KWIDTH, KHEIGHT - NaigationBarHeight)WithTitle:@"" ImageName:@""];
         backgroundView.tag = CartEmptyView;
         _emptyView = backgroundView;
     }
@@ -77,6 +79,7 @@ static NSInteger CartRowHeight = 100;
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
+
     if (self.selectedArray.count > 0) {
         for (XIU_ShoppingCart_GoodsModel *model in self.selectedArray) {
             model.select = NO;//这个其实有点多余,提交订单后的数据源不会包含这些,保险起见,加上了
@@ -90,11 +93,9 @@ static NSInteger CartRowHeight = 100;
 
 -(void)creatData {
 
-    
     NSString *path = [[NSBundle mainBundle] pathForResource:@"ShopCarNew" ofType:@"plist" inDirectory:nil];
     
     NSDictionary *dic = [[NSDictionary alloc]initWithContentsOfFile:path];
-    NSLog(@"%@",dic);
     NSArray *array = [dic objectForKey:@"data"];
     if (array.count > 0) {
         for (NSDictionary *dic in array) {
@@ -115,7 +116,6 @@ static NSInteger CartRowHeight = 100;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     self.navigationItem.title = @"购物车";
     self.view.backgroundColor = [UIColor whiteColor];
 
@@ -253,6 +253,14 @@ static NSInteger CartRowHeight = 100;
     [cell reloadDataWithModel:model];
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIStoryboard *story = [UIStoryboard storyboardWithName:@"XIU_CommodityDetailBaseController" bundle:[NSBundle mainBundle]];
+    
+    XIU_CommodityDetailBaseController *myView = (XIU_CommodityDetailBaseController *)[story instantiateViewControllerWithIdentifier:@"XIU_CommodityDetailBaseController"];
+    [self presentViewController:myView animated:YES completion:nil];
+}
+
 
 -(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
     return @"删除";

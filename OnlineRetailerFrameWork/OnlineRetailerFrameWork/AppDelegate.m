@@ -14,7 +14,6 @@
 #import "XIU_JSPachManager.h"
 
 @interface AppDelegate ()
-
 @property (strong, nonatomic) UIViewController *viewController;
 
 @property (nonatomic,strong) XIU_NetWorkReachability *hostReachability;
@@ -26,7 +25,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [XIU_BaseRootTool chooseRootViewController:self.window];
+
+   XIU_BaseRootTool *tabBarTool =  [XIU_BaseRootTool TabBarRootTool];
+
+    [tabBarTool chooseRootViewController:self.window];
+    
     [self.window makeKeyAndVisible];
     
     //network state
@@ -40,12 +43,13 @@
     
     return YES;
 }
-
 //设置系统回调
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
     return  [XIU_UMManager UMengShareWithBlockOpenURL:url sourceApplication:sourceApplication];
 }
+
+
 
 - (void)createNetWorkState {
     
@@ -130,5 +134,8 @@
         abort();
     }
 }
+
+
+
 
 @end

@@ -17,13 +17,30 @@
 
 #import "RDVTabBarController.h"
 #import "RDVTabBarItem.h"
+static XIU_BaseRootTool *sharedObj = nil;
 
 
+@interface XIU_BaseRootTool ()<RDVTabBarControllerDelegate>
+{
+
+}
+@property (nonatomic, weak) UIButton *UnLoginButton;
+@property (nonatomic, assign)NSInteger oldSelectIndex;
+
+@end
 @implementation XIU_BaseRootTool
 
-+ (void)chooseRootViewController:(UIWindow *)window {
++(XIU_BaseRootTool *)TabBarRootTool {
 
-    
+    static dispatch_once_t once;
+    dispatch_once(&once, ^{
+        sharedObj = [[self.class alloc]init];
+    });
+    return sharedObj;
+}
+
+- (void)chooseRootViewController:(UIWindow *)window {
+
     XIU_HomeViewController *firstViewController = [[XIU_HomeViewController alloc] init];
     XIU_BaseNavgationController *firstNavigationController = [[XIU_BaseNavgationController alloc]initWithRootViewController:firstViewController];
     firstViewController.view.backgroundColor = [UIColor orangeColor];
@@ -31,24 +48,48 @@
     
     XIU_ShoppingCartViewController *secondViewController = [[XIU_ShoppingCartViewController alloc] init];
     XIU_BaseNavgationController *secondNavigationController = [[XIU_BaseNavgationController alloc] initWithRootViewController:secondViewController];
+    secondNavigationController.tabBarItem.tag = 1;
+    
 
     
     XIU_MyCenterMainInterfaceVC *thirdViewController = [[XIU_MyCenterMainInterfaceVC alloc] init];
     XIU_BaseNavgationController *thirdNavigationController = [[XIU_BaseNavgationController alloc] initWithRootViewController:thirdViewController];
     
     
+    
     RDVTabBarController *tabBarController = [[RDVTabBarController alloc] init];
     [tabBarController setViewControllers:@[firstNavigationController, secondNavigationController,thirdNavigationController]];
     [self customizeTabBarForController:tabBarController];
-
+    tabBarController.delegate = self;
     window.rootViewController = tabBarController;
     
 }
 
 
+-(BOOL)tabBarController:(RDVTabBarController*)tabBarController shouldSelectViewController:(UIViewController *)viewController
+{
+    
+    self.oldSelectIndex = tabBarController.selectedIndex;
+    return YES;
+}
+
+- (void)tabBarController:(RDVTabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    
+    if (viewController.tabBarItem.tag == 1){
+        
+        if (![XIU_Login isLogin]) {
+
+            tabBarController.selectedIndex = self.oldSelectIndex;
+            [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:[[XIU_LoginViewController alloc] init] animated:YES completion:nil];
+        }
+    }
+}
+
+
+
 #pragma mark - Methods
 
-+ (void)customizeTabBarForController:(RDVTabBarController *)tabBarController {
+- (void)customizeTabBarForController:(RDVTabBarController *)tabBarController {
     UIImage *finishedImage = [UIImage imageNamed:@"tabbar_selected_background"];
     UIImage *unfinishedImage = [UIImage imageNamed:@"tabbar_normal_background"];
     NSArray *tabBarItemImages = @[@"first", @"second", @"third"];
@@ -56,6 +97,7 @@
     NSInteger index = 0;
     
     for (RDVTabBarItem *item in [[tabBarController tabBar] items]) {
+        
         [item setBackgroundSelectedImage:finishedImage withUnselectedImage:unfinishedImage];
         
         UIImage *selectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_selected",
@@ -77,11 +119,24 @@
         
         
         [item setFinishedSelectedImage:selectedimage withFinishedUnselectedImage:unselectedimage];
+//        if (![XIU_Login isLogin]) {
+//            if ([item.title isEqualToString:@"购物车"]) {
+////                _tabBarItemCount = [[tabBarController tabBar] items].count;
+//                UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 60)];
+//                [button addTarget:self action:@selector(UnLoginMethod) forControlEvents:UIControlEventTouchUpInside];
+//                button.backgroundColor = [UIColor blueColor];
+//                [item addSubview:button];
+//                _UnLoginButton = button;
+////                [item addSubview:self.UnLoginButton];
+//                
+//            }
+//        }else{
+//            _UnLoginButton = nil;
+//        }
+
         
         index++;
     }
 }
-
-
 
 @end

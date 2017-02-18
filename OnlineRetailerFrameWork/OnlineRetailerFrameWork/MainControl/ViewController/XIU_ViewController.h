@@ -10,4 +10,8 @@
 
 @interface XIU_ViewController : UIViewController
 
+
+- (void)showEmptyDataSetViewWithTitle:(NSDictionary *)emptyDictionary;
+- (BOOL)isLogin;
+
 @end

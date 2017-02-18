@@ -23,24 +23,9 @@
     [self createNavgationSearchBar];
     
     
-    
-    //text
-    UIView *text = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
-    text.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:text];
-    
-    [text bk_whenTapped:^{
-
-        UIStoryboard *story = [UIStoryboard storyboardWithName:@"XIU_CommodityDetailBaseController" bundle:[NSBundle mainBundle]];
- 
-        XIU_CommodityDetailBaseController *myView = (XIU_CommodityDetailBaseController *)[story instantiateViewControllerWithIdentifier:@"XIU_CommodityDetailBaseController"];
-        [self presentViewController:myView animated:YES completion:nil];
-    }];
-    
 }
 - (void)createNavgationSearchBar {
 
-    
     XIU_SearchBarSimulationView *searchBarView = [[XIU_SearchBarSimulationView alloc] initWithFrame:CGRectMake(60, 7, KWIDTH - 2 * 60 , 30)];
     [searchBarView bk_whenTapped:^{
         __weak typeof (self) weakSelf = self;

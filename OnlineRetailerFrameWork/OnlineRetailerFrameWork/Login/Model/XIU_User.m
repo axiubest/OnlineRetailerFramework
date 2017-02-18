@@ -11,6 +11,8 @@
 @implementation XIU_User
 
 
+//*userName, *userImage, *userPass, *userPhone, *userEmail, *userSex, *userBirth, *userIntru, *channelId, *hobby;
+
 -(id)copyWithZone:(NSZone*)zone {
     XIU_User *user = [[[self class] allocWithZone:zone] init];
     user.userId = [_userId copy];
@@ -31,6 +33,12 @@
     user.userMark = [_userMark copy];
 
     return user;
+}
+
+
+//choose XIU_User safe;
+- (NSString *)description {
+    return @"0x0";
 }
 
 - (NSString *)company{

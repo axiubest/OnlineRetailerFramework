@@ -57,9 +57,9 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YbX-mm-HYq">
                         <rect key="frame" x="0.0" y="50" width="88.5" height="64"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iId-GO-Xi8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="待付款.png" translatesAutoresizingMaskIntoConstraints="NO" id="iId-GO-Xi8">
                                 <rect key="frame" x="33" y="11.5" width="22" height="21.5"/>
-                                <color key="backgroundColor" red="0.94765633344650269" green="0.18864861130714417" blue="0.18500176072120667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="iId-GO-Xi8" secondAttribute="height" multiplier="1:1" id="GFZ-sK-ziO"/>
                                 </constraints>
@@ -83,9 +83,9 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TCq-N0-6Zr">
                         <rect key="frame" x="88.5" y="50" width="88" height="64"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TUy-Lb-Rcq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="待发货.png" translatesAutoresizingMaskIntoConstraints="NO" id="TUy-Lb-Rcq">
                                 <rect key="frame" x="33" y="11" width="22" height="22"/>
-                                <color key="backgroundColor" red="0.94765633344650269" green="0.18864861130714417" blue="0.18500176072120667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="TUy-Lb-Rcq" secondAttribute="height" multiplier="1:1" id="j0h-OZ-flX"/>
                                 </constraints>
@@ -109,9 +109,9 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KgO-cK-Bpe">
                         <rect key="frame" x="176.5" y="50" width="88" height="64"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WRC-cx-2Qg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="待收货.png" translatesAutoresizingMaskIntoConstraints="NO" id="WRC-cx-2Qg">
                                 <rect key="frame" x="32.5" y="11" width="22" height="22"/>
-                                <color key="backgroundColor" red="0.94765633344650269" green="0.18864861130714417" blue="0.18500176072120667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="WRC-cx-2Qg" secondAttribute="height" multiplier="1:1" id="2v2-Tb-bko"/>
                                 </constraints>
@@ -135,9 +135,9 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UV8-Fq-QjJ">
                         <rect key="frame" x="264.5" y="50" width="88.5" height="64"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PDw-AE-qHp">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="待评价.png" translatesAutoresizingMaskIntoConstraints="NO" id="PDw-AE-qHp">
                                 <rect key="frame" x="33" y="11" width="22" height="22"/>
-                                <color key="backgroundColor" red="0.94765633344650269" green="0.18864861130714417" blue="0.18500176072120667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="PDw-AE-qHp" secondAttribute="height" multiplier="1:1" id="Fd6-Kp-EYs"/>
                                 </constraints>
@@ -185,8 +185,18 @@
             <connections>
                 <outlet property="AllOrdersView" destination="wLH-Vm-Eqh" id="Akt-jJ-eaQ"/>
                 <outlet property="AllOrdersViewHeightConstraint" destination="HcR-pi-TBP" id="uIc-Xa-IZi"/>
+                <outlet property="WaitEvaluateImageView" destination="PDw-AE-qHp" id="G9Q-Yg-cDa"/>
+                <outlet property="WaitGetImageView" destination="WRC-cx-2Qg" id="sFQ-am-rIi"/>
+                <outlet property="WaitPayImageView" destination="iId-GO-Xi8" id="a6l-Bk-JNT"/>
+                <outlet property="WaitSendImageView" destination="TUy-Lb-Rcq" id="MTd-Oi-mFA"/>
             </connections>
             <point key="canvasLocation" x="242" y="-344"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="待付款.png" width="64" height="64"/>
+        <image name="待发货.png" width="64" height="64"/>
+        <image name="待收货.png" width="64" height="64"/>
+        <image name="待评价.png" width="64" height="64"/>
+    </resources>
 </document>
