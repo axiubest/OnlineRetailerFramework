@@ -29,7 +29,8 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+
     CALayer *headerLine = [[CALayer alloc] init];
     headerLine.frame = CGRectMake(0, _HeaderView.height, KWIDTH, LAYER_LINE_HEIGHT);
     headerLine.backgroundColor = LAYER_LINE_COLOR;

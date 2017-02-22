@@ -38,8 +38,13 @@
     // UM_Share
     [XIU_UMManager UmengShareFunc];
     
+    // UM_Analytics
+    [XIU_UMManager UmengMobClickFunc];
+    
     //JSPatch
     [XIU_JSPachManager contextManager];
+    
+    
     
     return YES;
 }

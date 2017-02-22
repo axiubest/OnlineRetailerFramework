@@ -37,12 +37,13 @@ static CGFloat const Section_HeaderHeight = 20.f;
     
     self.title = @"个人信息";
     self.curUser =[XIU_Login curLoginUser];
+
     
     //    添加myTableView
     _XIUTableView = ({
         UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         tableView.backgroundColor = [UIColor xiu_tableViewSectionBackgroundColor];
-;
+        
         tableView.dataSource = self;
         tableView.delegate = self;
         

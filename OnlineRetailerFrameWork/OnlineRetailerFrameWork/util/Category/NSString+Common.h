@@ -13,4 +13,10 @@
 - (NSString *)xiu_substringAfterString:(NSString *)string;
 
 + (NSMutableAttributedString*)SetStringOfShoppingCartPriceString:(NSString*)string;
+
+
+//cell height math
+- (CGSize)sizeWithLabelWidth:(CGFloat)width font:(UIFont *)font;
+
+
 @end

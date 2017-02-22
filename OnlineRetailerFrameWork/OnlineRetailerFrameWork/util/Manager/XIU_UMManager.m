@@ -15,6 +15,7 @@
 #import "WXApi.h"
 #import "WeiboSDK.h"
 
+#import <UMMobClick/MobClick.h>
 @implementation XIU_UMManager
 
 /*
@@ -127,5 +128,15 @@
             }
         }];
     }
+}
+
+
+
+
+#pragma mark UmengMobClickFunc
++ (void)UmengMobClickFunc {
+//    UMConfigInstance.appKey = USHARE_APPKEY;
+//    UMConfigInstance.channelId = @"App Store";
+//    [MobClick startWithConfigure:UMConfigInstance];//配置以上参数后调用此方法初始化SDK！
 }
 @end

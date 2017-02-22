@@ -114,14 +114,14 @@ static CGFloat const LAND_CONTORL_HEIGHT = 50.f;
 
 
 //-------------UM--------------
-static const NSString *const USHARE_APPKEY = @"";
-static const NSString *const XIU_Social_WX_ID = @"";
-static const NSString *const XIU_Social_WX_Secret = @"";
-static const NSString *const XIU_Social_QQ_ID = @"";
-static const NSString *const XIU_Social_QQ_Secret = @"";
-static const NSString *const XIU_Social_Sina_Select = @"";
-static const NSString *const XIU_Social_Sina_ID = @"";
-static const NSString *const XIU_Social_RedirectURL = @"";
+static  NSString *const USHARE_APPKEY = @"587d9de97f2c7464d9001cc4";
+static  NSString *const XIU_Social_WX_ID = @"";
+static  NSString *const XIU_Social_WX_Secret = @"";
+static  NSString *const XIU_Social_QQ_ID = @"";
+static  NSString *const XIU_Social_QQ_Secret = @"";
+static  NSString *const XIU_Social_Sina_Select = @"";
+static  NSString *const XIU_Social_Sina_ID = @"";
+static  NSString *const XIU_Social_RedirectURL = @"";
 
 //-------------UM--------------
 

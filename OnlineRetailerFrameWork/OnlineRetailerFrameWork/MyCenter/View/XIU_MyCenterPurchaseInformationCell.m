@@ -30,6 +30,7 @@ static NSInteger heightOfMyPurchase = 30;
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+     self.selectionStyle = UITableViewCellSelectionStyleNone;
     [self setUpCellUI];
     
 }

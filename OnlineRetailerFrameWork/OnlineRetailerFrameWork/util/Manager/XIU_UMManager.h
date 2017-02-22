@@ -12,6 +12,8 @@
 #import "XIU_ShareModel.h"
 @interface XIU_UMManager : UMSocialHandler
 
++(void)UmengMobClickFunc;
+
 +(void)UmengShareFunc;
 
 + (void)shareObjectWithSnsName:(NSString *)snsName WithMessageValue:(XIU_ShareModel *)model;

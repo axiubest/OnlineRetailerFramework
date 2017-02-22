@@ -9,6 +9,7 @@
 #import "XIU_MyCenterMainInterfaceVC.h"
 #import "XIU_SettingMineInfoVC.h"
 #import "XIU_ModifyAvatarViewController.h"
+#import "XIU_DeliveryAddressViewController.h"
 
 //text
 #import "XIU_LoginViewController.h"
@@ -43,7 +44,7 @@ static  NSString *const NavgationBarRightImageName = @"设置";
         tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         tableView.delegate = self;
         tableView.dataSource = self;
-        tableView.backgroundColor = [UIColor grayColor];
+        tableView.backgroundColor = [UIColor xiu_666color];
         [self.view addSubview:tableView];
         _XIUTableViw = tableView;
         
@@ -126,7 +127,7 @@ static  NSString *const NavgationBarRightImageName = @"设置";
     return 1;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 5;
+    return 2;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
@@ -141,7 +142,9 @@ static  NSString *const NavgationBarRightImageName = @"设置";
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
+        
         XIU_MyCenterPurchaseInformationCell *cell = [tableView dequeueReusableCellWithIdentifier:XIU_MyCenterPurchaseInformationIdentifier];
+       
         return cell;
     }
         XIU_MyCenterUtilitiesCell *cell = [tableView dequeueReusableCellWithIdentifier:XIU_MyCenterUtilitiesIdentifier];
@@ -181,4 +184,13 @@ static  NSString *const NavgationBarRightImageName = @"设置";
     
 }
 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:XIU_DeliveryAddressID bundle:nil];
+    
+    XIU_DeliveryAddressViewController *deliverAddress= [mainStoryBoard instantiateViewControllerWithIdentifier:XIU_DeliveryAddressID];
+
+    [self.navigationController pushViewController:deliverAddress animated:YES];
+}
 @end

@@ -220,6 +220,16 @@
 		8386FC551E4DA7F90029E653 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8386FC541E4DA7F90029E653 /* Assets.xcassets */; };
 		8386FC581E4DA7F90029E653 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8386FC561E4DA7F90029E653 /* LaunchScreen.storyboard */; };
 		83E2D2DC1E5D32230071D9A8 /* 相册.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E2D2DB1E5D32230071D9A8 /* 相册.png */; };
+		83E2D2E01E5D40620071D9A8 /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E2D2DF1E5D40620071D9A8 /* UMMobClick.framework */; };
+		83E2D2E21E5D40780071D9A8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E2D2E11E5D40780071D9A8 /* CoreTelephony.framework */; };
+		83E2D2E41E5D40830071D9A8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E2D2E31E5D40830071D9A8 /* libz.tbd */; };
+		83E2D2E61E5D40A60071D9A8 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E2D2E51E5D40A60071D9A8 /* libsqlite3.0.tbd */; };
+		83E2D2ED1E5D8DA80071D9A8 /* XIU_DeliveryAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D2EC1E5D8DA80071D9A8 /* XIU_DeliveryAddressViewController.m */; };
+		83E2D2EF1E5D8DBE0071D9A8 /* XIU_DeliveryAddressViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E2D2EE1E5D8DBE0071D9A8 /* XIU_DeliveryAddressViewController.storyboard */; };
+		83E2D2F11E5D925A0071D9A8 /* 编辑.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E2D2F01E5D925A0071D9A8 /* 编辑.png */; };
+		83E2D2F41E5D94BB0071D9A8 /* XIU_DeliveryAddressListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D2F31E5D94BB0071D9A8 /* XIU_DeliveryAddressListCell.m */; };
+		83E2D2F71E5DD7AC0071D9A8 /* XIU_DeliverAddressEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D2F61E5DD7AC0071D9A8 /* XIU_DeliverAddressEditViewController.m */; };
+		83E2D2F91E5DD7BF0071D9A8 /* XIU_DeliverAddressEditViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E2D2F81E5DD7BF0071D9A8 /* XIU_DeliverAddressEditViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -583,6 +593,19 @@
 		8386FC571E4DA7F90029E653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8386FC591E4DA7F90029E653 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83E2D2DB1E5D32230071D9A8 /* 相册.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "相册.png"; sourceTree = "<group>"; };
+		83E2D2DF1E5D40620071D9A8 /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMMobClick.framework; path = Pods/UMengAnalytics/umsdk_IOS_analyics_idfa_v4.2.4/UMMobClick.framework; sourceTree = "<group>"; };
+		83E2D2E11E5D40780071D9A8 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		83E2D2E31E5D40830071D9A8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		83E2D2E51E5D40A60071D9A8 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		83E2D2EB1E5D8DA80071D9A8 /* XIU_DeliveryAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_DeliveryAddressViewController.h; sourceTree = "<group>"; };
+		83E2D2EC1E5D8DA80071D9A8 /* XIU_DeliveryAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_DeliveryAddressViewController.m; sourceTree = "<group>"; };
+		83E2D2EE1E5D8DBE0071D9A8 /* XIU_DeliveryAddressViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XIU_DeliveryAddressViewController.storyboard; sourceTree = "<group>"; };
+		83E2D2F01E5D925A0071D9A8 /* 编辑.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "编辑.png"; sourceTree = "<group>"; };
+		83E2D2F21E5D94BB0071D9A8 /* XIU_DeliveryAddressListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_DeliveryAddressListCell.h; sourceTree = "<group>"; };
+		83E2D2F31E5D94BB0071D9A8 /* XIU_DeliveryAddressListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_DeliveryAddressListCell.m; sourceTree = "<group>"; };
+		83E2D2F51E5DD7AC0071D9A8 /* XIU_DeliverAddressEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_DeliverAddressEditViewController.h; sourceTree = "<group>"; };
+		83E2D2F61E5DD7AC0071D9A8 /* XIU_DeliverAddressEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_DeliverAddressEditViewController.m; sourceTree = "<group>"; };
+		83E2D2F81E5DD7BF0071D9A8 /* XIU_DeliverAddressEditViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XIU_DeliverAddressEditViewController.storyboard; sourceTree = "<group>"; };
 		ED2BFCE96CB7DAB98451ED2B /* Pods-OnlineRetailerFrameWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineRetailerFrameWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnlineRetailerFrameWork/Pods-OnlineRetailerFrameWork.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -591,7 +614,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83E2D2E61E5D40A60071D9A8 /* libsqlite3.0.tbd in Frameworks */,
+				83E2D2E41E5D40830071D9A8 /* libz.tbd in Frameworks */,
+				83E2D2E21E5D40780071D9A8 /* CoreTelephony.framework in Frameworks */,
 				2C0F21655B799AF5AEB00E80 /* libPods-OnlineRetailerFrameWork.a in Frameworks */,
+				83E2D2E01E5D40620071D9A8 /* UMMobClick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,6 +701,7 @@
 				8341AA221E4DAB3500FDC5A4 /* yes_btn_select.png */,
 				8341AA231E4DAB3500FDC5A4 /* yes_btn_unselect.png */,
 				8341AA241E4DAB3500FDC5A4 /* 头像占位图.png */,
+				83E2D2F01E5D925A0071D9A8 /* 编辑.png */,
 				83E2D2DB1E5D32230071D9A8 /* 相册.png */,
 				832798AA1E5C039200930000 /* 返回.png */,
 				8341ACD21E575C6700FDC5A4 /* 待发货.png */,
@@ -905,6 +933,7 @@
 		8341AA861E4DAB3500FDC5A4 /* MyCenter */ = {
 			isa = PBXGroup;
 			children = (
+				83E2D2E71E5D8D4C0071D9A8 /* DeliveryAddress-收货地址 */,
 				8341AA871E4DAB3500FDC5A4 /* Controller */,
 				8341AA901E4DAB3500FDC5A4 /* Model */,
 				8341AA911E4DAB3500FDC5A4 /* View */,
@@ -1404,9 +1433,52 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		83E2D2E71E5D8D4C0071D9A8 /* DeliveryAddress-收货地址 */ = {
+			isa = PBXGroup;
+			children = (
+				83E2D2E81E5D8D4C0071D9A8 /* Controller */,
+				83E2D2E91E5D8D4C0071D9A8 /* Model */,
+				83E2D2EA1E5D8D4C0071D9A8 /* View */,
+			);
+			path = "DeliveryAddress-收货地址";
+			sourceTree = "<group>";
+		};
+		83E2D2E81E5D8D4C0071D9A8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				83E2D2EB1E5D8DA80071D9A8 /* XIU_DeliveryAddressViewController.h */,
+				83E2D2EC1E5D8DA80071D9A8 /* XIU_DeliveryAddressViewController.m */,
+				83E2D2EE1E5D8DBE0071D9A8 /* XIU_DeliveryAddressViewController.storyboard */,
+				83E2D2F51E5DD7AC0071D9A8 /* XIU_DeliverAddressEditViewController.h */,
+				83E2D2F61E5DD7AC0071D9A8 /* XIU_DeliverAddressEditViewController.m */,
+				83E2D2F81E5DD7BF0071D9A8 /* XIU_DeliverAddressEditViewController.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		83E2D2E91E5D8D4C0071D9A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		83E2D2EA1E5D8D4C0071D9A8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				83E2D2F21E5D94BB0071D9A8 /* XIU_DeliveryAddressListCell.h */,
+				83E2D2F31E5D94BB0071D9A8 /* XIU_DeliveryAddressListCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CE6E3DB050FA266C68E95202 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				83E2D2E51E5D40A60071D9A8 /* libsqlite3.0.tbd */,
+				83E2D2E31E5D40830071D9A8 /* libz.tbd */,
+				83E2D2E11E5D40780071D9A8 /* CoreTelephony.framework */,
+				83E2D2DF1E5D40620071D9A8 /* UMMobClick.framework */,
 				48427B43B62B810785216F04 /* libPods-OnlineRetailerFrameWork.a */,
 			);
 			name = Frameworks;
@@ -1483,6 +1555,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83E2D2F11E5D925A0071D9A8 /* 编辑.png in Resources */,
 				832798A11E5BF92500930000 /* 设置.png in Resources */,
 				8341ABC11E4DAB3500FDC5A4 /* XIU_MyCenterUtilitiesCell.xib in Resources */,
 				8341AB6F1E4DAB3500FDC5A4 /* share_btn_inform@2x.png in Resources */,
@@ -1499,6 +1572,7 @@
 				8341AB6B1E4DAB3500FDC5A4 /* land_QQ.png in Resources */,
 				8341AB781E4DAB3500FDC5A4 /* 照相机.png in Resources */,
 				8341AB7A1E4DAB3500FDC5A4 /* yes_btn_unselect.png in Resources */,
+				83E2D2F91E5DD7BF0071D9A8 /* XIU_DeliverAddressEditViewController.storyboard in Resources */,
 				8341AB771E4DAB3500FDC5A4 /* 收藏.png in Resources */,
 				8341AB8B1E4DAB3500FDC5A4 /* second_selected@2x.png in Resources */,
 				8341AB701E4DAB3500FDC5A4 /* share_btn_qq@2x.png in Resources */,
@@ -1556,6 +1630,7 @@
 				8341ACCF1E574FE700FDC5A4 /* 待评价.png in Resources */,
 				8341ACE01E57D98600FDC5A4 /* shop.png in Resources */,
 				8341AB8E1E4DAB3500FDC5A4 /* tabbar_selected_background.png in Resources */,
+				83E2D2EF1E5D8DBE0071D9A8 /* XIU_DeliveryAddressViewController.storyboard in Resources */,
 				8341AB881E4DAB3500FDC5A4 /* second_normal.png in Resources */,
 				8386FC501E4DA7F90029E653 /* Main.storyboard in Resources */,
 				8341AB8D1E4DAB3500FDC5A4 /* tabbar_normal_background@2x.png in Resources */,
@@ -1618,6 +1693,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83E2D2F71E5DD7AC0071D9A8 /* XIU_DeliverAddressEditViewController.m in Sources */,
 				8341ACE41E57E17E00FDC5A4 /* UIImageView+Badge.m in Sources */,
 				8386FC4D1E4DA7F90029E653 /* ViewController.m in Sources */,
 				8341ABFF1E4DAB3500FDC5A4 /* NSString+Encryption.m in Sources */,
@@ -1628,6 +1704,7 @@
 				8341ABAB1E4DAB3500FDC5A4 /* XIU_BaseNavgationController.m in Sources */,
 				8341ABD01E4DAB3500FDC5A4 /* AFURLSessionManager.m in Sources */,
 				8341ABB41E4DAB3500FDC5A4 /* XIU_WebViewController.m in Sources */,
+				83E2D2F41E5D94BB0071D9A8 /* XIU_DeliveryAddressListCell.m in Sources */,
 				8341AC141E4DAB3500FDC5A4 /* XIU_ShareView.m in Sources */,
 				8341ABC61E4DAB3500FDC5A4 /* ActionSheetDistancePicker.m in Sources */,
 				8341ABDB1E4DAB3500FDC5A4 /* View+MASAdditions.m in Sources */,
@@ -1726,6 +1803,7 @@
 				8341AC0F1E4DAB3500FDC5A4 /* XIU_UMManager.m in Sources */,
 				8341ABD41E4DAB3500FDC5A4 /* MASConstraint.m in Sources */,
 				8341ABE31E4DAB3500FDC5A4 /* NSObject+MJClass.m in Sources */,
+				83E2D2ED1E5D8DA80071D9A8 /* XIU_DeliveryAddressViewController.m in Sources */,
 				8341ABD61E4DAB3500FDC5A4 /* MASLayoutConstraint.m in Sources */,
 				8341AC051E4DAB3500FDC5A4 /* UINavigationBar+Awesome.m in Sources */,
 				8341ABE01E4DAB3500FDC5A4 /* MJProperty.m in Sources */,
@@ -1874,6 +1952,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7VVA2HVT66;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/UMengAnalytics/umsdk_IOS_analyics_idfa_v4.2.4",
+				);
 				GCC_PREFIX_HEADER = OnlineRetailerFrameWork/PrefixHeader.pch;
 				INFOPLIST_FILE = OnlineRetailerFrameWork/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
@@ -1889,6 +1971,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7VVA2HVT66;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/UMengAnalytics/umsdk_IOS_analyics_idfa_v4.2.4",
+				);
 				GCC_PREFIX_HEADER = OnlineRetailerFrameWork/PrefixHeader.pch;
 				INFOPLIST_FILE = OnlineRetailerFrameWork/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;

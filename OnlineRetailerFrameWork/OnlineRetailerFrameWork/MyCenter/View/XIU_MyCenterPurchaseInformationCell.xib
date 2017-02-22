@@ -29,15 +29,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WzK-9R-QxV">
-                                <rect key="frame" x="318" y="16" width="15" height="18"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_next" translatesAutoresizingMaskIntoConstraints="NO" id="WzK-9R-QxV">
+                                <rect key="frame" x="330" y="18" width="13" height="15"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="18" id="VXA-Kx-tNO"/>
-                                    <constraint firstAttribute="width" constant="15" id="hSb-4v-Dm6"/>
+                                    <constraint firstAttribute="height" constant="15" id="VXA-Kx-tNO"/>
+                                    <constraint firstAttribute="width" constant="13" id="hSb-4v-Dm6"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="查看全部订单" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLm-gx-UTQ">
-                                <rect key="frame" x="234" y="18" width="74" height="15"/>
+                                <rect key="frame" x="246" y="18" width="74" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -50,15 +50,15 @@
                             <constraint firstItem="WzK-9R-QxV" firstAttribute="centerY" secondItem="wLH-Vm-Eqh" secondAttribute="centerY" id="jfb-jd-WUD"/>
                             <constraint firstItem="Pts-Nz-zKR" firstAttribute="centerY" secondItem="wLH-Vm-Eqh" secondAttribute="centerY" id="jkX-RR-0a4"/>
                             <constraint firstItem="WzK-9R-QxV" firstAttribute="leading" secondItem="QLm-gx-UTQ" secondAttribute="trailing" constant="10" id="kQK-Bv-t6l"/>
-                            <constraint firstAttribute="trailing" secondItem="WzK-9R-QxV" secondAttribute="trailing" constant="20" id="ww8-75-SDz"/>
+                            <constraint firstAttribute="trailing" secondItem="WzK-9R-QxV" secondAttribute="trailing" constant="10" id="ww8-75-SDz"/>
                             <constraint firstItem="Pts-Nz-zKR" firstAttribute="leading" secondItem="wLH-Vm-Eqh" secondAttribute="leading" constant="20" id="zdf-C3-dwR"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YbX-mm-HYq">
-                        <rect key="frame" x="0.0" y="50" width="88.5" height="64"/>
+                        <rect key="frame" x="0.0" y="50" width="89" height="63"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="待付款.png" translatesAutoresizingMaskIntoConstraints="NO" id="iId-GO-Xi8">
-                                <rect key="frame" x="33" y="11.5" width="22" height="21.5"/>
+                                <rect key="frame" x="33" y="11" width="22" height="22"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="iId-GO-Xi8" secondAttribute="height" multiplier="1:1" id="GFZ-sK-ziO"/>
@@ -81,7 +81,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TCq-N0-6Zr">
-                        <rect key="frame" x="88.5" y="50" width="88" height="64"/>
+                        <rect key="frame" x="89" y="50" width="88" height="63"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="待发货.png" translatesAutoresizingMaskIntoConstraints="NO" id="TUy-Lb-Rcq">
                                 <rect key="frame" x="33" y="11" width="22" height="22"/>
@@ -91,7 +91,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="待发货" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="so1-eS-tj2">
-                                <rect key="frame" x="25.5" y="38" width="37" height="15"/>
+                                <rect key="frame" x="25" y="38" width="37" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -107,17 +107,17 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KgO-cK-Bpe">
-                        <rect key="frame" x="176.5" y="50" width="88" height="64"/>
+                        <rect key="frame" x="177" y="50" width="88" height="63"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="待收货.png" translatesAutoresizingMaskIntoConstraints="NO" id="WRC-cx-2Qg">
-                                <rect key="frame" x="32.5" y="11" width="22" height="22"/>
+                                <rect key="frame" x="32" y="11" width="22" height="22"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="WRC-cx-2Qg" secondAttribute="height" multiplier="1:1" id="2v2-Tb-bko"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="待收货" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUu-3I-Rv1">
-                                <rect key="frame" x="25.5" y="38" width="37" height="15"/>
+                                <rect key="frame" x="25" y="38" width="37" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -133,7 +133,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UV8-Fq-QjJ">
-                        <rect key="frame" x="264.5" y="50" width="88.5" height="64"/>
+                        <rect key="frame" x="265" y="50" width="88" height="63"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="待评价.png" translatesAutoresizingMaskIntoConstraints="NO" id="PDw-AE-qHp">
                                 <rect key="frame" x="33" y="11" width="22" height="22"/>
@@ -194,6 +194,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="arrow_next" width="14" height="14"/>
         <image name="待付款.png" width="64" height="64"/>
         <image name="待发货.png" width="64" height="64"/>
         <image name="待收货.png" width="64" height="64"/>
