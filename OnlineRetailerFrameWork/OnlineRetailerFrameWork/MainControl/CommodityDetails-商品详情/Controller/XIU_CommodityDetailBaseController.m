@@ -16,15 +16,13 @@
 #import "XIU_CommodityDetialBaseStoreInformationCell.h"
 #import "XIU_CommodityDetialSelectTypeCell.h"
 
-#define SCREEN_BOUNDS   [UIScreen mainScreen].bounds
-#define SCREEN_SIZE     [UIScreen mainScreen].bounds.size
 
 
 #define HEADER_VIEW_HEIGHT   KHEIGHT * 0.6// 顶部商品图片高度
-#define END_DRAG_SHOW_HEIGHT 80.0f       // 结束拖拽最大值时的显示
-#define BOTTOM_VIEW_HEIGHT  44.0f       // 底部视图高度（加入购物车＼立即购买）
 
-#define BOTTOM_POP_VIEW_HEIGHT 200
+static CGFloat const END_DRAG_SHOW_HEIGHT = 80.f;// 结束拖拽最大值时的显示
+static CGFloat const BOTTOM_VIEW_HEIGHT = 44.0f;// 底部视图高度（加入购物车＼立即购买）
+static CGFloat const BOTTOM_POP_VIEW_HEIGHT = 200;
 
 
 @interface XIU_CommodityDetailBaseController ()<UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, XIUScrollViewDelegate>
@@ -391,8 +389,8 @@
         if (minY <= -END_DRAG_SHOW_HEIGHT && !isShowTop && !isShowDetail) {
             isShowTop = YES;
             isTop = YES;
-            [[UIApplication sharedApplication].keyWindow addSubview:self.maskView];
-            [[UIApplication sharedApplication].keyWindow addSubview:self.popTopView];
+            [kKeyWindow addSubview:self.maskView];
+            [kKeyWindow addSubview:self.popTopView];
             
             [UIView animateWithDuration:0.25 animations:^{
                 self.maskView.alpha = 1.0;
@@ -448,8 +446,8 @@
 
 - (void)open {
     isTop = NO;
-    [[UIApplication sharedApplication].keyWindow addSubview:self.maskView];
-    [[UIApplication sharedApplication].keyWindow addSubview:self.popView];
+    [kKeyWindow addSubview:self.maskView];
+    [kKeyWindow addSubview:self.popView];
     
     [UIView animateWithDuration:0.2 animations:^{
         self.view.layer.transform = [self firstStepTransform];

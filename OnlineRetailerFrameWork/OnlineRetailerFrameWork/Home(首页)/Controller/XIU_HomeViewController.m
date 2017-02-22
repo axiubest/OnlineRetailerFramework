@@ -9,6 +9,7 @@
 #import "XIU_HomeViewController.h"
 #import "XIU_SearchBarViewController.h"
 #import "XIU_SearchBarSimulationView.h"
+#import "XIU_ScanQRCodeViewController.h"
 
 #import "XIU_CommodityDetailBaseController.h"
 @interface XIU_HomeViewController ()
@@ -20,9 +21,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor redColor];
+    
+    [self createNavgationButtonWithImageNmae:@"设置" title:@"扫一扫" target:self action:@selector(QRCode) type:UINavigationItem_Type_LeftItem];
     [self createNavgationSearchBar];
     
     
+}
+
+- (void)QRCode {
+    [self.navigationController pushViewController:[[XIU_ScanQRCodeViewController alloc] init] animated:YES];
 }
 - (void)createNavgationSearchBar {
 

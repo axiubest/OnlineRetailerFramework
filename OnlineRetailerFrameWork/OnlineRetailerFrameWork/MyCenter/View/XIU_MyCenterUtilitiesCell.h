@@ -9,6 +9,8 @@
 //实用工具Cell
 #import <UIKit/UIKit.h>
 
+static NSString *const XIU_MyCenterUtilitiesIdentifier = @"XIU_MyCenterUtilitiesCell";
+
 @interface XIU_MyCenterUtilitiesCell : UITableViewCell
 
 @end

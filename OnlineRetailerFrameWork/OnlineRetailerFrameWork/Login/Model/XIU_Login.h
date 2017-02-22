@@ -12,9 +12,9 @@
 
 @interface XIU_Login : NSObject
 
-@property (readwrite, nonatomic, strong) NSString *phone;
+@property (readwrite, nonatomic, copy) NSString *phone;
 
-@property (readwrite, nonatomic, strong) NSString *password;
+@property (readwrite, nonatomic, copy) NSString *password;
 
 
 - (NSString *)toPath;

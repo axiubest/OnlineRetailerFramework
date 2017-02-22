@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2C0F21655B799AF5AEB00E80 /* libPods-OnlineRetailerFrameWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48427B43B62B810785216F04 /* libPods-OnlineRetailerFrameWork.a */; };
+		832798A11E5BF92500930000 /* 设置.png in Resources */ = {isa = PBXBuildFile; fileRef = 832798A01E5BF92500930000 /* 设置.png */; };
+		832798A71E5C008100930000 /* XIU_ScanQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832798A61E5C008100930000 /* XIU_ScanQRCodeViewController.m */; };
+		832798AB1E5C039200930000 /* 返回.png in Resources */ = {isa = PBXBuildFile; fileRef = 832798AA1E5C039200930000 /* 返回.png */; };
+		832798AE1E5C089000930000 /* XIU_ScanQRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 832798AD1E5C089000930000 /* XIU_ScanQRCodeView.m */; };
+		832798B61E5C43C100930000 /* XIU_ScanQRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 832798B51E5C43C100930000 /* XIU_ScanQRCodeManager.m */; };
 		8341AB681E4DAB3500FDC5A4 /* XIU_HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AA0C1E4DAB3400FDC5A4 /* XIU_HomeViewController.m */; };
 		8341AB691E4DAB3500FDC5A4 /* XIU_SearchBarSimulationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AA101E4DAB3500FDC5A4 /* XIU_SearchBarSimulationView.m */; };
 		8341AB6A1E4DAB3500FDC5A4 /* arrow_buttom.png in Resources */ = {isa = PBXBuildFile; fileRef = 8341AA121E4DAB3500FDC5A4 /* arrow_buttom.png */; };
@@ -29,7 +34,6 @@
 		8341AB7A1E4DAB3500FDC5A4 /* yes_btn_unselect.png in Resources */ = {isa = PBXBuildFile; fileRef = 8341AA231E4DAB3500FDC5A4 /* yes_btn_unselect.png */; };
 		8341AB7B1E4DAB3500FDC5A4 /* 头像占位图.png in Resources */ = {isa = PBXBuildFile; fileRef = 8341AA241E4DAB3500FDC5A4 /* 头像占位图.png */; };
 		8341AB7C1E4DAB3500FDC5A4 /* 显示.png in Resources */ = {isa = PBXBuildFile; fileRef = 8341AA251E4DAB3500FDC5A4 /* 显示.png */; };
-		8341AB7D1E4DAB3500FDC5A4 /* 设置.png in Resources */ = {isa = PBXBuildFile; fileRef = 8341AA261E4DAB3500FDC5A4 /* 设置.png */; };
 		8341AB7E1E4DAB3500FDC5A4 /* 隐藏.png in Resources */ = {isa = PBXBuildFile; fileRef = 8341AA271E4DAB3500FDC5A4 /* 隐藏.png */; };
 		8341AB7F1E4DAB3500FDC5A4 /* first_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 8341AA291E4DAB3500FDC5A4 /* first_normal.png */; };
 		8341AB801E4DAB3500FDC5A4 /* first_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8341AA2A1E4DAB3500FDC5A4 /* first_normal@2x.png */; };
@@ -215,11 +219,20 @@
 		8386FC531E4DA7F90029E653 /* OnlineRetailerFrameWork.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8386FC511E4DA7F90029E653 /* OnlineRetailerFrameWork.xcdatamodeld */; };
 		8386FC551E4DA7F90029E653 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8386FC541E4DA7F90029E653 /* Assets.xcassets */; };
 		8386FC581E4DA7F90029E653 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8386FC561E4DA7F90029E653 /* LaunchScreen.storyboard */; };
+		83E2D2DC1E5D32230071D9A8 /* 相册.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E2D2DB1E5D32230071D9A8 /* 相册.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		48427B43B62B810785216F04 /* libPods-OnlineRetailerFrameWork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OnlineRetailerFrameWork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		630E178D7E0BAF639AF17DC8 /* Pods-OnlineRetailerFrameWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineRetailerFrameWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnlineRetailerFrameWork/Pods-OnlineRetailerFrameWork.release.xcconfig"; sourceTree = "<group>"; };
+		832798A01E5BF92500930000 /* 设置.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "设置.png"; sourceTree = "<group>"; };
+		832798A51E5C008100930000 /* XIU_ScanQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_ScanQRCodeViewController.h; sourceTree = "<group>"; };
+		832798A61E5C008100930000 /* XIU_ScanQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_ScanQRCodeViewController.m; sourceTree = "<group>"; };
+		832798AA1E5C039200930000 /* 返回.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回.png"; sourceTree = "<group>"; };
+		832798AC1E5C089000930000 /* XIU_ScanQRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_ScanQRCodeView.h; sourceTree = "<group>"; };
+		832798AD1E5C089000930000 /* XIU_ScanQRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_ScanQRCodeView.m; sourceTree = "<group>"; };
+		832798B41E5C43C100930000 /* XIU_ScanQRCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_ScanQRCodeManager.h; sourceTree = "<group>"; };
+		832798B51E5C43C100930000 /* XIU_ScanQRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_ScanQRCodeManager.m; sourceTree = "<group>"; };
 		8341AA071E4DAA1A00FDC5A4 /* FileGlobalReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileGlobalReference.h; sourceTree = "<group>"; };
 		8341AA081E4DAA3500FDC5A4 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		8341AA0B1E4DAB3400FDC5A4 /* XIU_HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_HomeViewController.h; sourceTree = "<group>"; };
@@ -245,7 +258,6 @@
 		8341AA231E4DAB3500FDC5A4 /* yes_btn_unselect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yes_btn_unselect.png; sourceTree = "<group>"; };
 		8341AA241E4DAB3500FDC5A4 /* 头像占位图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "头像占位图.png"; sourceTree = "<group>"; };
 		8341AA251E4DAB3500FDC5A4 /* 显示.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "显示.png"; sourceTree = "<group>"; };
-		8341AA261E4DAB3500FDC5A4 /* 设置.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "设置.png"; sourceTree = "<group>"; };
 		8341AA271E4DAB3500FDC5A4 /* 隐藏.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "隐藏.png"; sourceTree = "<group>"; };
 		8341AA291E4DAB3500FDC5A4 /* first_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first_normal.png; sourceTree = "<group>"; };
 		8341AA2A1E4DAB3500FDC5A4 /* first_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first_normal@2x.png"; sourceTree = "<group>"; };
@@ -570,6 +582,7 @@
 		8386FC541E4DA7F90029E653 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8386FC571E4DA7F90029E653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8386FC591E4DA7F90029E653 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83E2D2DB1E5D32230071D9A8 /* 相册.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "相册.png"; sourceTree = "<group>"; };
 		ED2BFCE96CB7DAB98451ED2B /* Pods-OnlineRetailerFrameWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineRetailerFrameWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnlineRetailerFrameWork/Pods-OnlineRetailerFrameWork.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -585,6 +598,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		832798A21E5BFD7300930000 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				832798A31E5BFD9700930000 /* Controller */,
+				832798A41E5BFD9700930000 /* View */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
+		832798A31E5BFD9700930000 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				832798A51E5C008100930000 /* XIU_ScanQRCodeViewController.h */,
+				832798A61E5C008100930000 /* XIU_ScanQRCodeViewController.m */,
+				832798B41E5C43C100930000 /* XIU_ScanQRCodeManager.h */,
+				832798B51E5C43C100930000 /* XIU_ScanQRCodeManager.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		832798A41E5BFD9700930000 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				832798AC1E5C089000930000 /* XIU_ScanQRCodeView.h */,
+				832798AD1E5C089000930000 /* XIU_ScanQRCodeView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8341AA091E4DAB3400FDC5A4 /* Home(首页) */ = {
 			isa = PBXGroup;
 			children = (
@@ -632,10 +674,12 @@
 				8341AA221E4DAB3500FDC5A4 /* yes_btn_select.png */,
 				8341AA231E4DAB3500FDC5A4 /* yes_btn_unselect.png */,
 				8341AA241E4DAB3500FDC5A4 /* 头像占位图.png */,
+				83E2D2DB1E5D32230071D9A8 /* 相册.png */,
+				832798AA1E5C039200930000 /* 返回.png */,
 				8341ACD21E575C6700FDC5A4 /* 待发货.png */,
+				832798A01E5BF92500930000 /* 设置.png */,
 				8341ACD31E575C6700FDC5A4 /* 待收货.png */,
 				8341AA251E4DAB3500FDC5A4 /* 显示.png */,
-				8341AA261E4DAB3500FDC5A4 /* 设置.png */,
 				8341AA271E4DAB3500FDC5A4 /* 隐藏.png */,
 				8341ACC91E574FE700FDC5A4 /* 待付款.png */,
 				8341ACCA1E574FE700FDC5A4 /* 待评价.png */,
@@ -749,9 +793,10 @@
 		8341AA551E4DAB3500FDC5A4 /* MainControl */ = {
 			isa = PBXGroup;
 			children = (
+				832798A21E5BFD7300930000 /* QRCode */,
+				8341AA711E4DAB3500FDC5A4 /* SearchViewController-搜索框 */,
 				8341AA561E4DAB3500FDC5A4 /* CommodityDetails-商品详情 */,
 				8341AA6E1E4DAB3500FDC5A4 /* NavController */,
-				8341AA711E4DAB3500FDC5A4 /* SearchViewController-搜索框 */,
 				8341AA781E4DAB3500FDC5A4 /* TabBarController */,
 				8341AA7F1E4DAB3500FDC5A4 /* ViewController */,
 			);
@@ -1438,6 +1483,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832798A11E5BF92500930000 /* 设置.png in Resources */,
 				8341ABC11E4DAB3500FDC5A4 /* XIU_MyCenterUtilitiesCell.xib in Resources */,
 				8341AB6F1E4DAB3500FDC5A4 /* share_btn_inform@2x.png in Resources */,
 				8341ABA51E4DAB3500FDC5A4 /* XIU_CommodityDetialBaseProductInformationCell.xib in Resources */,
@@ -1467,8 +1513,8 @@
 				8341AB811E4DAB3500FDC5A4 /* first_selected.png in Resources */,
 				8341AB851E4DAB3500FDC5A4 /* navigationbar_background_tall.png in Resources */,
 				8341AB6A1E4DAB3500FDC5A4 /* arrow_buttom.png in Resources */,
-				8341AB7D1E4DAB3500FDC5A4 /* 设置.png in Resources */,
 				8341AB7C1E4DAB3500FDC5A4 /* 显示.png in Resources */,
+				83E2D2DC1E5D32230071D9A8 /* 相册.png in Resources */,
 				8341AB751E4DAB3500FDC5A4 /* 客服.png in Resources */,
 				8341ACD51E575C6700FDC5A4 /* 待收货.png in Resources */,
 				8341AB891E4DAB3500FDC5A4 /* second_normal@2x.png in Resources */,
@@ -1495,6 +1541,7 @@
 				8341AC3A1E4EC24A00FDC5A4 /* cart_default_bg.png in Resources */,
 				8341AB871E4DAB3500FDC5A4 /* navigationbar_search_simulator.png in Resources */,
 				8341AB7F1E4DAB3500FDC5A4 /* first_normal.png in Resources */,
+				832798AB1E5C039200930000 /* 返回.png in Resources */,
 				8341AB8A1E4DAB3500FDC5A4 /* second_selected.png in Resources */,
 				8341AC381E4EC24900FDC5A4 /* cart_cutBtn_highlight@2x.png in Resources */,
 				8341AB9A1E4DAB3500FDC5A4 /* sortedEnames.plist in Resources */,
@@ -1631,6 +1678,7 @@
 				8341ABE51E4DAB3500FDC5A4 /* NSObject+MJKeyValue.m in Sources */,
 				8341ABD31E4DAB3500FDC5A4 /* MASCompositeConstraint.m in Sources */,
 				8386FC4A1E4DA7F90029E653 /* AppDelegate.m in Sources */,
+				832798B61E5C43C100930000 /* XIU_ScanQRCodeManager.m in Sources */,
 				8341ABCD1E4DAB3500FDC5A4 /* AFSecurityPolicy.m in Sources */,
 				8341AC061E4DAB3500FDC5A4 /* UITableView+Common.m in Sources */,
 				8341AB981E4DAB3500FDC5A4 /* XIU_ResignPhoneNumberVC.m in Sources */,
@@ -1639,6 +1687,8 @@
 				8341AB941E4DAB3500FDC5A4 /* XIU_CountryCodeViewController.m in Sources */,
 				8341ABE61E4DAB3500FDC5A4 /* NSObject+MJProperty.m in Sources */,
 				8341AC571E4F390C00FDC5A4 /* XIU_ShoppingCartCell.m in Sources */,
+				832798AE1E5C089000930000 /* XIU_ScanQRCodeView.m in Sources */,
+				832798A71E5C008100930000 /* XIU_ScanQRCodeViewController.m in Sources */,
 				8341ABB01E4DAB3500FDC5A4 /* RDVTabBarController.m in Sources */,
 				8341AB9E1E4DAB3500FDC5A4 /* XIU_GraphicVerificationView.m in Sources */,
 				8341AC101E4DAB3500FDC5A4 /* SMPageControl.m in Sources */,
@@ -1768,7 +1818,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1810,7 +1860,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -20,7 +20,9 @@
 
 #import "XIU_MyCenterUserHeaderView.h"
 
-#define NAVBAR_CHANGE_POINT 50
+static NSInteger NAVBAR_CHANGE_POINT = 50;
+
+static  NSString *const NavgationBarRightImageName = @"设置";
 
 @interface XIU_MyCenterMainInterfaceVC ()<UITableViewDelegate, UITableViewDataSource,SettingMineInfoDelegate, XIU_LoginViewControllerDelegate, XIU_MyCenterUserHeaderViewDelegate>
 {
@@ -46,8 +48,8 @@
         _XIUTableViw = tableView;
         
         
-    TableView_ResignNib([XIU_MyCenterPurchaseInformationCell xiu_classNib], @"cell");
-      TableView_ResignNib([XIU_MyCenterUtilitiesCell xiu_classNib], @"cell2");
+    TableView_ResignNib([XIU_MyCenterPurchaseInformationCell xiu_classNib], XIU_MyCenterPurchaseInformationIdentifier);
+      TableView_ResignNib([XIU_MyCenterUtilitiesCell xiu_classNib], XIU_MyCenterUtilitiesIdentifier);
 
     }
     return _XIUTableViw;
@@ -67,21 +69,10 @@
     navBarHairlineImageView = [self findHairlineImageViewUnder:self.navigationController.navigationBar];
     [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor clearColor]];
     
-    [self createNavgationRightButton];
+    [self createNavgationButtonWithImageNmae:NavgationBarRightImageName title:nil target:self action:@selector(chickedNavSettingButton) type:UINavigationItem_Type_RightItem];
 
 }
 
-- (void)createNavgationRightButton {
-    UIButton *right = [UIButton buttonWithType:UIButtonTypeCustom];
-    
-    [right setImage:[UIImage imageNamed:@"设置"] forState:UIControlStateNormal];
-    
-    right.frame = CGRectMake(0, 0, 25, 25);
-    [right addTarget:self action:@selector(chickedNavSettingButton) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIBarButtonItem *leftSettingItem = [[UIBarButtonItem alloc]initWithCustomView:right];
-    self.navigationItem.rightBarButtonItem = leftSettingItem;
-}
 
 #pragma mark setting
 - (void)chickedNavSettingButton {
@@ -150,10 +141,10 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        XIU_MyCenterPurchaseInformationCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+        XIU_MyCenterPurchaseInformationCell *cell = [tableView dequeueReusableCellWithIdentifier:XIU_MyCenterPurchaseInformationIdentifier];
         return cell;
     }
-        XIU_MyCenterUtilitiesCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell2"];
+        XIU_MyCenterUtilitiesCell *cell = [tableView dequeueReusableCellWithIdentifier:XIU_MyCenterUtilitiesIdentifier];
         return cell;
 
 }

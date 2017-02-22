@@ -12,14 +12,12 @@
 
 
 //-------------网络参数设置----------------
+//#define patchUpdateURL =@"http://112.74.28.179:8080/Chislim/apk/demo.js"
 
 static NSString *const patchUpdateURL = @"http://112.74.28.179:8080/Chislim/apk/demo.js";
 
 static NSString *const KBASEURL = @"http://112.74.28.179:8080/Chislim/";
 //-------------网络参数设置----------------
-
-
-
 
 //------------屏幕尺寸---------------
 
@@ -29,9 +27,11 @@ static NSString *const KBASEURL = @"http://112.74.28.179:8080/Chislim/";
 //屏幕宽
 #define KWIDTH [UIScreen mainScreen].bounds.size.width
 
+#define SCREEN_BOUNDS   [UIScreen mainScreen].bounds
+#define SCREEN_SIZE     [UIScreen mainScreen].bounds.size
 
-static NSInteger  NaigationBarHeight = 64;
-static NSInteger  TabBarHeight = 44;
+static NSInteger const  NaigationBarHeight = 64;
+static NSInteger const  TabBarHeight = 44;
 
 //------------屏幕尺寸---------------
 
@@ -43,8 +43,9 @@ static NSInteger  TabBarHeight = 44;
 
 //TableView—Frame
 #define UITableView_CGRect CGRectMake(0, 0, KWIDTH, KHEIGHT)
-#define kPaddingLeftWidth 15.0
-#define kLoginPaddingLeftWidth 18.0
+
+static CGFloat const kPaddingLeftWidth = 15.0f;
+static CGFloat const kLoginPaddingLeftWidth = 18.0f;
 
 
 //TableView-加载xib
@@ -54,8 +55,8 @@ static NSInteger  TabBarHeight = 44;
 
 //------------TableView设置---------------
 
-
-
+//登录模块按钮宽度
+static CGFloat const LAND_CONTORL_HEIGHT = 50.f;
 
 
 
@@ -63,7 +64,6 @@ static NSInteger  TabBarHeight = 44;
 //------------系统---------------
 
 //重写NSLog,Debug模式下打印日志和当前行数
-#define kKeyWindow [UIApplication sharedApplication].keyWindow
 
 #ifdef DEBUG
 #define NSLog(s, ... ) NSLog( @"[%@ in line %d]=>>%@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
@@ -108,25 +108,20 @@ static NSInteger  TabBarHeight = 44;
 //----------------------
 
 
-//登录模块按钮宽度
-#define LAND_CONTORL_HEIGHT 50
+
 
 #endif /* PrefixHeader_pch */
 
 
 //-------------UM--------------
-#define USHARE_APPKEY @""
+static const NSString *const USHARE_APPKEY = @"";
+static const NSString *const XIU_Social_WX_ID = @"";
+static const NSString *const XIU_Social_WX_Secret = @"";
+static const NSString *const XIU_Social_QQ_ID = @"";
+static const NSString *const XIU_Social_QQ_Secret = @"";
+static const NSString *const XIU_Social_Sina_Select = @"";
+static const NSString *const XIU_Social_Sina_ID = @"";
+static const NSString *const XIU_Social_RedirectURL = @"";
 
-//Social Data
-#define XIU_Social_WX_ID @""
-#define XIU_Social_WX_Secret @""
-
-#define XIU_Social_QQ_ID  @""
-#define XIU_Social_QQ_Secret @""
-
-#define XIU_Social_Sina_Select @""
-#define XIU_Social_Sina_ID @""
-
-#define XIU_Social_RedirectURL @""
 //-------------UM--------------
 
