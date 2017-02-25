@@ -31,7 +31,8 @@
     [super awakeFromNib];
     // Initialization code
     [self createBottomLine];
-//    _diliveryDistrabtionAddressLab.font
+    
+    
 
 }
 

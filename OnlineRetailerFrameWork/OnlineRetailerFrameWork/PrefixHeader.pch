@@ -10,7 +10,7 @@
 #import "FileGlobalReference.h"
 
 
-
+static NSInteger HUDProgress_Time = 1;
 //-------------网络参数设置----------------
 //#define patchUpdateURL =@"http://112.74.28.179:8080/Chislim/apk/demo.js"
 
@@ -26,6 +26,8 @@ static NSString *const KBASEURL = @"http://112.74.28.179:8080/Chislim/";
 
 //屏幕宽
 #define KWIDTH [UIScreen mainScreen].bounds.size.width
+
+#define FULLRECT CGRectMake(0, 0, KWIDTH, KHEIGHT)
 
 #define SCREEN_BOUNDS   [UIScreen mainScreen].bounds
 #define SCREEN_SIZE     [UIScreen mainScreen].bounds.size

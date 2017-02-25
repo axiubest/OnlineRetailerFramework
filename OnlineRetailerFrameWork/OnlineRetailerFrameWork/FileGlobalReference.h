@@ -11,6 +11,7 @@
 
 
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "MBProgressHUD.h"
 #import "XIU_ViewController.h"
 #import "XIU_NetAPIManager.h"
 #import "XIU_BaseNavgationController.h"
@@ -23,6 +24,7 @@
 #import "XIU_Login.h"
 
 //------------------------
+#import "UITableViewCell+Common.h"
 #import "NSString+TextField.h"
 #import "NSObject+Common.h"
 #import "UIColor+Hex.h"

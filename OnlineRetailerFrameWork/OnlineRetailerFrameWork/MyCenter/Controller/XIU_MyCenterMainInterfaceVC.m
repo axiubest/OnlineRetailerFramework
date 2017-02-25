@@ -44,7 +44,8 @@ static  NSString *const NavgationBarRightImageName = @"设置";
         tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         tableView.delegate = self;
         tableView.dataSource = self;
-        tableView.backgroundColor = [UIColor xiu_666color];
+        tableView.sectionHeaderHeight = 0.00001;
+        tableView.backgroundColor = [UIColor xiu_tableViewSectionBackgroundColor];
         [self.view addSubview:tableView];
         _XIUTableViw = tableView;
         
@@ -131,14 +132,14 @@ static  NSString *const NavgationBarRightImageName = @"设置";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 10;
+    return 0;
 }
 
+
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {
-        return 100;
-    }
-    return 220;
+
+   return  indexPath.section == 0 ? 100 : 220;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {

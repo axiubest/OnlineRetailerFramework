@@ -7,12 +7,14 @@
 //
 
 #import "XIU_DeliveryAddressViewController.h"
+#import "XIU_DeliverAddressEditViewController.h"
 #import "XIU_DeliveryAddressListCell.h"
+
 @interface XIU_DeliveryAddressViewController ()<UITableViewDelegate, UITableViewDataSource, XIU_DeliveryAddressListCellDelegate>
 {
     XIU_DeliveryAddressListCell *_cell;
 }
-@property (weak, nonatomic) IBOutlet UILabel *bottomAddNewAddressButton;
+
 
 @property (weak, nonatomic) IBOutlet UITableView *XIUTableView;
 @end
@@ -23,8 +25,13 @@
     [super viewDidLoad];
     
     _XIUTableView.tableHeaderView.frame = CGRectZero;
-}
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.navigationItem.title = @"收货地址";
 
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 0.00001;
+}
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 10;
 }
@@ -53,12 +60,26 @@
 }
 
 
+- (IBAction)bottomAddNewAddressButton:(id)sender {
+    //添加地址按钮点击传入空模型进入新建地址
+    [self pushXIU_DeliverAddressEditViewControllerWithModel:nil];
+}
+
 #pragma maek XIU_DeliveryAddressListCellDelegate
 - (void)deleteFunc {
     
 }
 
 - (void)editFunc {
+    //编辑状体下传入模型进入新建地址
+    [self pushXIU_DeliverAddressEditViewControllerWithModel:@"1"];
+}
+
+- (void)pushXIU_DeliverAddressEditViewControllerWithModel:(NSString *)model {
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:XIU_DeliverAddressEditID bundle:nil];
     
+    XIU_DeliverAddressEditViewController *deliverAddress= [mainStoryBoard instantiateViewControllerWithIdentifier:XIU_DeliverAddressEditID];
+    deliverAddress.model = model;
+    [self.navigationController pushViewController:deliverAddress animated:YES];
 }
 @end

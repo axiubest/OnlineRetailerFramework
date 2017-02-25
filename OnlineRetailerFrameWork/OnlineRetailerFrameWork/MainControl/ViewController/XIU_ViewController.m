@@ -123,6 +123,19 @@
         }else if (navigationItem_Type == UINavigationItem_Type_RightItem) {
             self.navigationItem.rightBarButtonItem = Item;
         }
+    }else if (imageName == nil) {
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        
+        [button setTitle:title forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        button.frame = CGRectMake(0, 0, 40, 25);
+        [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+        UIBarButtonItem *Item = [[UIBarButtonItem alloc]initWithCustomView:button];
+        if (navigationItem_Type == UINavigationItem_Type_LeftItem) {
+            self.navigationItem.leftBarButtonItem = Item;
+        }else if (navigationItem_Type == UINavigationItem_Type_RightItem) {
+            self.navigationItem.rightBarButtonItem = Item;
+        }
     }else {
         UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(-5, -5, 30, 30)];
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -161,7 +174,13 @@
 }
 
 
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self setEditing:NO];
+}
 
+-(void)dealloc {
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
 
 - (void)createNavgationButtonOfLeftWithImageNmae:(NSString *)imageName target:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents {
     

@@ -219,6 +219,13 @@
 		8386FC531E4DA7F90029E653 /* OnlineRetailerFrameWork.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8386FC511E4DA7F90029E653 /* OnlineRetailerFrameWork.xcdatamodeld */; };
 		8386FC551E4DA7F90029E653 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8386FC541E4DA7F90029E653 /* Assets.xcassets */; };
 		8386FC581E4DA7F90029E653 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8386FC561E4DA7F90029E653 /* LaunchScreen.storyboard */; };
+		83AB9FF21E5E73BF00F9B529 /* XIU_DeliveryAddressEditInformationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AB9FF11E5E73BF00F9B529 /* XIU_DeliveryAddressEditInformationCell.m */; };
+		83AB9FF51E5E744000F9B529 /* XIU_DeliveryAddressEditLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AB9FF41E5E744000F9B529 /* XIU_DeliveryAddressEditLocationCell.m */; };
+		83AB9FF81E5E750E00F9B529 /* XIU_DeliveryAddressEditDestribtionLocCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AB9FF71E5E750E00F9B529 /* XIU_DeliveryAddressEditDestribtionLocCell.m */; };
+		83AB9FFA1E5E8C5600F9B529 /* 下一步.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AB9FF91E5E8C5600F9B529 /* 下一步.png */; };
+		83AB9FFD1E5EE74C00F9B529 /* XIU_DeliveryAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AB9FFC1E5EE74C00F9B529 /* XIU_DeliveryAddressPickerView.m */; };
+		83ABA0081E60170B00F9B529 /* Address.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83ABA0071E60170B00F9B529 /* Address.plist */; };
+		83ABA00B1E611E3D00F9B529 /* UITableViewCell+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ABA00A1E611E3D00F9B529 /* UITableViewCell+Common.m */; };
 		83E2D2DC1E5D32230071D9A8 /* 相册.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E2D2DB1E5D32230071D9A8 /* 相册.png */; };
 		83E2D2E01E5D40620071D9A8 /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E2D2DF1E5D40620071D9A8 /* UMMobClick.framework */; };
 		83E2D2E21E5D40780071D9A8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E2D2E11E5D40780071D9A8 /* CoreTelephony.framework */; };
@@ -592,6 +599,18 @@
 		8386FC541E4DA7F90029E653 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8386FC571E4DA7F90029E653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8386FC591E4DA7F90029E653 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83AB9FF01E5E73BF00F9B529 /* XIU_DeliveryAddressEditInformationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_DeliveryAddressEditInformationCell.h; sourceTree = "<group>"; };
+		83AB9FF11E5E73BF00F9B529 /* XIU_DeliveryAddressEditInformationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_DeliveryAddressEditInformationCell.m; sourceTree = "<group>"; };
+		83AB9FF31E5E744000F9B529 /* XIU_DeliveryAddressEditLocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_DeliveryAddressEditLocationCell.h; sourceTree = "<group>"; };
+		83AB9FF41E5E744000F9B529 /* XIU_DeliveryAddressEditLocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_DeliveryAddressEditLocationCell.m; sourceTree = "<group>"; };
+		83AB9FF61E5E750E00F9B529 /* XIU_DeliveryAddressEditDestribtionLocCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_DeliveryAddressEditDestribtionLocCell.h; sourceTree = "<group>"; };
+		83AB9FF71E5E750E00F9B529 /* XIU_DeliveryAddressEditDestribtionLocCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_DeliveryAddressEditDestribtionLocCell.m; sourceTree = "<group>"; };
+		83AB9FF91E5E8C5600F9B529 /* 下一步.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "下一步.png"; sourceTree = "<group>"; };
+		83AB9FFB1E5EE74C00F9B529 /* XIU_DeliveryAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_DeliveryAddressPickerView.h; sourceTree = "<group>"; };
+		83AB9FFC1E5EE74C00F9B529 /* XIU_DeliveryAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_DeliveryAddressPickerView.m; sourceTree = "<group>"; };
+		83ABA0071E60170B00F9B529 /* Address.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Address.plist; sourceTree = "<group>"; };
+		83ABA0091E611E3D00F9B529 /* UITableViewCell+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Common.h"; sourceTree = "<group>"; };
+		83ABA00A1E611E3D00F9B529 /* UITableViewCell+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Common.m"; sourceTree = "<group>"; };
 		83E2D2DB1E5D32230071D9A8 /* 相册.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "相册.png"; sourceTree = "<group>"; };
 		83E2D2DF1E5D40620071D9A8 /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMMobClick.framework; path = Pods/UMengAnalytics/umsdk_IOS_analyics_idfa_v4.2.4/UMMobClick.framework; sourceTree = "<group>"; };
 		83E2D2E11E5D40780071D9A8 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -702,6 +721,7 @@
 				8341AA231E4DAB3500FDC5A4 /* yes_btn_unselect.png */,
 				8341AA241E4DAB3500FDC5A4 /* 头像占位图.png */,
 				83E2D2F01E5D925A0071D9A8 /* 编辑.png */,
+				83AB9FF91E5E8C5600F9B529 /* 下一步.png */,
 				83E2D2DB1E5D32230071D9A8 /* 相册.png */,
 				832798AA1E5C039200930000 /* 返回.png */,
 				8341ACD21E575C6700FDC5A4 /* 待发货.png */,
@@ -1315,6 +1335,8 @@
 				8341AB461E4DAB3500FDC5A4 /* UIColor+Hex.m */,
 				8341AB471E4DAB3500FDC5A4 /* UINavigationBar+Awesome.h */,
 				8341AB481E4DAB3500FDC5A4 /* UINavigationBar+Awesome.m */,
+				83ABA0091E611E3D00F9B529 /* UITableViewCell+Common.h */,
+				83ABA00A1E611E3D00F9B529 /* UITableViewCell+Common.m */,
 				8341AB491E4DAB3500FDC5A4 /* UITableView+Common.h */,
 				8341AB4A1E4DAB3500FDC5A4 /* UITableView+Common.m */,
 				8341AB4B1E4DAB3500FDC5A4 /* UIView+Common.h */,
@@ -1418,6 +1440,7 @@
 		8386FC451E4DA7F90029E653 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				83ABA0071E60170B00F9B529 /* Address.plist */,
 				8386FC4B1E4DA7F90029E653 /* ViewController.h */,
 				8386FC4C1E4DA7F90029E653 /* ViewController.m */,
 				8386FC4E1E4DA7F90029E653 /* Main.storyboard */,
@@ -1468,6 +1491,14 @@
 			children = (
 				83E2D2F21E5D94BB0071D9A8 /* XIU_DeliveryAddressListCell.h */,
 				83E2D2F31E5D94BB0071D9A8 /* XIU_DeliveryAddressListCell.m */,
+				83AB9FF01E5E73BF00F9B529 /* XIU_DeliveryAddressEditInformationCell.h */,
+				83AB9FF11E5E73BF00F9B529 /* XIU_DeliveryAddressEditInformationCell.m */,
+				83AB9FF31E5E744000F9B529 /* XIU_DeliveryAddressEditLocationCell.h */,
+				83AB9FF41E5E744000F9B529 /* XIU_DeliveryAddressEditLocationCell.m */,
+				83AB9FF61E5E750E00F9B529 /* XIU_DeliveryAddressEditDestribtionLocCell.h */,
+				83AB9FF71E5E750E00F9B529 /* XIU_DeliveryAddressEditDestribtionLocCell.m */,
+				83AB9FFB1E5EE74C00F9B529 /* XIU_DeliveryAddressPickerView.h */,
+				83AB9FFC1E5EE74C00F9B529 /* XIU_DeliveryAddressPickerView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1562,6 +1593,7 @@
 				8341ABA51E4DAB3500FDC5A4 /* XIU_CommodityDetialBaseProductInformationCell.xib in Resources */,
 				8341AB8F1E4DAB3500FDC5A4 /* tabbar_selected_background@2x.png in Resources */,
 				8341ACDC1E57D98600FDC5A4 /* 收货地址.png in Resources */,
+				83ABA0081E60170B00F9B529 /* Address.plist in Resources */,
 				8341AB861E4DAB3500FDC5A4 /* navigationbar_background_tall@2x.png in Resources */,
 				8341AB791E4DAB3500FDC5A4 /* yes_btn_select.png in Resources */,
 				8341ABBD1E4DAB3500FDC5A4 /* XIU_MyCenterPurchaseInformationCell.xib in Resources */,
@@ -1579,6 +1611,7 @@
 				8341AB841E4DAB3500FDC5A4 /* navigationbar_background@2x.png in Resources */,
 				8341AB831E4DAB3500FDC5A4 /* navigationbar_background.png in Resources */,
 				8341ACE11E57D98600FDC5A4 /* goods.png in Resources */,
+				83AB9FFA1E5E8C5600F9B529 /* 下一步.png in Resources */,
 				8341AB971E4DAB3500FDC5A4 /* XIU_LoginViewController.xib in Resources */,
 				8341AB991E4DAB3500FDC5A4 /* sortedChnames.plist in Resources */,
 				8341ACCE1E574FE700FDC5A4 /* 待付款.png in Resources */,
@@ -1706,6 +1739,7 @@
 				8341ABB41E4DAB3500FDC5A4 /* XIU_WebViewController.m in Sources */,
 				83E2D2F41E5D94BB0071D9A8 /* XIU_DeliveryAddressListCell.m in Sources */,
 				8341AC141E4DAB3500FDC5A4 /* XIU_ShareView.m in Sources */,
+				83AB9FF81E5E750E00F9B529 /* XIU_DeliveryAddressEditDestribtionLocCell.m in Sources */,
 				8341ABC61E4DAB3500FDC5A4 /* ActionSheetDistancePicker.m in Sources */,
 				8341ABDB1E4DAB3500FDC5A4 /* View+MASAdditions.m in Sources */,
 				8341AB961E4DAB3500FDC5A4 /* XIU_LoginViewController.m in Sources */,
@@ -1768,9 +1802,11 @@
 				832798A71E5C008100930000 /* XIU_ScanQRCodeViewController.m in Sources */,
 				8341ABB01E4DAB3500FDC5A4 /* RDVTabBarController.m in Sources */,
 				8341AB9E1E4DAB3500FDC5A4 /* XIU_GraphicVerificationView.m in Sources */,
+				83AB9FF21E5E73BF00F9B529 /* XIU_DeliveryAddressEditInformationCell.m in Sources */,
 				8341AC101E4DAB3500FDC5A4 /* SMPageControl.m in Sources */,
 				8341ABFD1E4DAB3500FDC5A4 /* NSObject+Cache.m in Sources */,
 				8341ABF71E4DAB3500FDC5A4 /* UIView+WebCacheOperation.m in Sources */,
+				83ABA00B1E611E3D00F9B529 /* UITableViewCell+Common.m in Sources */,
 				8341ABF31E4DAB3500FDC5A4 /* UIImage+MultiFormat.m in Sources */,
 				8341ABA21E4DAB3500FDC5A4 /* XIU_AddShoppingCartPopView.m in Sources */,
 				8341ABF51E4DAB3500FDC5A4 /* UIImageView+HighlightedWebCache.m in Sources */,
@@ -1787,6 +1823,7 @@
 				8341ABDA1E4DAB3500FDC5A4 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				8341ABBC1E4DAB3500FDC5A4 /* XIU_MyCenterPurchaseInformationCell.m in Sources */,
 				8341ABD11E4DAB3500FDC5A4 /* UIGestureRecognizer+BlocksKit.m in Sources */,
+				83AB9FFD1E5EE74C00F9B529 /* XIU_DeliveryAddressPickerView.m in Sources */,
 				8341ABFE1E4DAB3500FDC5A4 /* NSObject+Common.m in Sources */,
 				8341AC121E4DAB3500FDC5A4 /* XIU_NetWorkReachability.m in Sources */,
 				8341ABCB1E4DAB3500FDC5A4 /* AFHTTPSessionManager.m in Sources */,
@@ -1806,6 +1843,7 @@
 				83E2D2ED1E5D8DA80071D9A8 /* XIU_DeliveryAddressViewController.m in Sources */,
 				8341ABD61E4DAB3500FDC5A4 /* MASLayoutConstraint.m in Sources */,
 				8341AC051E4DAB3500FDC5A4 /* UINavigationBar+Awesome.m in Sources */,
+				83AB9FF51E5E744000F9B529 /* XIU_DeliveryAddressEditLocationCell.m in Sources */,
 				8341ABE01E4DAB3500FDC5A4 /* MJProperty.m in Sources */,
 				8341ABA11E4DAB3500FDC5A4 /* UIImageEffects.m in Sources */,
 				8341AC001E4DAB3500FDC5A4 /* NSString+TextField.m in Sources */,
