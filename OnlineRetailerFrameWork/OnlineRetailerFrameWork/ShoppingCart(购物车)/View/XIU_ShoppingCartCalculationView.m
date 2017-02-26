@@ -7,7 +7,6 @@
 //
 
 #import "XIU_ShoppingCartCalculationView.h"
-#import "NSString+Common.h"
 
 static NSString *Bottom_UnSelectButtonString = @"cart_unSelect_btn";
 static NSString *Bottom_SelectButtonString = @"cart_selected_btn";

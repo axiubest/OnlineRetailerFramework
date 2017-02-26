@@ -14,8 +14,7 @@
 -(instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.layer.masksToBounds = 1;
-        self.layer.cornerRadius = 3;
+        [self setCornerRadius:3.f];
         self.backgroundColor = [UIColor redColor];
         UIImageView *searchImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navigationbar_search_simulator"]];
         [self addSubview:searchImage];

@@ -32,14 +32,7 @@
     [self.navigationController pushViewController:[[XIU_ScanQRCodeViewController alloc] init] animated:YES];
 }
 - (void)createNavgationSearchBar {
-
-    XIU_SearchBarSimulationView *searchBarView = [[XIU_SearchBarSimulationView alloc] initWithFrame:CGRectMake(60, 7, KWIDTH - 2 * 60 , 30)];
-    [searchBarView bk_whenTapped:^{
-        __weak typeof (self) weakSelf = self;
-        [weakSelf.navigationController pushViewController:[[XIU_SearchBarViewController alloc] init] animated:YES];
-    }];
-    self.navigationItem.titleView = searchBarView;
-    
+    [self createSimulationSearchBar];
 }
 
 - (void)didReceiveMemoryWarning {

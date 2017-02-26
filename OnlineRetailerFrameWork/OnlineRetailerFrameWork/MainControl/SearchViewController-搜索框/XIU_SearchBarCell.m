@@ -9,15 +9,18 @@
 #import "XIU_SearchBarCell.h"
 #import "Masonry.h"
 
+
 #define SIZE_MAGRIN_ITEM 12
+
+
 @implementation XIU_SearchBarCell
 
 
--(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier AndDataArray:(NSArray <SearchBarModel *>*)array {
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier AndDataArray:(NSMutableArray *)array {
   self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         
-        XIU_HistorySearch *search = [[XIU_HistorySearch alloc] initWithFrame:CGRectMake(0, 8, self.frame.size.width, 40) WithTitleName:@"最近搜索"];
+        XIU_HistorySearch *search = [[XIU_HistorySearch alloc] initWithFrame:CGRectMake(0, 8, KWIDTH, 40) WithTitleName:@"最近搜索"];
         [self.contentView addSubview:search];
         
         
@@ -25,7 +28,7 @@
         x = margin;
         for(int i=0;i<array.count;i++){
             
-            NSString *str = [array[i] title];
+            NSString *str = array[i];
             
             NSDictionary *attrs = @{NSFontAttributeName : [UIFont boldSystemFontOfSize:13.f]};
             CGSize size=[str sizeWithAttributes:attrs];
@@ -38,7 +41,7 @@
                 x = margin+total;
                 total += size.width + SIZE_MAGRIN_ITEM + margin;
             }
-            XIU_ButtonItem *item = [[XIU_ButtonItem alloc] initWithFrame:CGRectMake(x, y, size.width + SIZE_MAGRIN_ITEM * 2, 23) WithModel:array[i]];
+            XIU_ButtonItem *item = [[XIU_ButtonItem alloc] initWithFrame:CGRectMake(x, y, size.width + SIZE_MAGRIN_ITEM * 2, 23) WithString:array[i]];
             UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(chickedButtonWithModel:)];
             [self addGestureRecognizer:tap];
             
@@ -52,8 +55,8 @@
     return self;
 }
 
-- (void)chickedButtonWithModel:(SearchBarModel *)model {
-    [_XIUDelegate searchBarCell:model];
+- (void)chickedButtonWithModel:(NSString *)keyword {
+    [_XIUDelegate searchBarCellWithKeyword:keyword];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -70,16 +73,16 @@
 #pragma mark--------------------------------------------
 @implementation XIU_ButtonItem
 
--(instancetype)initWithFrame:(CGRect)frame WithModel:(SearchBarModel *)model {
+-(instancetype)initWithFrame:(CGRect)frame WithString:(NSString *)string {
     
     self = [super initWithFrame:frame];
     if (self) {
-        self.layer.masksToBounds = YES;
-        self.layer.cornerRadius = 10;
-        self.backgroundColor = [UIColor lightGrayColor];
+        
+        [self setCornerRadius:3];
+        self.backgroundColor = [UIColor xiu_tableViewSectionBackgroundColor];
         UILabel *textLab = [[UILabel alloc] initWithFrame:CGRectMake(SIZE_MAGRIN_ITEM, 0, frame.size.width - SIZE_MAGRIN_ITEM * 2, frame.size.height)];
         textLab.font = [UIFont systemFontOfSize:13.f];
-        textLab.text = model.title;
+        textLab.text = string;
         textLab.lineBreakMode = NSLineBreakByTruncatingMiddle;
         [self addSubview:textLab];
     }
@@ -104,9 +107,17 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-        UIImageView *img = [[UIImageView alloc] init];
-        img.backgroundColor = [UIColor redColor];
+        UIImageView *img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"放大镜"]];
+
         [self addSubview:img];
+        
+        UIImageView *trushImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"垃圾箱"]];
+        [trushImageView setUserInteractionEnabled:YES];
+        [trushImageView bk_whenTapped:^{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"确定要清除历史记录吗？" message:nil delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+            [alert show];
+        }];
+        [self addSubview:trushImageView];
         
         UILabel *titleLab = [[UILabel alloc] init];
         titleLab.text = titleName;
@@ -126,6 +137,12 @@
             make.centerY.equalTo(img.mas_centerY);
         }];
         
+        [trushImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(self).with.offset(-20);
+            make.size.mas_equalTo(CGSizeMake(18, 18));
+            make.centerY.equalTo(self);
+        }];
+        
         if ([titleName isEqualToString:@"最近搜索"]) {
             
         }
@@ -133,6 +150,15 @@
     return self;
 }
 
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    if (buttonIndex == 1) {
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:history_search];
+        
+        [[NSNotificationCenter defaultCenter]postNotification: [NSNotification notificationWithName:@"DeleteAllHistorySearchNotification" object:nil userInfo:nil]];
+    }
+}
 @end
 
 

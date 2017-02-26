@@ -13,9 +13,6 @@
 #import "XIU_GetVerificationCodeVC.h"
 
 #import "XIU_GraphicVerificationView.h"
-
-
-#import "NSString+TextField.h"
 @interface XIU_ResignPhoneNumberVC ()
 
 

@@ -14,6 +14,10 @@ static NSInteger HUDProgress_Time = 1;
 //-------------网络参数设置----------------
 //#define patchUpdateURL =@"http://112.74.28.179:8080/Chislim/apk/demo.js"
 
+//搜索记录plist参数
+static NSString * const history_search = @"history_search";
+
+
 static NSString *const patchUpdateURL = @"http://112.74.28.179:8080/Chislim/apk/demo.js";
 
 static NSString *const KBASEURL = @"http://112.74.28.179:8080/Chislim/";
@@ -33,7 +37,7 @@ static NSString *const KBASEURL = @"http://112.74.28.179:8080/Chislim/";
 #define SCREEN_SIZE     [UIScreen mainScreen].bounds.size
 
 static NSInteger const  NaigationBarHeight = 64;
-static NSInteger const  TabBarHeight = 44;
+static NSInteger const  TabBarHeight = 50;
 
 //------------屏幕尺寸---------------
 

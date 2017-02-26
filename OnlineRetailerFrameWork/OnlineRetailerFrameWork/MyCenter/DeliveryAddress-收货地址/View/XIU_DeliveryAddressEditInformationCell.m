@@ -7,8 +7,6 @@
 //
 
 #import "XIU_DeliveryAddressEditInformationCell.h"
-#import "NSString+TextField.h"
-
 
 static NSString * const recipientInfo_tooShort = @"收货人姓名至少2个字符";
 static NSString * const recipientInfo_tooLong = @"收货人姓名小于15个字符";

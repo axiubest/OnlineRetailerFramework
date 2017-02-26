@@ -12,7 +12,6 @@
 #import "XIU_ShoppingCart_GoodsModel.h"
 #import "XIU_ShoppingCartHeaderView.h"
 #import "XIU_ShoppingCartCalculationView.h"
-#import "NSString+Common.h"
 #import "XIU_ShoppingCartEmptyView.h"
 
 #import "XIU_CommodityDetailBaseController.h"
@@ -80,15 +79,15 @@ static NSInteger CartRowHeight = 100;
     
     [super viewWillAppear:animated];
 
-    if (self.selectedArray.count > 0) {
-        for (XIU_ShoppingCart_GoodsModel *model in self.selectedArray) {
-            model.select = NO;//这个其实有点多余,提交订单后的数据源不会包含这些,保险起见,加上了
-        }
-        [self.selectedArray removeAllObjects];
-    }
-    
-    _allSellectedButton.selected = NO;
-    _totlePriceLabel.attributedText = [NSString SetStringOfShoppingCartPriceString:@"￥0.00"];
+//    if (self.selectedArray.count > 0) {
+//        for (XIU_ShoppingCart_GoodsModel *model in self.selectedArray) {
+//            model.select = NO;//这个其实有点多余,提交订单后的数据源不会包含这些,保险起见,加上了
+//        }
+//        [self.selectedArray removeAllObjects];
+//    }
+//    
+//    _allSellectedButton.selected = NO;
+//    _totlePriceLabel.attributedText = [NSString SetStringOfShoppingCartPriceString:@"￥0.00"];
 }
 
 -(void)creatData {
@@ -113,6 +112,16 @@ static NSInteger CartRowHeight = 100;
 - (void)loadData {
     [self creatData];
     [self changeView];
+    
+    if (self.selectedArray.count > 0) {
+        for (XIU_ShoppingCart_GoodsModel *model in self.selectedArray) {
+            model.select = NO;//这个其实有点多余,提交订单后的数据源不会包含这些,保险起见,加上了
+        }
+        [self.selectedArray removeAllObjects];
+    }
+    
+    _allSellectedButton.selected = NO;
+    _totlePriceLabel.attributedText = [NSString SetStringOfShoppingCartPriceString:@"￥0.00"];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -123,12 +132,12 @@ static NSInteger CartRowHeight = 100;
     [self loadData];
     
 
-    if (self.dataArray.count > 0) {
-        
-        [self setupCartView];
-    } else {
-        [self.view addSubview:self.emptyView];
-    }
+//    if (self.dataArray.count > 0) {
+//        
+//        [self setupCartView];
+//    } else {
+//        [self.view addSubview:self.emptyView];
+//    }
 }
 
 

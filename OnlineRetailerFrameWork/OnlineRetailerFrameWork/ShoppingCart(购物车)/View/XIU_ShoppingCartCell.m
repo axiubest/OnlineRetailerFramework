@@ -63,7 +63,7 @@ static CGFloat SelectButtonSize = 25;
 #pragma mark - public method
 - (void)reloadDataWithModel:(XIU_ShoppingCart_GoodsModel*)model {
     
-    self.ImageView.image = model.image;
+    self.ImageView.image = [UIImage imageNamed:model.image];
     self.nameLabel.text = model.goodsName;
     self.priceLabel.text = model.price;
     self.dateLabel.text = model.price;

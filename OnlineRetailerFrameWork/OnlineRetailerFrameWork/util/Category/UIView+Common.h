@@ -13,5 +13,8 @@
 //剪切圆形，
 - (void)doCircleFrame;
 
+//添加圆角
+- (void)setCornerRadius:(CGFloat)radius;
+
 + (UINib *)xiu_classNib;
 @end

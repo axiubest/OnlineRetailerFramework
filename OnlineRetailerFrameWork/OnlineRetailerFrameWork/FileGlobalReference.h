@@ -25,7 +25,7 @@
 
 //------------------------
 #import "UITableViewCell+Common.h"
-#import "NSString+TextField.h"
+#import "NSString+Common.h"
 #import "NSObject+Common.h"
 #import "UIColor+Hex.h"
 #import "UIView+Frame.h"

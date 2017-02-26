@@ -7,7 +7,7 @@
 //
 
 #import "XIU_DeliveryAddressListCell.h"
-#import "NSString+Common.h"
+
 @interface XIU_DeliveryAddressListCell ()<UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *deliveryPersonLab;

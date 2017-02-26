@@ -80,7 +80,6 @@
 		8341ABA91E4DAB3500FDC5A4 /* XIU_CommodityDetialBaseUserEvaluationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8341AA6B1E4DAB3500FDC5A4 /* XIU_CommodityDetialBaseUserEvaluationCell.xib */; };
 		8341ABAA1E4DAB3500FDC5A4 /* XIU_CommodityDetialSelectTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AA6D1E4DAB3500FDC5A4 /* XIU_CommodityDetialSelectTypeCell.m */; };
 		8341ABAB1E4DAB3500FDC5A4 /* XIU_BaseNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AA701E4DAB3500FDC5A4 /* XIU_BaseNavgationController.m */; };
-		8341ABAC1E4DAB3500FDC5A4 /* SearchBarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AA731E4DAB3500FDC5A4 /* SearchBarModel.m */; };
 		8341ABAD1E4DAB3500FDC5A4 /* XIU_SearchBarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AA751E4DAB3500FDC5A4 /* XIU_SearchBarCell.m */; };
 		8341ABAE1E4DAB3500FDC5A4 /* XIU_SearchBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AA771E4DAB3500FDC5A4 /* XIU_SearchBarViewController.m */; };
 		8341ABAF1E4DAB3500FDC5A4 /* RDVTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AA7A1E4DAB3500FDC5A4 /* RDVTabBar.m */; };
@@ -163,7 +162,6 @@
 		8341ABFD1E4DAB3500FDC5A4 /* NSObject+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AB381E4DAB3500FDC5A4 /* NSObject+Cache.m */; };
 		8341ABFE1E4DAB3500FDC5A4 /* NSObject+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AB3A1E4DAB3500FDC5A4 /* NSObject+Common.m */; };
 		8341ABFF1E4DAB3500FDC5A4 /* NSString+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AB3C1E4DAB3500FDC5A4 /* NSString+Encryption.m */; };
-		8341AC001E4DAB3500FDC5A4 /* NSString+TextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AB3E1E4DAB3500FDC5A4 /* NSString+TextField.m */; };
 		8341AC011E4DAB3500FDC5A4 /* NSString+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AB401E4DAB3500FDC5A4 /* NSString+Common.m */; };
 		8341AC021E4DAB3500FDC5A4 /* UIBarButtonItem+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AB421E4DAB3500FDC5A4 /* UIBarButtonItem+Common.m */; };
 		8341AC031E4DAB3500FDC5A4 /* UIColor+ColorStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AB441E4DAB3500FDC5A4 /* UIColor+ColorStyle.m */; };
@@ -226,6 +224,11 @@
 		83AB9FFD1E5EE74C00F9B529 /* XIU_DeliveryAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AB9FFC1E5EE74C00F9B529 /* XIU_DeliveryAddressPickerView.m */; };
 		83ABA0081E60170B00F9B529 /* Address.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83ABA0071E60170B00F9B529 /* Address.plist */; };
 		83ABA00B1E611E3D00F9B529 /* UITableViewCell+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ABA00A1E611E3D00F9B529 /* UITableViewCell+Common.m */; };
+		83ABA0121E61366000F9B529 /* XIU_SearchShoppingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ABA0111E61366000F9B529 /* XIU_SearchShoppingListViewController.m */; };
+		83ABA0141E6137E500F9B529 /* XIU_SearchShoppingListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83ABA0131E6137E500F9B529 /* XIU_SearchShoppingListViewController.storyboard */; };
+		83ABA0171E61401500F9B529 /* XIU_SearchShoppingListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ABA0161E61401500F9B529 /* XIU_SearchShoppingListCell.m */; };
+		83ABA0191E614BE900F9B529 /* 放大镜.png in Resources */ = {isa = PBXBuildFile; fileRef = 83ABA0181E614BE900F9B529 /* 放大镜.png */; };
+		83ABA01B1E614D5A00F9B529 /* 垃圾箱.png in Resources */ = {isa = PBXBuildFile; fileRef = 83ABA01A1E614D5A00F9B529 /* 垃圾箱.png */; };
 		83E2D2DC1E5D32230071D9A8 /* 相册.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E2D2DB1E5D32230071D9A8 /* 相册.png */; };
 		83E2D2E01E5D40620071D9A8 /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E2D2DF1E5D40620071D9A8 /* UMMobClick.framework */; };
 		83E2D2E21E5D40780071D9A8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E2D2E11E5D40780071D9A8 /* CoreTelephony.framework */; };
@@ -338,8 +341,6 @@
 		8341AA6D1E4DAB3500FDC5A4 /* XIU_CommodityDetialSelectTypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_CommodityDetialSelectTypeCell.m; sourceTree = "<group>"; };
 		8341AA6F1E4DAB3500FDC5A4 /* XIU_BaseNavgationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_BaseNavgationController.h; sourceTree = "<group>"; };
 		8341AA701E4DAB3500FDC5A4 /* XIU_BaseNavgationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_BaseNavgationController.m; sourceTree = "<group>"; };
-		8341AA721E4DAB3500FDC5A4 /* SearchBarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchBarModel.h; sourceTree = "<group>"; };
-		8341AA731E4DAB3500FDC5A4 /* SearchBarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchBarModel.m; sourceTree = "<group>"; };
 		8341AA741E4DAB3500FDC5A4 /* XIU_SearchBarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_SearchBarCell.h; sourceTree = "<group>"; };
 		8341AA751E4DAB3500FDC5A4 /* XIU_SearchBarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_SearchBarCell.m; sourceTree = "<group>"; };
 		8341AA761E4DAB3500FDC5A4 /* XIU_SearchBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_SearchBarViewController.h; sourceTree = "<group>"; };
@@ -511,8 +512,6 @@
 		8341AB3A1E4DAB3500FDC5A4 /* NSObject+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Common.m"; sourceTree = "<group>"; };
 		8341AB3B1E4DAB3500FDC5A4 /* NSString+Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Encryption.h"; sourceTree = "<group>"; };
 		8341AB3C1E4DAB3500FDC5A4 /* NSString+Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encryption.m"; sourceTree = "<group>"; };
-		8341AB3D1E4DAB3500FDC5A4 /* NSString+TextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TextField.h"; sourceTree = "<group>"; };
-		8341AB3E1E4DAB3500FDC5A4 /* NSString+TextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TextField.m"; sourceTree = "<group>"; };
 		8341AB3F1E4DAB3500FDC5A4 /* NSString+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Common.h"; sourceTree = "<group>"; };
 		8341AB401E4DAB3500FDC5A4 /* NSString+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Common.m"; sourceTree = "<group>"; };
 		8341AB411E4DAB3500FDC5A4 /* UIBarButtonItem+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Common.h"; sourceTree = "<group>"; };
@@ -611,6 +610,13 @@
 		83ABA0071E60170B00F9B529 /* Address.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Address.plist; sourceTree = "<group>"; };
 		83ABA0091E611E3D00F9B529 /* UITableViewCell+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Common.h"; sourceTree = "<group>"; };
 		83ABA00A1E611E3D00F9B529 /* UITableViewCell+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Common.m"; sourceTree = "<group>"; };
+		83ABA0101E61366000F9B529 /* XIU_SearchShoppingListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_SearchShoppingListViewController.h; sourceTree = "<group>"; };
+		83ABA0111E61366000F9B529 /* XIU_SearchShoppingListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_SearchShoppingListViewController.m; sourceTree = "<group>"; };
+		83ABA0131E6137E500F9B529 /* XIU_SearchShoppingListViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XIU_SearchShoppingListViewController.storyboard; sourceTree = "<group>"; };
+		83ABA0151E61401500F9B529 /* XIU_SearchShoppingListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_SearchShoppingListCell.h; sourceTree = "<group>"; };
+		83ABA0161E61401500F9B529 /* XIU_SearchShoppingListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_SearchShoppingListCell.m; sourceTree = "<group>"; };
+		83ABA0181E614BE900F9B529 /* 放大镜.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "放大镜.png"; sourceTree = "<group>"; };
+		83ABA01A1E614D5A00F9B529 /* 垃圾箱.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "垃圾箱.png"; sourceTree = "<group>"; };
 		83E2D2DB1E5D32230071D9A8 /* 相册.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "相册.png"; sourceTree = "<group>"; };
 		83E2D2DF1E5D40620071D9A8 /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMMobClick.framework; path = Pods/UMengAnalytics/umsdk_IOS_analyics_idfa_v4.2.4/UMMobClick.framework; sourceTree = "<group>"; };
 		83E2D2E11E5D40780071D9A8 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -720,8 +726,10 @@
 				8341AA221E4DAB3500FDC5A4 /* yes_btn_select.png */,
 				8341AA231E4DAB3500FDC5A4 /* yes_btn_unselect.png */,
 				8341AA241E4DAB3500FDC5A4 /* 头像占位图.png */,
+				83ABA01A1E614D5A00F9B529 /* 垃圾箱.png */,
 				83E2D2F01E5D925A0071D9A8 /* 编辑.png */,
 				83AB9FF91E5E8C5600F9B529 /* 下一步.png */,
+				83ABA0181E614BE900F9B529 /* 放大镜.png */,
 				83E2D2DB1E5D32230071D9A8 /* 相册.png */,
 				832798AA1E5C039200930000 /* 返回.png */,
 				8341ACD21E575C6700FDC5A4 /* 待发货.png */,
@@ -841,6 +849,7 @@
 		8341AA551E4DAB3500FDC5A4 /* MainControl */ = {
 			isa = PBXGroup;
 			children = (
+				83ABA00C1E61317000F9B529 /* SearchList-搜索列表 */,
 				832798A21E5BFD7300930000 /* QRCode */,
 				8341AA711E4DAB3500FDC5A4 /* SearchViewController-搜索框 */,
 				8341AA561E4DAB3500FDC5A4 /* CommodityDetails-商品详情 */,
@@ -914,8 +923,6 @@
 		8341AA711E4DAB3500FDC5A4 /* SearchViewController-搜索框 */ = {
 			isa = PBXGroup;
 			children = (
-				8341AA721E4DAB3500FDC5A4 /* SearchBarModel.h */,
-				8341AA731E4DAB3500FDC5A4 /* SearchBarModel.m */,
 				8341AA741E4DAB3500FDC5A4 /* XIU_SearchBarCell.h */,
 				8341AA751E4DAB3500FDC5A4 /* XIU_SearchBarCell.m */,
 				8341AA761E4DAB3500FDC5A4 /* XIU_SearchBarViewController.h */,
@@ -1323,8 +1330,6 @@
 				8341AB3A1E4DAB3500FDC5A4 /* NSObject+Common.m */,
 				8341AB3B1E4DAB3500FDC5A4 /* NSString+Encryption.h */,
 				8341AB3C1E4DAB3500FDC5A4 /* NSString+Encryption.m */,
-				8341AB3D1E4DAB3500FDC5A4 /* NSString+TextField.h */,
-				8341AB3E1E4DAB3500FDC5A4 /* NSString+TextField.m */,
 				8341AB3F1E4DAB3500FDC5A4 /* NSString+Common.h */,
 				8341AB401E4DAB3500FDC5A4 /* NSString+Common.m */,
 				8341AB411E4DAB3500FDC5A4 /* UIBarButtonItem+Common.h */,
@@ -1454,6 +1459,42 @@
 				8341AA081E4DAA3500FDC5A4 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		83ABA00C1E61317000F9B529 /* SearchList-搜索列表 */ = {
+			isa = PBXGroup;
+			children = (
+				83ABA00D1E61317000F9B529 /* Controller */,
+				83ABA00E1E61317000F9B529 /* Model */,
+				83ABA00F1E61317000F9B529 /* View */,
+			);
+			path = "SearchList-搜索列表";
+			sourceTree = "<group>";
+		};
+		83ABA00D1E61317000F9B529 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				83ABA0101E61366000F9B529 /* XIU_SearchShoppingListViewController.h */,
+				83ABA0111E61366000F9B529 /* XIU_SearchShoppingListViewController.m */,
+				83ABA0131E6137E500F9B529 /* XIU_SearchShoppingListViewController.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		83ABA00E1E61317000F9B529 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		83ABA00F1E61317000F9B529 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				83ABA0151E61401500F9B529 /* XIU_SearchShoppingListCell.h */,
+				83ABA0161E61401500F9B529 /* XIU_SearchShoppingListCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		83E2D2E71E5D8D4C0071D9A8 /* DeliveryAddress-收货地址 */ = {
@@ -1591,11 +1632,13 @@
 				8341ABC11E4DAB3500FDC5A4 /* XIU_MyCenterUtilitiesCell.xib in Resources */,
 				8341AB6F1E4DAB3500FDC5A4 /* share_btn_inform@2x.png in Resources */,
 				8341ABA51E4DAB3500FDC5A4 /* XIU_CommodityDetialBaseProductInformationCell.xib in Resources */,
+				83ABA01B1E614D5A00F9B529 /* 垃圾箱.png in Resources */,
 				8341AB8F1E4DAB3500FDC5A4 /* tabbar_selected_background@2x.png in Resources */,
 				8341ACDC1E57D98600FDC5A4 /* 收货地址.png in Resources */,
 				83ABA0081E60170B00F9B529 /* Address.plist in Resources */,
 				8341AB861E4DAB3500FDC5A4 /* navigationbar_background_tall@2x.png in Resources */,
 				8341AB791E4DAB3500FDC5A4 /* yes_btn_select.png in Resources */,
+				83ABA0141E6137E500F9B529 /* XIU_SearchShoppingListViewController.storyboard in Resources */,
 				8341ABBD1E4DAB3500FDC5A4 /* XIU_MyCenterPurchaseInformationCell.xib in Resources */,
 				8341ABA91E4DAB3500FDC5A4 /* XIU_CommodityDetialBaseUserEvaluationCell.xib in Resources */,
 				8341AB6C1E4DAB3500FDC5A4 /* land_wchat.png in Resources */,
@@ -1636,6 +1679,7 @@
 				8341AB821E4DAB3500FDC5A4 /* first_selected@2x.png in Resources */,
 				8341ACDE1E57D98600FDC5A4 /* 客户服务.png in Resources */,
 				8341AC421E4EFFBF00FDC5A4 /* cart_selected_btn.png in Resources */,
+				83ABA0191E614BE900F9B529 /* 放大镜.png in Resources */,
 				8341ACDF1E57D98600FDC5A4 /* 浏览记录.png in Resources */,
 				8341AC0A1E4DAB3500FDC5A4 /* demo.js in Resources */,
 				8341AB921E4DAB3500FDC5A4 /* third_selected.png in Resources */,
@@ -1748,6 +1792,7 @@
 				8341AB9F1E4DAB3500FDC5A4 /* XIU_CommodityDetailBaseController.m in Sources */,
 				8341ABB21E4DAB3500FDC5A4 /* XIU_HiddenTabBarController.m in Sources */,
 				8341ABD51E4DAB3500FDC5A4 /* MASConstraintMaker.m in Sources */,
+				83ABA0171E61401500F9B529 /* XIU_SearchShoppingListCell.m in Sources */,
 				8341ABBF1E4DAB3500FDC5A4 /* XIU_MyCenterUserHeaderView.m in Sources */,
 				8341ABB61E4DAB3500FDC5A4 /* XIU_MyCenterMainInterfaceVC.m in Sources */,
 				8341ABDF1E4DAB3500FDC5A4 /* MJFoundation.m in Sources */,
@@ -1761,7 +1806,6 @@
 				8341ABC91E4DAB3500FDC5A4 /* DistancePickerView.m in Sources */,
 				8341ABAD1E4DAB3500FDC5A4 /* XIU_SearchBarCell.m in Sources */,
 				8341ABAF1E4DAB3500FDC5A4 /* RDVTabBar.m in Sources */,
-				8341ABAC1E4DAB3500FDC5A4 /* SearchBarModel.m in Sources */,
 				8341AC4B1E4F389600FDC5A4 /* XIU_ShoppingCartViewController.m in Sources */,
 				8341AC0E1E4DAB3500FDC5A4 /* XIU_NetAPIManager.m in Sources */,
 				8341ABD21E4DAB3500FDC5A4 /* UIView+BlocksKit.m in Sources */,
@@ -1832,6 +1876,7 @@
 				8341ABEB1E4DAB3500FDC5A4 /* SDWebImageCompat.m in Sources */,
 				8341AC2B1E4EBDD400FDC5A4 /* XIU_ShoppingCartHeaderView.m in Sources */,
 				8341ABAA1E4DAB3500FDC5A4 /* XIU_CommodityDetialSelectTypeCell.m in Sources */,
+				83ABA0121E61366000F9B529 /* XIU_SearchShoppingListViewController.m in Sources */,
 				8386FC471E4DA7F90029E653 /* main.m in Sources */,
 				8341ABEE1E4DAB3500FDC5A4 /* SDWebImageDownloaderOperation.m in Sources */,
 				8341ABC31E4DAB3500FDC5A4 /* AbstractActionSheetPicker.m in Sources */,
@@ -1846,7 +1891,6 @@
 				83AB9FF51E5E744000F9B529 /* XIU_DeliveryAddressEditLocationCell.m in Sources */,
 				8341ABE01E4DAB3500FDC5A4 /* MJProperty.m in Sources */,
 				8341ABA11E4DAB3500FDC5A4 /* UIImageEffects.m in Sources */,
-				8341AC001E4DAB3500FDC5A4 /* NSString+TextField.m in Sources */,
 				8341ABF91E4DAB3500FDC5A4 /* NSDate+Common.m in Sources */,
 				8341AB9B1E4DAB3500FDC5A4 /* XIU_Login.m in Sources */,
 				8341AC011E4DAB3500FDC5A4 /* NSString+Common.m in Sources */,

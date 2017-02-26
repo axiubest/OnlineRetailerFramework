@@ -7,15 +7,15 @@
 //
 
 #define SIZE_MAGRIN_ITEM 12
-
+static NSInteger historySearchCount = 10;
 
 
 #import "XIU_SearchBarViewController.h"
 #import "XIU_SearchBarCell.h"
-#import "Masonry.h"
-#import "SearchBarModel.h"
+#import "XIU_SearchShoppingListViewController.h"
 
-@interface XIU_SearchBarViewController ()<UITableViewDelegate, UITableViewDataSource, SearchBarCellDelegate>
+
+@interface XIU_SearchBarViewController ()<UITableViewDelegate, UITableViewDataSource, SearchBarCellDelegate, UISearchBarDelegate>
 
 @property (nonatomic, weak)UITableView *XIUTableView;
 @property (nonatomic, weak)UISearchBar *searchBar;
@@ -25,24 +25,10 @@
 
 @implementation XIU_SearchBarViewController
 
-
 - (NSMutableArray *)dataSource {
-    if (!_dataSource) {
-        _dataSource = [NSMutableArray array];
-        for (int i = 0; i < 30; i++) {
-            SearchBarModel *model = [[SearchBarModel alloc] init];
-            
-            model.title = [NSString stringWithFormat:@"dfdfdf"];
-            if (i == 3) {
-                model.title = @"jjohj;ohjohjohjjopihjhoioohiphoihohio;lhgfdsdfghjkdxsdfghjppppppppppppp";
-            }if (i == 2) {
-                model.title = @"12344jdsfdsdghjkgfgfdjgkdfghfjgkjfhdgfhfjgkhjfgdhfghjgkhgfgdhfgfjgkjfgdhfgdhjghfhfgjfjsdjf5";
-            }
+        
+        return  [[NSUserDefaults standardUserDefaults]objectForKey:history_search];
 
-            [_dataSource addObject:model];
-        }
-    }
-    return _dataSource;
 }
 
 -(UITableView *)XIUTableView {
@@ -61,28 +47,31 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
+    NSNotificationCenter * center = [NSNotificationCenter defaultCenter];
+    
+    [center addObserver:self selector:@selector(DeleteAllHistorySearch:) name:@"DeleteAllHistorySearchNotification" object:nil];
+    
     [self XIUTableView];
     [self createNavgationSearchBar];
     [self createChanelButton];
 }
 
-- (void)createChanelButton {
-    UIButton *chanel = [[UIButton alloc] initWithFrame:CGRectMake(20, 0, 30, 20)];
-    [chanel setTitle:@"取消" forState:UIControlStateNormal];
-    chanel.titleLabel.font = [UIFont systemFontOfSize:14];
-    [chanel setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [chanel addTarget:self action:@selector(cancelDidClick) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:chanel];
-    self.navigationItem.rightBarButtonItem = item;
 
+- (void)DeleteAllHistorySearch:(NSNotification *)notificaton {
+    [self.XIUTableView reloadData];
+}
+- (void)createChanelButton {
+    
+    [self createNavgationButtonWithImageNmae:nil title:@"取消" target:self action:@selector(cancelDidClick) type:UINavigationItem_Type_RightItem];
 }
 
 - (void)createNavgationSearchBar {
     
     UIView *searchBarView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width - 140, 30)];
     searchBarView.backgroundColor  =[UIColor whiteColor];
-    UISearchBar *search = [[UISearchBar alloc] initWithFrame:searchBarView.frame];
+
+    UISearchBar *search = [[UISearchBar alloc] init];
+    search.delegate = self;
     [searchBarView addSubview:search];
     search.placeholder = @"123";
     self.navigationItem.titleView = searchBarView;
@@ -90,13 +79,17 @@
     search.backgroundImage = [UIImage imageNamed:@"clearImage"];
     search.returnKeyType = UIReturnKeySearch;
     [search becomeFirstResponder];
+    
+    [search mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.bottom.and.right.equalTo(searchBarView).with.insets(UIEdgeInsetsMake(0, 0,0,0));
+    }];
     _searchBar = search;
     
 }
 
 #pragma mark tableView---Delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return 1;
     
 }
 
@@ -113,20 +106,25 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     
-    XIU_SearchBarCell *cell = [[XIU_SearchBarCell alloc] initWithStyle:1 reuseIdentifier:@"cell" AndDataArray:self.dataSource];
+    XIU_SearchBarCell *cell = [[XIU_SearchBarCell alloc] initWithStyle:1 reuseIdentifier:XIU_SearchBarIdentifier AndDataArray:self.dataSource];
     cell.XIUDelegate = self;
     if (!cell) {
-        cell  =[tableView dequeueReusableCellWithIdentifier:@"cell"];
+        cell  =[tableView dequeueReusableCellWithIdentifier:XIU_SearchBarIdentifier];
         
     }
         return cell;
 }
-- (void)searchBarCell:(SearchBarModel *)model {
-    NSLog(@"网络请求，开始搜索关键字");
-    [self.searchBar resignFirstResponder];
-
+- (void)searchBarCellWithKeyword:(NSString *)keyword {
+    [self pustSearchShoppingListViewControllerWithKeyword:keyword];
 }
 
+- (void)pustSearchShoppingListViewControllerWithKeyword:(NSString *)keyword {
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:XIU_SearchShoppingListID bundle:nil];
+    XIU_SearchShoppingListViewController *deliverAddress= [mainStoryBoard instantiateViewControllerWithIdentifier:XIU_SearchShoppingListID];
+    [self.navigationController pushViewController:deliverAddress animated:YES];
+    NSLog(@"网络请求，开始搜索关键字");
+    [self.searchBar resignFirstResponder];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -142,7 +140,7 @@
     x = margin;
     for(int i=0;i<self.dataSource.count;i++){
         
-        NSString *str = [self.dataSource[i] title];
+        NSString *str = self.dataSource[i];
         
         NSDictionary *attrs = @{NSFontAttributeName : [UIFont boldSystemFontOfSize:13.f]};
         CGSize size=[str sizeWithAttributes:attrs];
@@ -159,6 +157,27 @@
     return y + 30;
 
 }
+
+
+#pragma mark searchBar Delegate
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    NSMutableArray *arr= [NSMutableArray arrayWithObject:searchBar.text];
+    if (![[NSUserDefaults standardUserDefaults] objectForKey:history_search]) {
+        [[NSUserDefaults standardUserDefaults]setObject:arr forKey:history_search];
+    }else {
+        
+        [arr addObjectsFromArray:[[NSUserDefaults standardUserDefaults] objectForKey:history_search]];
+        arr.count > historySearchCount ? [arr removeLastObject] : arr;
+        [[NSUserDefaults standardUserDefaults] setObject:arr forKey:history_search];
+    }
+    [self pustSearchShoppingListViewControllerWithKeyword:@""];
+}
+
+
+-(void)dealloc {
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
+
 @end
 
 

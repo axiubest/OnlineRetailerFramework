@@ -98,8 +98,7 @@ static XIU_ShareView *shared_instance = nil;
                 _dismissBtn = ({
                     UIButton *button = [UIButton new];
                     button.backgroundColor = [UIColor whiteColor];
-                    button.layer.masksToBounds = YES;
-                    button.layer.cornerRadius = 2.0;
+                    [self setCornerRadius:2.f];
                     button.titleLabel.font = [UIFont systemFontOfSize:15];
                     [button setTitle:@"取消" forState:UIControlStateNormal];
                     [button setTitleColor:[UIColor colorWithHexString:@"0x808080"] forState:UIControlStateNormal];

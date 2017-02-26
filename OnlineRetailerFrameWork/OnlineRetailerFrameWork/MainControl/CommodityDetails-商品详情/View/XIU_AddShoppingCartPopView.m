@@ -40,8 +40,7 @@
 - (void)createStaticHeaderView:(CGRect)frame {
     UIImageView *picImage = [[UIImageView alloc] initWithFrame:CGRectMake(LEFT_MARGIN, -40, 120, 120)];
     [picImage setImage:[UIImage imageNamed:@"1"]];
-    picImage.layer.masksToBounds = 1;
-    picImage.layer.cornerRadius = 5.f;
+    [self setCornerRadius:5.f];
     [self addSubview:picImage];
     
  

@@ -7,8 +7,12 @@
 //
 
 #import "UIView+Common.h"
-#import "NSString+Common.h"
 @implementation UIView (Common)
+
+- (void)setCornerRadius:(CGFloat)radius {
+    self.layer.masksToBounds = YES;
+    self.layer.cornerRadius = radius;
+}
 
 - (void)doCircleFrame{
     self.layer.masksToBounds = YES;

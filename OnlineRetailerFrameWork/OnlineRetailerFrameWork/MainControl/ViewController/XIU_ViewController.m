@@ -8,7 +8,8 @@
 
 #import "XIU_ViewController.h"
 #import "XIU_NetWorkReachability.h"
-
+#import "XIU_SearchBarSimulationView.h"
+#import "XIU_SearchBarViewController.h"
 @interface XIU_ViewController ()
 
 @property (nonatomic, weak) UIView *NetWorkReachabilityView;
@@ -183,6 +184,17 @@
 }
 
 - (void)createNavgationButtonOfLeftWithImageNmae:(NSString *)imageName target:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents {
+    
+}
+
+- (void)createSimulationSearchBar {
+    
+    XIU_SearchBarSimulationView *searchBarView = [[XIU_SearchBarSimulationView alloc] initWithFrame:CGRectMake(50, 7, KWIDTH - 2 * 60 , 30)];
+    [searchBarView bk_whenTapped:^{
+        __weak typeof (self) weakSelf = self;
+        [weakSelf.navigationController pushViewController:[[XIU_SearchBarViewController alloc] init] animated:YES];
+    }];
+    self.navigationItem.titleView = searchBarView;
     
 }
 

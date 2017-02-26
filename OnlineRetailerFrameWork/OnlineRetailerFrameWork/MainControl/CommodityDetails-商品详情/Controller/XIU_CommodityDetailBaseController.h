@@ -23,7 +23,7 @@ typedef NS_ENUM(NSInteger, ProductInformationCellType) {
 #import "XIU_HiddenTabBarController.h"
 
 
-
+static NSString *const XIU_CommodityDetailID = @"XIU_CommodityDetailBaseController";
 @interface XIU_CommodityDetailBaseController : XIU_HiddenTabBarController
 
 @property (nonatomic, assign, readonly) CommodityDetailCellType CommodityDetailType;

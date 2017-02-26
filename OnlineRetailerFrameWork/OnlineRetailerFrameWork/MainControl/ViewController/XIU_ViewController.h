@@ -24,5 +24,6 @@ typedef NS_ENUM(NSUInteger, UINavigationItem_Type) {
 
 - (void)showEmptyDataSetViewWithTitle:(NSDictionary *)emptyDictionary;
 - (BOOL)isLogin;
+- (void)createSimulationSearchBar;
 
 @end
