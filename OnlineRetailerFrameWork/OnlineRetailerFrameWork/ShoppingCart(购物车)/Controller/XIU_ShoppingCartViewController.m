@@ -21,8 +21,8 @@ static NSInteger CartEmptyView = 100;
 static NSInteger CartRowHeight = 100;
 @interface XIU_ShoppingCartViewController ()<UITableViewDelegate,UITableViewDataSource, XIU_ShoppingCartCalculationViewDelegate>
 
-@property (strong,nonatomic)NSMutableArray *dataArray;
-@property (strong,nonatomic)NSMutableArray *selectedArray;
+@property (strong,nonatomic)NSMutableArray<XIU_ShoppingCart_ShopModel *> *dataArray;
+@property (strong,nonatomic)NSMutableArray<XIU_ShoppingCart_GoodsModel *> *selectedArray;
 @property (strong,nonatomic)UITableView *XIUTableView;
 @property (strong,nonatomic)UIButton *allSellectedButton;
 @property (strong,nonatomic)UILabel *totlePriceLabel;

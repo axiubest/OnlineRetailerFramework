@@ -182,14 +182,14 @@
   complete:^(BOOL success) {
       self.LoginButton.enabled = !success;
       if (success) {
-          __weak typeof(self) weakSelf = self;
+          XIU_WeakSelf(self);
           NSLog(@"login_success%@",kPathCache);
           [_XIUDelegate login];
           
 #warning
           [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissVC" object:nil];
 
-          [weakSelf.navigationController popViewControllerAnimated:YES];
+          [weakself.navigationController popViewControllerAnimated:YES];
  
       }
   }];

@@ -91,10 +91,10 @@
     return 1;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    __weak typeof(self) weakSelf = self;
+    XIU_WeakSelf(self);
     SettingTextCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier_SettingText forIndexPath:indexPath];
     [cell setTextValue:_textValue andTextChangeBlock:^(NSString *textValue) {
-        weakSelf.myTextValue = textValue;
+        weakself.myTextValue = textValue;
     }];
     cell.textField.placeholder = self.placeholderStr ?: @"未填写";
     return cell;

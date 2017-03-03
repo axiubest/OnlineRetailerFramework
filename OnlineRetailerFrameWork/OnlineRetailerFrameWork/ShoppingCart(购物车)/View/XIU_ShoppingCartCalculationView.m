@@ -42,11 +42,9 @@ static NSInteger selectallButtonSize = 25;
         self.allSellectedButton = selectAll;
         
         
-        UIButton *selectAllBtn = [[UIButton alloc] init];
-        [selectAllBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [selectAllBtn addTarget:self action:@selector(selectAllBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-        [selectAllBtn setTitle:@"全选" forState:UIControlStateNormal];
-        selectAllBtn.titleLabel.font = [UIFont systemFontOfSize:13.f];
+        UILabel *selectAllBtn  =[[UILabel alloc] init];
+        selectAllBtn.text = @"全选";
+        selectAllBtn.font = [UIFont systemFontOfSize:13.f];
         [self addSubview:selectAllBtn];
         
         

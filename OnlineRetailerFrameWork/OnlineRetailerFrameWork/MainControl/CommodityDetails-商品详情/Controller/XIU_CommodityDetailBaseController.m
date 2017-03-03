@@ -65,6 +65,7 @@ static CGFloat const BOTTOM_POP_VIEW_HEIGHT = 200;
 
 @property (nonatomic, strong) XIU_AddShoppingCartPopView *popView; // 弹出底部视图
 
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
 
 @property (nonatomic, strong) XIU_CommodityDetailPopView * XIUscrollView;
 @property (nonatomic, strong) NSMutableArray * itmeArray;
@@ -205,14 +206,14 @@ static CGFloat const BOTTOM_POP_VIEW_HEIGHT = 200;
 - (void)setupHeadView {
     self.scrollView = [[UIScrollView alloc] initWithFrame:self.headView.bounds];
     // 添加多张图片
-    for (int i=0; i<5; i++) {
+    for (int i=0; i<6; i++) {
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(i*KWIDTH, 0, KWIDTH, HEADER_VIEW_HEIGHT)];
         imageView.image = [UIImage imageNamed:@(i+1).stringValue];
         [self.scrollView addSubview:imageView];
     }
     self.scrollView.pagingEnabled = YES;
     self.scrollView.showsHorizontalScrollIndicator = NO;
-    self.scrollView.contentSize = CGSizeMake(KWIDTH * 5, HEADER_VIEW_HEIGHT);
+    self.scrollView.contentSize = CGSizeMake(KWIDTH * 6, 50);
     self.scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     [self.headView addSubview:self.scrollView];
 }
@@ -263,37 +264,38 @@ static CGFloat const BOTTOM_POP_VIEW_HEIGHT = 200;
     switch (_CommodityDetailType) {
         case CommodityDetailCellType_ProductInformation: {
             XIU_CommodityDetialBaseProductInformationCell *basicInfoCell = [tableView dequeueReusableCellWithIdentifier:XIU_CommodityDetialBaseProductInformationIdentifier forIndexPath:indexPath];
-            __weak typeof(self) weakSelf = self;
+            XIU_WeakSelf(self);
             basicInfoCell.block = ^(NSInteger index){
                 switch (index) {
                     case ProductInformationCellType_Share:
-                        weakSelf.popTitle = @"分享";
+                        weakself.popTitle = @"分享";
                         break;
                     case ProductInformationCellType_Bargain:
-                        weakSelf.popTitle = @"聚划算";
+                        weakself.popTitle = @"聚划算";
                         break;
                     case ProductInformationCellType_Discount:
-                        weakSelf.popTitle = @"领取优惠券";
+                        weakself.popTitle = @"领取优惠券";
                         break;
                 }
-                [weakSelf open];
+                [weakself open];
             };
             return basicInfoCell;
         }
             break;
         case CommodityDetailCellType_StoreInformation: {
             XIU_CommodityDetialBaseStoreInformationCell *shopInfoCell = [tableView dequeueReusableCellWithIdentifier:@"XIU_CommodityDetialBaseStoreInformationCell" forIndexPath:indexPath];
-            __weak typeof(self) weakSelf = self;
+
+            XIU_WeakSelf(self);
             shopInfoCell.block = ^(NSInteger index){
                 switch (index) {
                     case 0:
-                        weakSelf.popTitle = @"查看分类";
+                        weakself.popTitle = @"查看分类";
                         break;
                     case 1:
-                        weakSelf.popTitle = @"进店逛逛";
+                        weakself.popTitle = @"进店逛逛";
                         break;
                 }
-                [weakSelf open];
+                [weakself open];
             };
             return shopInfoCell;
         }
@@ -305,9 +307,10 @@ static CGFloat const BOTTOM_POP_VIEW_HEIGHT = 200;
             break;
         case CommodityDetailCellType_SelectTypeCell: {
             XIU_CommodityDetialSelectTypeCell *selectTypeCell = [tableView dequeueReusableCellWithIdentifier:@"XIU_CommodityDetialSelectTypeCell" forIndexPath:indexPath];
+            XIU_WeakSelf(self);
+
             [selectTypeCell bk_whenTapped:^{
-                __weak typeof (self)weakSelf = self;
-                [weakSelf open];
+                [weakself open];
             }];
             return selectTypeCell;
         }
@@ -348,8 +351,10 @@ static CGFloat const BOTTOM_POP_VIEW_HEIGHT = 200;
         if (self.tableView.contentOffset.y >= 0 &&  self.tableView.contentOffset.y <= HEADER_VIEW_HEIGHT) {
             self.scrollView.contentOffset = CGPointMake(self.scrollView.contentOffset.x, -offset / 2.0f);
             self.navigationView.alpha = offset / HEADER_VIEW_HEIGHT;
+//            self.backButton.alpha = -(offset / HEADER_VIEW_HEIGHT);
         } else if (self.tableView.contentOffset.y < 0) {
             self.navigationView.alpha = 0.0f;
+            self.backButton.alpha = 1.f;
             if (offset <= -END_DRAG_SHOW_HEIGHT) {
                 _topMsgLabel.text = @"释放查看我的喜爱";
             } else {
@@ -357,6 +362,7 @@ static CGFloat const BOTTOM_POP_VIEW_HEIGHT = 200;
             }
         } else {
             self.navigationView.alpha = 1.0f;
+            self.backButton.alpha = 0.0f;
         }
     } else {
         // WebView中的ScrollView

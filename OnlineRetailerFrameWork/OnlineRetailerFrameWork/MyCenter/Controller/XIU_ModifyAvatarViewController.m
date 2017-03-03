@@ -142,7 +142,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    __weak typeof(self) weakSelf = self;
+    XIU_WeakSelf(self);
     if (indexPath.section == 0 && indexPath.row == 0) {
         UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"更换头像" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"拍照", @"从相册选择", nil];
         [actionSheet showInView:self.view];
@@ -151,10 +151,10 @@
         switch (indexPath.row) {
             case UserInformationItemStyle_userName: {
                 XIU_SettingTextViewController *vc = [XIU_SettingTextViewController settingTextVCWithTitle:@"昵称" textValue:_curUser.userName  doneBlock:^(NSString *textValue) {
-                    NSString *preValue = weakSelf.curUser.userName;
-                    weakSelf.curUser.userName = textValue;
+                    NSString *preValue = weakself.curUser.userName;
+                    weakself.curUser.userName = textValue;
                     
-                    [weakSelf.XIUTableView reloadData];
+                    [weakself.XIUTableView reloadData];
                     //                    request
                 }];
                 [self.navigationController pushViewController:vc animated:YES];
@@ -163,8 +163,8 @@
             case UserInformationItemStyle_sex: {
                 [ActionSheetStringPicker showPickerWithTitle:nil rows:@[@[@"男", @"女", @"未知"]] initialSelection:@[_curUser.userSex] doneBlock:^(ActionSheetStringPicker *picker, NSArray * selectedIndex, NSArray *selectedValue) {
                     
-                    weakSelf.curUser.userSex = @"";
-                    [weakSelf.XIUTableView reloadData];
+                    weakself.curUser.userSex = @"";
+                    [weakself.XIUTableView reloadData];
                     
                 } cancelBlock:nil origin:self.view];
             }
@@ -175,9 +175,9 @@
                     curDate = [NSDate dateFromString:@"1990-01-01" withFormat:@"yyyy-MM-dd"];
                 }
                 ActionSheetDatePicker *picker = [[ActionSheetDatePicker alloc] initWithTitle:nil datePickerMode:UIDatePickerModeDate selectedDate:curDate doneBlock:^(ActionSheetDatePicker *picker, NSDate *selectedDate, id origin) {
-                    NSString *preValue = weakSelf.curUser.userBirth;
-                    weakSelf.curUser.userBirth = [selectedDate string_yyyy_MM_dd];
-                    [weakSelf.XIUTableView reloadData];
+                    NSString *preValue = weakself.curUser.userBirth;
+                    weakself.curUser.userBirth = [selectedDate string_yyyy_MM_dd];
+                    [weakself.XIUTableView reloadData];
                     //                    request
                 } cancelBlock:^(ActionSheetDatePicker *picker) {
                     
@@ -190,10 +190,10 @@
                 break;
             case UserInformationItemStyle_hobby: {
                 XIU_SettingTextViewController *vc = [XIU_SettingTextViewController settingTextVCWithTitle:@"爱好" textValue:_curUser.hobby  doneBlock:^(NSString *textValue) {
-                    NSString *preValue = weakSelf.curUser.hobby;
-                    weakSelf.curUser.hobby = textValue;
+                    NSString *preValue = weakself.curUser.hobby;
+                    weakself.curUser.hobby = textValue;
                     
-                    [weakSelf.XIUTableView reloadData];
+                    [weakself.XIUTableView reloadData];
                     //                    request
                 }];
                 [self.navigationController pushViewController:vc animated:YES];

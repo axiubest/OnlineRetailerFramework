@@ -91,7 +91,7 @@ static NSString *const NavgationItem_AblumImageName = @"相册";
     
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)(fileUrl), &soundID);
     
-    // 如果需要在播放完之后执行某些操作，可以调用如下方法注册一个播放完成回调函数
+
     AudioServicesAddSystemSoundCompletion(soundID, NULL, NULL, soundCompleteCallback, NULL);
     
     AudioServicesPlaySystemSound(soundID);
@@ -115,39 +115,37 @@ void soundCompleteCallback(SystemSoundID soundID, void *clientData){
 
 
 - (void)selectPhotoInAlbum {
-    // 1、 获取摄像设备
+    
     AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     if (device) {
-        // 判断授权状态
+
         PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
-        if (status == PHAuthorizationStatusNotDetermined) { // 用户还没有做出选择
-            // 弹框请求用户授权
+        if (status == PHAuthorizationStatusNotDetermined) {
+            
             [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
-                if (status == PHAuthorizationStatusAuthorized) { // 用户点击了好
+                if (status == PHAuthorizationStatusAuthorized) {
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init]; // 创建对象
-                        imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary; //（选择类型）表示仅仅从相册中选取照片
-                        imagePicker.delegate = self; // 指定代理，因此我们要实现UIImagePickerControllerDelegate,  UINavigationControllerDelegate协议
-                        [self presentViewController:imagePicker animated:YES completion:nil]; // 显示相册
+                        UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+                        imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+                        imagePicker.delegate = self;
+                        [self presentViewController:imagePicker animated:YES completion:nil];
                         NSLog(@"主线程 - - %@", [NSThread currentThread]);
                     });
                     NSLog(@"当前线程 - - %@", [NSThread currentThread]);
                     
-                    // 用户第一次同意了访问相册权限
                     NSLog(@"用户第一次同意了访问相册权限");
                 } else {
-                    // 用户第一次拒绝了访问相机权限
                     NSLog(@"用户第一次拒绝了访问相册");
                 }
             }];
             
-        } else if (status == PHAuthorizationStatusAuthorized) { // 用户允许当前应用访问相册
+        } else if (status == PHAuthorizationStatusAuthorized) {
             UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init]; // 创建对象
-            imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary; //（选择类型）表示仅仅从相册中选取照片
-            imagePicker.delegate = self; // 指定代理，因此我们要实现UIImagePickerControllerDelegate,  UINavigationControllerDelegate协议
-            [self presentViewController:imagePicker animated:YES completion:nil]; // 显示相册
+            imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+            imagePicker.delegate = self;
+            [self presentViewController:imagePicker animated:YES completion:nil];
             
-        } else if (status == PHAuthorizationStatusDenied) { // 用户拒绝当前应用访问相册
+        } else if (status == PHAuthorizationStatusDenied) {
             
             NSLog(@"请去-> [设置 - 隐私 - 照片 - SGQRCodeExample] 打开访问开关");
             
@@ -170,10 +168,8 @@ void soundCompleteCallback(SystemSoundID soundID, void *clientData){
 }
 
 - (void)scanQRCodeFromPhotosInTheAlbum:(UIImage *)image {
-    // CIDetector(CIDetector可用于人脸识别)进行图片解析，从而
     CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeQRCode context:nil options:@{ CIDetectorAccuracy : CIDetectorAccuracyHigh }];
-    
-    // 取得识别结果
+
     NSArray *features = [detector featuresInImage:[CIImage imageWithCGImage:image.CGImage]];
     
     NSLog(@"扫描结果 － － %@", features);
@@ -183,13 +179,7 @@ void soundCompleteCallback(SystemSoundID soundID, void *clientData){
         NSString *scannedResult = feature.messageString;
         NSLog(@"result:%@",scannedResult);
         
-//        if (self.first_push) {
-//            ScanSuccessJumpVC *jumpVC = [[ScanSuccessJumpVC alloc] init];
-//            jumpVC.jump_URL = scannedResult;
-//            [self.navigationController pushViewController:jumpVC animated:YES];
-//            
-//            self.first_push = NO;
-//        }
+
     }
 }
 @end

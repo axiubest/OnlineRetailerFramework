@@ -21,7 +21,7 @@
             model.goodsID = [dic objectForKey:@"goodsId"];
             model.goodsName = [dic objectForKey:@"goodsName"];
             model.price = [NSString stringWithFormat:@"%@",[dic objectForKey:@"realPrice"]];
-            
+            model.image = [dic objectForKey:@"goodsImage"];
             [dataArray addObject:model];
         }
         

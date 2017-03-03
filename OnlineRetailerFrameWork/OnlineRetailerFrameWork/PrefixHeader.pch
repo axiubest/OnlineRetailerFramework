@@ -37,7 +37,7 @@ static NSString *const KBASEURL = @"http://112.74.28.179:8080/Chislim/";
 #define SCREEN_SIZE     [UIScreen mainScreen].bounds.size
 
 static NSInteger const  NaigationBarHeight = 64;
-static NSInteger const  TabBarHeight = 50;
+static NSInteger const  TabBarHeight = 44;
 
 //------------屏幕尺寸---------------
 
@@ -69,6 +69,8 @@ static CGFloat const LAND_CONTORL_HEIGHT = 50.f;
 
 //------------系统---------------
 
+//弱引用
+#define XIU_WeakSelf(type)  __weak typeof(type) weak##type = type;
 //重写NSLog,Debug模式下打印日志和当前行数
 
 #ifdef DEBUG

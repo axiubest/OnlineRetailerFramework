@@ -11,6 +11,7 @@
 #import "XIU_SearchShoppingListCell.h"
 @interface XIU_SearchShoppingListViewController ()<UITableViewDelegate, UITableViewDataSource>
 
+
 @property (weak, nonatomic) IBOutlet UITableView *XIUTableView;
 
 @end

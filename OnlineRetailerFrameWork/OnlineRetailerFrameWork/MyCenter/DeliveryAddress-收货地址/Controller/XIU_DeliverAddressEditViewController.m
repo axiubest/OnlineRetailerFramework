@@ -17,10 +17,10 @@
 
 @interface XIU_DeliverAddressEditViewController ()<UITableViewDelegate, UITableViewDataSource, XIU_DeliveryAddressPickerViewDelegate>
 {
-    XIU_DeliveryAddressEditLocationCell *locationCell;
-    XIU_DeliveryAddressEditInformationCell *personCell;
-    XIU_DeliveryAddressEditInformationCell *phoneCell;
-    XIU_DeliveryAddressEditDestribtionLocCell *DestribtionCell;
+    XIU_DeliveryAddressEditLocationCell         *locationCell;
+    XIU_DeliveryAddressEditInformationCell      *personCell;
+    XIU_DeliveryAddressEditInformationCell      *phoneCell;
+    XIU_DeliveryAddressEditDestribtionLocCell   *DestribtionCell;
 }
 @property (weak, nonatomic) IBOutlet UITableView *XIUTableView;
 

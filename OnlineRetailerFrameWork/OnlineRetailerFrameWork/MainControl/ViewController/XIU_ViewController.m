@@ -191,8 +191,8 @@
     
     XIU_SearchBarSimulationView *searchBarView = [[XIU_SearchBarSimulationView alloc] initWithFrame:CGRectMake(50, 7, KWIDTH - 2 * 60 , 30)];
     [searchBarView bk_whenTapped:^{
-        __weak typeof (self) weakSelf = self;
-        [weakSelf.navigationController pushViewController:[[XIU_SearchBarViewController alloc] init] animated:YES];
+        XIU_WeakSelf(self);
+        [weakself.navigationController pushViewController:[[XIU_SearchBarViewController alloc] init] animated:YES];
     }];
     self.navigationItem.titleView = searchBarView;
     
