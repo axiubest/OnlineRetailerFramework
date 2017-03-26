@@ -30,6 +30,8 @@
 }
 - (void)setUp
 {
+    
+    
     self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, kScrollViewWidth, kViewHeight)];
     self.scrollView.center = self.center;
     self.scrollView.showsHorizontalScrollIndicator = NO;

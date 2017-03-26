@@ -16,7 +16,7 @@
 @interface XIU_CountryCodeViewController ()<UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UISearchDisplayDelegate>
 
 @property (nonatomic, weak)UITableView *XIUTableView;
-@property (nonatomic, strong) NSMutableArray *searchResultValuesArray;
+@property (nonatomic, strong) NSMutableArray <NSString *> *searchResultValuesArray;
 @end
 
 @implementation XIU_CountryCodeViewController
@@ -29,7 +29,9 @@
 
 }
 
-- (NSMutableArray *)searchResultValuesArray {
+
+
+-(NSMutableArray<NSString *> *)searchResultValuesArray {
     if (!_searchResultValuesArray) {
         _searchResultValuesArray = [NSMutableArray array];
     }

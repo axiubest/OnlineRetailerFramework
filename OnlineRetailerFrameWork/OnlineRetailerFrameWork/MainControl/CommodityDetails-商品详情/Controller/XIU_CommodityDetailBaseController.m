@@ -108,7 +108,7 @@ static CGFloat const BOTTOM_POP_VIEW_HEIGHT = 200;
     
     self.XIUimageView.image = [self blurViewByLightEffectWithImage:self.itmeArray[0]];
     
-    self.XIUscrollView = [[XIU_CommodityDetailPopView alloc] initWithFrame:CGRectMake(30, 0, self.view.frame.size.width, self.view.frame.size.height / 2)];
+    self.XIUscrollView = [[XIU_CommodityDetailPopView alloc] initWithFrame:CGRectMake(30, 0, self.view.width, self.view.height / 2)];
     self.XIUscrollView.delegate = self;
  
     self.XIUscrollView.itmeArray = self.itmeArray;

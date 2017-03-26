@@ -100,6 +100,9 @@
     }
 }
 
+- (NSString *)toPath {
+    return @"UserServlet?dowhat=getOneByPhone&";
+}
 
 - (BOOL)isLogin {
    return  [XIU_Login isLogin];

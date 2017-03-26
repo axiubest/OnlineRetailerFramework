@@ -22,6 +22,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor redColor];
     
+    
+    
     [self createNavgationButtonWithImageNmae:@"设置" title:@"扫一扫" target:self action:@selector(QRCode) type:UINavigationItem_Type_LeftItem];
     [self createNavgationSearchBar];
     

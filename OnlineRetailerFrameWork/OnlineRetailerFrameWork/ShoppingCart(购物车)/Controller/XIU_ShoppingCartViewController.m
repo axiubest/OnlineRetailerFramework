@@ -57,7 +57,10 @@ static NSInteger CartRowHeight = 100;
     return _XIUTableView;
 }
 
-- (NSMutableArray *)dataArray {
+
+
+
+-(NSMutableArray<XIU_ShoppingCart_ShopModel *> *)dataArray {
     if (_dataArray == nil) {
         _dataArray = [NSMutableArray arrayWithCapacity:0];
     }
@@ -65,14 +68,15 @@ static NSInteger CartRowHeight = 100;
     return _dataArray;
 }
 
-- (NSMutableArray *)selectedArray {
+
+
+-(NSMutableArray<XIU_ShoppingCart_GoodsModel *> *)selectedArray {
     if (_selectedArray == nil) {
         _selectedArray = [NSMutableArray arrayWithCapacity:0];
     }
     
     return _selectedArray;
 }
-
 
 #pragma mark - viewController life cicle
 - (void)viewWillAppear:(BOOL)animated {
