@@ -16,5 +16,10 @@
 //添加圆角
 - (void)setCornerRadius:(CGFloat)radius;
 
-+ (UINib *)xiu_classNib;
+//load cell name of nib
++ (UINib *)XIU_ClassNib;
+
+//load cell name of identifier
++(NSString *)XIU_ClassIdentifier;
+
 @end

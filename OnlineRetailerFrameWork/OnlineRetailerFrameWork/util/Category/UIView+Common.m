@@ -23,12 +23,15 @@
 
 
 #pragma mark DefaultNib
-+ (UINib *)xiu_classNib {
-    return [UINib nibWithNibName:[self xiu_nibName] bundle:nil];
++ (UINib *)XIU_ClassNib {
+    return [UINib nibWithNibName:[self XIU_NibName] bundle:nil];
 }
 
++(NSString *)XIU_ClassIdentifier {
+    return [self XIU_NibName];
+}
 
-+ (NSString *)xiu_nibName {
++ (NSString *)XIU_NibName {
     /* Swift has "Namespaced" class names that prepend the module
      * For instance: "Wikipedia.MyCellClassName"
      * So we need to remove the "Wikipedia." for this to work

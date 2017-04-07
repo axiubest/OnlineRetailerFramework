@@ -12,7 +12,7 @@
 
 static NSInteger HUDProgress_Time = 1;
 //-------------网络参数设置----------------
-//#define patchUpdateURL =@"http://112.74.28.179:8080/Chislim/apk/demo.js"
+
 
 //搜索记录plist参数
 static NSString * const history_search = @"history_search";
@@ -53,11 +53,6 @@ static NSInteger const  TabBarHeight = 44;
 static CGFloat const kPaddingLeftWidth = 15.0f;
 static CGFloat const kLoginPaddingLeftWidth = 18.0f;
 
-
-//TableView-加载xib
-#define TableView_ResignNib(Nib,identifier) [tableView registerNib:Nib forCellReuseIdentifier:identifier]
-
-#define TableView_ResignClass(cellName,identifier) [tableView registerClass:[cellName class] forCellReuseIdentifier:identifier]
 
 //------------TableView设置---------------
 

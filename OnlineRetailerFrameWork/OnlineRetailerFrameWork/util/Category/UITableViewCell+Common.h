@@ -10,5 +10,6 @@
 
 @interface UITableViewCell (Common)
 
+
 -(void)alertViewWithString:(NSString *)alertString;
 @end

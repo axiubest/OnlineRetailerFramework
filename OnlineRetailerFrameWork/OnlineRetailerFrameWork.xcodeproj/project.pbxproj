@@ -212,8 +212,6 @@
 		8341ACE41E57E17E00FDC5A4 /* UIImageView+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341ACE31E57E17E00FDC5A4 /* UIImageView+Badge.m */; };
 		8386FC471E4DA7F90029E653 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8386FC461E4DA7F90029E653 /* main.m */; };
 		8386FC4A1E4DA7F90029E653 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8386FC491E4DA7F90029E653 /* AppDelegate.m */; };
-		8386FC4D1E4DA7F90029E653 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8386FC4C1E4DA7F90029E653 /* ViewController.m */; };
-		8386FC501E4DA7F90029E653 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8386FC4E1E4DA7F90029E653 /* Main.storyboard */; };
 		8386FC531E4DA7F90029E653 /* OnlineRetailerFrameWork.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8386FC511E4DA7F90029E653 /* OnlineRetailerFrameWork.xcdatamodeld */; };
 		8386FC551E4DA7F90029E653 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8386FC541E4DA7F90029E653 /* Assets.xcassets */; };
 		8386FC581E4DA7F90029E653 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8386FC561E4DA7F90029E653 /* LaunchScreen.storyboard */; };
@@ -591,9 +589,6 @@
 		8386FC461E4DA7F90029E653 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8386FC481E4DA7F90029E653 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8386FC491E4DA7F90029E653 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8386FC4B1E4DA7F90029E653 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8386FC4C1E4DA7F90029E653 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8386FC4F1E4DA7F90029E653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8386FC521E4DA7F90029E653 /* OnlineRetailerFrameWork.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OnlineRetailerFrameWork.xcdatamodel; sourceTree = "<group>"; };
 		8386FC541E4DA7F90029E653 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8386FC571E4DA7F90029E653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -1446,9 +1441,6 @@
 			isa = PBXGroup;
 			children = (
 				83ABA0071E60170B00F9B529 /* Address.plist */,
-				8386FC4B1E4DA7F90029E653 /* ViewController.h */,
-				8386FC4C1E4DA7F90029E653 /* ViewController.m */,
-				8386FC4E1E4DA7F90029E653 /* Main.storyboard */,
 				8386FC561E4DA7F90029E653 /* LaunchScreen.storyboard */,
 				8386FC591E4DA7F90029E653 /* Info.plist */,
 				8386FC511E4DA7F90029E653 /* OnlineRetailerFrameWork.xcdatamodeld */,
@@ -1709,7 +1701,6 @@
 				8341AB8E1E4DAB3500FDC5A4 /* tabbar_selected_background.png in Resources */,
 				83E2D2EF1E5D8DBE0071D9A8 /* XIU_DeliveryAddressViewController.storyboard in Resources */,
 				8341AB881E4DAB3500FDC5A4 /* second_normal.png in Resources */,
-				8386FC501E4DA7F90029E653 /* Main.storyboard in Resources */,
 				8341AB8D1E4DAB3500FDC5A4 /* tabbar_normal_background@2x.png in Resources */,
 				8341AB931E4DAB3500FDC5A4 /* third_selected@2x.png in Resources */,
 			);
@@ -1772,7 +1763,6 @@
 			files = (
 				83E2D2F71E5DD7AC0071D9A8 /* XIU_DeliverAddressEditViewController.m in Sources */,
 				8341ACE41E57E17E00FDC5A4 /* UIImageView+Badge.m in Sources */,
-				8386FC4D1E4DA7F90029E653 /* ViewController.m in Sources */,
 				8341ABFF1E4DAB3500FDC5A4 /* NSString+Encryption.m in Sources */,
 				8341AB681E4DAB3500FDC5A4 /* XIU_HomeViewController.m in Sources */,
 				8341ABB51E4DAB3500FDC5A4 /* XIU_ModifyAvatarViewController.m in Sources */,
@@ -1919,14 +1909,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8386FC4E1E4DA7F90029E653 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8386FC4F1E4DA7F90029E653 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8386FC561E4DA7F90029E653 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

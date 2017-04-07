@@ -6,7 +6,6 @@
 //  Copyright (c) 2015年 Coding. All rights reserved.
 //
 
-#define kCellIdentifier_UserInfoDetailTagCell @"UserInfoDetailTagCell"
 
 #import <UIKit/UIKit.h>
 

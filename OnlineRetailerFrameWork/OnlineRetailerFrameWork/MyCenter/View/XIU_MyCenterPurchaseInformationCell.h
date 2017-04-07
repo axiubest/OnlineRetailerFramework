@@ -8,7 +8,6 @@
 //用户购买信息cell
 #import <UIKit/UIKit.h>
 
-static NSString *const XIU_MyCenterPurchaseInformationIdentifier = @"XIU_MyCenterPurchaseInformationCell";
 @interface XIU_MyCenterPurchaseInformationCell : UITableViewCell
 
 

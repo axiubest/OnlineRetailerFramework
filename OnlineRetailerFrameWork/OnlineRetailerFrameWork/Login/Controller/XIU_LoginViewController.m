@@ -186,7 +186,6 @@
           NSLog(@"login_success%@",kPathCache);
           [_XIUDelegate login];
           
-#warning
           [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissVC" object:nil];
 
           [weakself.navigationController popViewControllerAnimated:YES];

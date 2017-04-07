@@ -123,7 +123,7 @@ static dispatch_once_t onceToken;
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:aPath]];
     
     //下载Task操作
-    NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
+    [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
         
         // @property int64_t totalUnitCount;     需要下载文件的总大小
         // @property int64_t completedUnitCount; 当前已经下载的大小

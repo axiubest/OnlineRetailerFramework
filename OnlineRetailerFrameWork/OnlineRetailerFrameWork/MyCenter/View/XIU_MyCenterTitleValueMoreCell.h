@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#define kCellIdentifier_TitleValueMore @"XIU_MyCenterTitleValueMoreCell"
 
 @interface XIU_MyCenterTitleValueMoreCell : UITableViewCell
 

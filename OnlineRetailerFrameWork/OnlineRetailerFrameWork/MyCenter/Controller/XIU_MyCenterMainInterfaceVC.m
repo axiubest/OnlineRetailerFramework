@@ -50,8 +50,10 @@ static  NSString *const NavgationBarRightImageName = @"设置";
         _XIUTableViw = tableView;
         
         
-    TableView_ResignNib([XIU_MyCenterPurchaseInformationCell xiu_classNib], XIU_MyCenterPurchaseInformationIdentifier);
-      TableView_ResignNib([XIU_MyCenterUtilitiesCell xiu_classNib], XIU_MyCenterUtilitiesIdentifier);
+        [tableView registerNib:[XIU_MyCenterPurchaseInformationCell XIU_ClassNib] forCellReuseIdentifier:[XIU_MyCenterPurchaseInformationCell XIU_ClassIdentifier]];
+        
+        [tableView registerNib:[XIU_MyCenterUtilitiesCell XIU_ClassNib] forCellReuseIdentifier:[XIU_MyCenterUtilitiesCell XIU_ClassIdentifier]];
+        
 
     }
     return _XIUTableViw;
@@ -144,11 +146,11 @@ static  NSString *const NavgationBarRightImageName = @"设置";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         
-        XIU_MyCenterPurchaseInformationCell *cell = [tableView dequeueReusableCellWithIdentifier:XIU_MyCenterPurchaseInformationIdentifier];
+        XIU_MyCenterPurchaseInformationCell *cell = [tableView dequeueReusableCellWithIdentifier:[XIU_MyCenterPurchaseInformationCell XIU_ClassIdentifier]];
        
         return cell;
     }
-        XIU_MyCenterUtilitiesCell *cell = [tableView dequeueReusableCellWithIdentifier:XIU_MyCenterUtilitiesIdentifier];
+        XIU_MyCenterUtilitiesCell *cell = [tableView dequeueReusableCellWithIdentifier:[XIU_MyCenterUtilitiesCell XIU_ClassIdentifier]];
         return cell;
 
 }

@@ -46,9 +46,11 @@
         tableView.dataSource = self;
         tableView.delegate = self;
         tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        TableView_ResignClass(XIU_MyCenterTitleValueMoreCell, kCellIdentifier_TitleValueMore);
-        TableView_ResignClass(XIU_MyCenterModifyAvatarCell, kCellIdentifier_XIU_MyCenterModifyAvatar);
-        TableView_ResignClass(UserInfoDetailTagCell, kCellIdentifier_UserInfoDetailTagCell);
+        [tableView registerNib:[XIU_MyCenterTitleValueMoreCell XIU_ClassNib] forCellReuseIdentifier:[XIU_MyCenterTitleValueMoreCell XIU_ClassIdentifier]];
+
+        [tableView registerNib:[XIU_MyCenterModifyAvatarCell XIU_ClassNib] forCellReuseIdentifier:[XIU_MyCenterModifyAvatarCell XIU_ClassIdentifier]];
+        [tableView registerNib:[UserInfoDetailTagCell XIU_ClassNib] forCellReuseIdentifier:[UserInfoDetailTagCell XIU_ClassIdentifier]];
+
         
         [self.view addSubview:tableView];
         [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -64,13 +66,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0 && indexPath.row == 0) {
-        XIU_MyCenterModifyAvatarCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier_XIU_MyCenterModifyAvatar forIndexPath:indexPath];
+        XIU_MyCenterModifyAvatarCell *cell = [tableView dequeueReusableCellWithIdentifier:[XIU_MyCenterModifyAvatarCell XIU_ClassIdentifier] forIndexPath:indexPath];
         cell.curUser = _curUser;
         [tableView addLineforPlainCell:cell forRowAtIndexPath:indexPath withLeftSpace:kPaddingLeftWidth];
         return cell;
     }else {
         
-        XIU_MyCenterTitleValueMoreCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier_TitleValueMore forIndexPath:indexPath];
+        XIU_MyCenterTitleValueMoreCell *cell = [tableView dequeueReusableCellWithIdentifier:[XIU_MyCenterTitleValueMoreCell XIU_ClassIdentifier] forIndexPath:indexPath];
         if (indexPath.section == 1) {
             switch (indexPath.row) {
                 case 0:
@@ -151,7 +153,7 @@
         switch (indexPath.row) {
             case UserInformationItemStyle_userName: {
                 XIU_SettingTextViewController *vc = [XIU_SettingTextViewController settingTextVCWithTitle:@"昵称" textValue:_curUser.userName  doneBlock:^(NSString *textValue) {
-                    NSString *preValue = weakself.curUser.userName;
+
                     weakself.curUser.userName = textValue;
                     
                     [weakself.XIUTableView reloadData];
@@ -175,7 +177,7 @@
                     curDate = [NSDate dateFromString:@"1990-01-01" withFormat:@"yyyy-MM-dd"];
                 }
                 ActionSheetDatePicker *picker = [[ActionSheetDatePicker alloc] initWithTitle:nil datePickerMode:UIDatePickerModeDate selectedDate:curDate doneBlock:^(ActionSheetDatePicker *picker, NSDate *selectedDate, id origin) {
-                    NSString *preValue = weakself.curUser.userBirth;
+
                     weakself.curUser.userBirth = [selectedDate string_yyyy_MM_dd];
                     [weakself.XIUTableView reloadData];
                     //                    request
@@ -190,7 +192,7 @@
                 break;
             case UserInformationItemStyle_hobby: {
                 XIU_SettingTextViewController *vc = [XIU_SettingTextViewController settingTextVCWithTitle:@"爱好" textValue:_curUser.hobby  doneBlock:^(NSString *textValue) {
-                    NSString *preValue = weakself.curUser.hobby;
+
                     weakself.curUser.hobby = textValue;
                     
                     [weakself.XIUTableView reloadData];

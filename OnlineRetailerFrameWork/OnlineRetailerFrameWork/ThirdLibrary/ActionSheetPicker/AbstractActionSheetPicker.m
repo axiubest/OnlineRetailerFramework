@@ -410,7 +410,7 @@ CG_INLINE BOOL isIPhone4()
 }
 
 
-#warning color
+
 - (UIBarButtonItem *)createButtonWithType:(UIBarButtonSystemItem)type target:(id)target action:(SEL)buttonAction
 {
     UIBarButtonItem *barButton;
