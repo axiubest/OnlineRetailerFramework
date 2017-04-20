@@ -119,7 +119,7 @@
         
         [button setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
         
-        button.frame = CGRectMake(0, 0, 25, 25);
+        [button sizeToFit];
         [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
         UIBarButtonItem *Item = [[UIBarButtonItem alloc]initWithCustomView:button];
         if (navigationItem_Type == UINavigationItem_Type_LeftItem) {
@@ -132,7 +132,7 @@
         
         [button setTitle:title forState:UIControlStateNormal];
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        button.frame = CGRectMake(0, 0, 40, 25);
+        [button sizeToFit];
         [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
         UIBarButtonItem *Item = [[UIBarButtonItem alloc]initWithCustomView:button];
         if (navigationItem_Type == UINavigationItem_Type_LeftItem) {
