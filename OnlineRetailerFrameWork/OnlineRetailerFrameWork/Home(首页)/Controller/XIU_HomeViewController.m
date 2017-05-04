@@ -11,8 +11,12 @@
 #import "XIU_SearchBarSimulationView.h"
 #import "XIU_ScanQRCodeViewController.h"
 
+#define kTopViewHeight 700 * kScreenWidthRatio
+
 #import "XIU_CommodityDetailBaseController.h"
 @interface XIU_HomeViewController ()
+@property (nonatomic,strong) UICollectionView *collectionView;
+@property (nonatomic,strong) NSMutableArray *dataArray;
 
 @end
 
@@ -32,6 +36,17 @@
 
 - (void)QRCode {
     [self.navigationController pushViewController:[[XIU_ScanQRCodeViewController alloc] init] animated:YES];
+}
+
+
+
+
+- (NSMutableArray *)dataArray {
+    
+    if (!_dataArray) {
+        _dataArray = [[NSMutableArray alloc] initWithObjects:@"",@"", nil];
+    }
+    return _dataArray;
 }
 - (void)createNavgationSearchBar {
     [self createSimulationSearchBar];

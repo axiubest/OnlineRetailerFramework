@@ -11,20 +11,40 @@
 
 
 static NSInteger HUDProgress_Time = 1;
+
+
+//-------------color----------------
+#define Color(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+//-------------color----------------
+
+
+
 //-------------网络参数设置----------------
 
 
 //搜索记录plist参数
 static NSString * const history_search = @"history_search";
 
-
 static NSString *const patchUpdateURL = @"http://112.74.28.179:8080/Chislim/apk/demo.js";
 
 static NSString *const KBASEURL = @"http://112.74.28.179:8080/Chislim/";
 //-------------网络参数设置----------------
 
+
+
 //------------屏幕尺寸---------------
 
+#define kiPhone4_W 320
+#define kiPhone4_H 480
+#define kiPhone5_W 320
+#define kiPhone5_H 568
+#define kiPhone6_W 375
+#define kiPhone6_H 667
+#define kiPhone6P_W 414
+#define kiPhone6P_H 736
+
+
+#define kKeyWindow [UIApplication sharedApplication].keyWindow
 //屏幕高
 #define KHEIGHT [UIScreen mainScreen].bounds.size.height
 
@@ -36,8 +56,15 @@ static NSString *const KBASEURL = @"http://112.74.28.179:8080/Chislim/";
 #define SCREEN_BOUNDS   [UIScreen mainScreen].bounds
 #define SCREEN_SIZE     [UIScreen mainScreen].bounds.size
 
+/***  屏宽比例 */
+#define kScreenWidthRatio (KWIDTH / (kiPhone6_W * 1.0))
+/***  粗体 */
+#define kBoldFont(size) [UIFont boldSystemFontOfSize:size * kScreenWidthRatio]
+/***  普通字体 */
+#define kFont(size) [UIFont systemFontOfSize:size * kScreenWidthRatio]
+
 static NSInteger const  NaigationBarHeight = 64;
-static NSInteger const  TabBarHeight = 44;
+static NSInteger const  TabBarHeight = 49;
 
 //------------屏幕尺寸---------------
 
@@ -65,6 +92,8 @@ static CGFloat const LAND_CONTORL_HEIGHT = 50.f;
 
 //弱引用
 #define XIU_WeakSelf(type)  __weak typeof(type) weak##type = type;
+
+
 //重写NSLog,Debug模式下打印日志和当前行数
 
 #ifdef DEBUG
@@ -95,7 +124,7 @@ static CGFloat const LAND_CONTORL_HEIGHT = 50.f;
 #define kPathCache [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
 
 
-#define kKeyWindow [UIApplication sharedApplication].keyWindow
+
 
 //------------系统---------------
 
@@ -115,15 +144,4 @@ static CGFloat const LAND_CONTORL_HEIGHT = 50.f;
 #endif /* PrefixHeader_pch */
 
 
-//-------------UM--------------
-static  NSString *const USHARE_APPKEY = @"587d9de97f2c7464d9001cc4";
-static  NSString *const XIU_Social_WX_ID = @"";
-static  NSString *const XIU_Social_WX_Secret = @"";
-static  NSString *const XIU_Social_QQ_ID = @"";
-static  NSString *const XIU_Social_QQ_Secret = @"";
-static  NSString *const XIU_Social_Sina_Select = @"";
-static  NSString *const XIU_Social_Sina_ID = @"";
-static  NSString *const XIU_Social_RedirectURL = @"";
-
-//-------------UM--------------
 

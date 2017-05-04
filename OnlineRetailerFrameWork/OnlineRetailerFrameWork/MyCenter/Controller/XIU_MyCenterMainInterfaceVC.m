@@ -10,7 +10,7 @@
 #import "XIU_SettingMineInfoVC.h"
 #import "XIU_ModifyAvatarViewController.h"
 #import "XIU_DeliveryAddressViewController.h"
-
+#import "XIU_OrderViewController.h"
 //text
 #import "XIU_LoginViewController.h"
 #import "UINavigationBar+Awesome.h"
@@ -25,7 +25,7 @@ static NSInteger NAVBAR_CHANGE_POINT = 50;
 
 static  NSString *const NavgationBarRightImageName = @"设置";
 
-@interface XIU_MyCenterMainInterfaceVC ()<UITableViewDelegate, UITableViewDataSource,SettingMineInfoDelegate, XIU_LoginViewControllerDelegate, XIU_MyCenterUserHeaderViewDelegate>
+@interface XIU_MyCenterMainInterfaceVC ()<UITableViewDelegate, UITableViewDataSource,SettingMineInfoDelegate, XIU_LoginViewControllerDelegate, XIU_MyCenterUserHeaderViewDelegate,XIU_MyCenterPurchaseInformationDelegate>
 {
     UIImageView *navBarHairlineImageView;
 
@@ -147,7 +147,7 @@ static  NSString *const NavgationBarRightImageName = @"设置";
     if (indexPath.section == 0) {
         
         XIU_MyCenterPurchaseInformationCell *cell = [tableView dequeueReusableCellWithIdentifier:[XIU_MyCenterPurchaseInformationCell XIU_ClassIdentifier]];
-       
+        cell.delegate = self;
         return cell;
     }
         XIU_MyCenterUtilitiesCell *cell = [tableView dequeueReusableCellWithIdentifier:[XIU_MyCenterUtilitiesCell XIU_ClassIdentifier]];
@@ -180,13 +180,6 @@ static  NSString *const NavgationBarRightImageName = @"设置";
    return section == 0 ?  KWIDTH, KWIDTH * 0.4 : 0;
 }
 
-#pragma mark XIU_LoginViewControllerDelegate
-- (void)login {
-    
-    [_XIUTableViw reloadData];
-    
-}
-
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
@@ -195,5 +188,27 @@ static  NSString *const NavgationBarRightImageName = @"设置";
     XIU_DeliveryAddressViewController *deliverAddress= [mainStoryBoard instantiateViewControllerWithIdentifier:XIU_DeliveryAddressID];
 
     [self.navigationController pushViewController:deliverAddress animated:YES];
+}
+
+
+#pragma mark XIU_LoginViewControllerDelegate
+- (void)login {
+    
+    [_XIUTableViw reloadData];
+    
+}
+
+- (void)clickPurchaseInformationWithType:(PurchaseInformationStyle)type {
+    switch (type) {
+        case PurchaseInformationStyle_All: {
+            XIU_OrderViewController *order = [[XIU_OrderViewController alloc] init];
+            [self.navigationController pushViewController:order animated:YES];
+        }
+         
+            break;
+            
+        default:
+            break;
+    }
 }
 @end

@@ -11,6 +11,7 @@
 
 
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "UMengHeader.h"
 #import "MBProgressHUD.h"
 #import "XIU_ViewController.h"
 #import "XIU_NetAPIManager.h"

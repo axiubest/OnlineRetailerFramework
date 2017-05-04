@@ -31,67 +31,12 @@ static NSInteger CartRowHeight = 100;
 
 @implementation XIU_ShoppingCartViewController
 
--(XIU_ShoppingCartEmptyView *)emptyView {
-    if (!_emptyView) {
-        XIU_ShoppingCartEmptyView *backgroundView = [[XIU_ShoppingCartEmptyView alloc]initWithFrame:CGRectMake(0, NaigationBarHeight, KWIDTH, KHEIGHT - NaigationBarHeight)WithTitle:@"" ImageName:@""];
-        backgroundView.tag = CartEmptyView;
-        _emptyView = backgroundView;
-    }
-    return _emptyView;
-}
 
--(UITableView *)XIUTableView {
-    if (!_XIUTableView) {
-        UITableView *table = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, KWIDTH, KHEIGHT - 2  * TabBarHeight- NaigationBarHeight) style:UITableViewStyleGrouped];
-        
-        table.delegate = self;
-        table.dataSource = self;
-        
-        table.rowHeight = CartRowHeight;
-        table.separatorStyle = UITableViewCellSeparatorStyleNone;
-        table.backgroundColor = [UIColor colorWithRed:246 green:246 blue:248 alpha:1];
-        [self.view addSubview:table];
-        _XIUTableView = table;
-
-    }
-    return _XIUTableView;
-}
-
-
-
-
--(NSMutableArray<XIU_ShoppingCart_ShopModel *> *)dataArray {
-    if (_dataArray == nil) {
-        _dataArray = [NSMutableArray arrayWithCapacity:0];
-    }
-    
-    return _dataArray;
-}
-
-
-
--(NSMutableArray<XIU_ShoppingCart_GoodsModel *> *)selectedArray {
-    if (_selectedArray == nil) {
-        _selectedArray = [NSMutableArray arrayWithCapacity:0];
-    }
-    
-    return _selectedArray;
-}
 
 #pragma mark - viewController life cicle
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-
-//    if (self.selectedArray.count > 0) {
-//        for (XIU_ShoppingCart_GoodsModel *model in self.selectedArray) {
-//            model.select = NO;//这个其实有点多余,提交订单后的数据源不会包含这些,保险起见,加上了
-//        }
-//        [self.selectedArray removeAllObjects];
-//    }
-//    
-//    _allSellectedButton.selected = NO;
-//    _totlePriceLabel.attributedText = [NSString SetStringOfShoppingCartPriceString:@"￥0.00"];
 }
 
 -(void)creatData {
@@ -132,16 +77,8 @@ static NSInteger CartRowHeight = 100;
     self.navigationItem.title = @"购物车";
     self.view.backgroundColor = [UIColor whiteColor];
 
-    
     [self loadData];
-    
 
-//    if (self.dataArray.count > 0) {
-//        
-//        [self setupCartView];
-//    } else {
-//        [self.view addSubview:self.emptyView];
-//    }
 }
 
 
@@ -211,9 +148,9 @@ static NSInteger CartRowHeight = 100;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    XIU_ShoppingCartCell *cell = [tableView dequeueReusableCellWithIdentifier:XIU_ShoppingCartShopCellIdentifier];
+    XIU_ShoppingCartCell *cell = [tableView dequeueReusableCellWithIdentifier:[XIU_ShoppingCartCell XIU_ClassIdentifier]];
     if (cell == nil) {
-        cell = [[XIU_ShoppingCartCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:XIU_ShoppingCartShopCellIdentifier];
+        cell = [[XIU_ShoppingCartCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:[XIU_ShoppingCartCell XIU_ClassIdentifier]];
     }
     
     XIU_ShoppingCart_ShopModel *shopModel = self.dataArray[indexPath.section];
@@ -463,5 +400,53 @@ static NSInteger CartRowHeight = 100;
     [self.XIUTableView reloadData];
     [self countPrice];
 
+}
+
+
+-(XIU_ShoppingCartEmptyView *)emptyView {
+    if (!_emptyView) {
+        XIU_ShoppingCartEmptyView *backgroundView = [[XIU_ShoppingCartEmptyView alloc]initWithFrame:CGRectMake(0, NaigationBarHeight, KWIDTH, KHEIGHT - NaigationBarHeight)WithTitle:@"" ImageName:@""];
+        backgroundView.tag = CartEmptyView;
+        _emptyView = backgroundView;
+    }
+    return _emptyView;
+}
+
+-(UITableView *)XIUTableView {
+    if (!_XIUTableView) {
+        UITableView *table = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, KWIDTH, KHEIGHT - 2  * TabBarHeight- NaigationBarHeight) style:UITableViewStyleGrouped];
+        
+        table.delegate = self;
+        table.dataSource = self;
+        
+        table.rowHeight = CartRowHeight;
+        table.separatorStyle = UITableViewCellSeparatorStyleNone;
+        table.backgroundColor = [UIColor colorWithRed:246 green:246 blue:248 alpha:1];
+        [self.view addSubview:table];
+        _XIUTableView = table;
+        
+    }
+    return _XIUTableView;
+}
+
+
+
+
+-(NSMutableArray<XIU_ShoppingCart_ShopModel *> *)dataArray {
+    if (_dataArray == nil) {
+        _dataArray = [NSMutableArray arrayWithCapacity:0];
+    }
+    
+    return _dataArray;
+}
+
+
+
+-(NSMutableArray<XIU_ShoppingCart_GoodsModel *> *)selectedArray {
+    if (_selectedArray == nil) {
+        _selectedArray = [NSMutableArray arrayWithCapacity:0];
+    }
+    
+    return _selectedArray;
 }
 @end

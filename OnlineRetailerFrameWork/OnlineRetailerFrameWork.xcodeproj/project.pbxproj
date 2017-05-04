@@ -238,6 +238,9 @@
 		83E2D2F41E5D94BB0071D9A8 /* XIU_DeliveryAddressListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D2F31E5D94BB0071D9A8 /* XIU_DeliveryAddressListCell.m */; };
 		83E2D2F71E5DD7AC0071D9A8 /* XIU_DeliverAddressEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D2F61E5DD7AC0071D9A8 /* XIU_DeliverAddressEditViewController.m */; };
 		83E2D2F91E5DD7BF0071D9A8 /* XIU_DeliverAddressEditViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E2D2F81E5DD7BF0071D9A8 /* XIU_DeliverAddressEditViewController.storyboard */; };
+		FA6045B01EBB74A900C93734 /* XIU_OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6045AF1EBB74A900C93734 /* XIU_OrderViewController.m */; };
+		FA6045B31EBB77DB00C93734 /* XIU_OrderSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6045B21EBB77DB00C93734 /* XIU_OrderSegmentView.m */; };
+		FA6045B71EBB781900C93734 /* XIU_OrderSegmentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6045B61EBB781900C93734 /* XIU_OrderSegmentView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -627,6 +630,12 @@
 		83E2D2F61E5DD7AC0071D9A8 /* XIU_DeliverAddressEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_DeliverAddressEditViewController.m; sourceTree = "<group>"; };
 		83E2D2F81E5DD7BF0071D9A8 /* XIU_DeliverAddressEditViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XIU_DeliverAddressEditViewController.storyboard; sourceTree = "<group>"; };
 		ED2BFCE96CB7DAB98451ED2B /* Pods-OnlineRetailerFrameWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineRetailerFrameWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnlineRetailerFrameWork/Pods-OnlineRetailerFrameWork.debug.xcconfig"; sourceTree = "<group>"; };
+		FA04F77E1EA7BAF9007D4835 /* UMengHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMengHeader.h; sourceTree = "<group>"; };
+		FA6045AE1EBB74A900C93734 /* XIU_OrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_OrderViewController.h; sourceTree = "<group>"; };
+		FA6045AF1EBB74A900C93734 /* XIU_OrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_OrderViewController.m; sourceTree = "<group>"; };
+		FA6045B11EBB77DB00C93734 /* XIU_OrderSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_OrderSegmentView.h; sourceTree = "<group>"; };
+		FA6045B21EBB77DB00C93734 /* XIU_OrderSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_OrderSegmentView.m; sourceTree = "<group>"; };
+		FA6045B61EBB781900C93734 /* XIU_OrderSegmentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XIU_OrderSegmentView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -970,6 +979,8 @@
 				8341AA891E4DAB3500FDC5A4 /* XIU_ModifyAvatarViewController.m */,
 				8341AA8A1E4DAB3500FDC5A4 /* XIU_MyCenterMainInterfaceVC.h */,
 				8341AA8B1E4DAB3500FDC5A4 /* XIU_MyCenterMainInterfaceVC.m */,
+				FA6045AE1EBB74A900C93734 /* XIU_OrderViewController.h */,
+				FA6045AF1EBB74A900C93734 /* XIU_OrderViewController.m */,
 				8341AA8C1E4DAB3500FDC5A4 /* XIU_SettingMineInfoVC.h */,
 				8341AA8D1E4DAB3500FDC5A4 /* XIU_SettingMineInfoVC.m */,
 				8341AA8E1E4DAB3500FDC5A4 /* XIU_SettingTextViewController.h */,
@@ -1004,6 +1015,9 @@
 				8341AA9F1E4DAB3500FDC5A4 /* XIU_MyCenterUtilitiesCell.h */,
 				8341AAA01E4DAB3500FDC5A4 /* XIU_MyCenterUtilitiesCell.m */,
 				8341AAA11E4DAB3500FDC5A4 /* XIU_MyCenterUtilitiesCell.xib */,
+				FA6045B11EBB77DB00C93734 /* XIU_OrderSegmentView.h */,
+				FA6045B21EBB77DB00C93734 /* XIU_OrderSegmentView.m */,
+				FA6045B61EBB781900C93734 /* XIU_OrderSegmentView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1447,6 +1461,7 @@
 				8386FC481E4DA7F90029E653 /* AppDelegate.h */,
 				8386FC491E4DA7F90029E653 /* AppDelegate.m */,
 				8341AA071E4DAA1A00FDC5A4 /* FileGlobalReference.h */,
+				FA04F77E1EA7BAF9007D4835 /* UMengHeader.h */,
 				8386FC461E4DA7F90029E653 /* main.m */,
 				8341AA081E4DAA3500FDC5A4 /* PrefixHeader.pch */,
 			);
@@ -1641,6 +1656,7 @@
 				8341AB7A1E4DAB3500FDC5A4 /* yes_btn_unselect.png in Resources */,
 				83E2D2F91E5DD7BF0071D9A8 /* XIU_DeliverAddressEditViewController.storyboard in Resources */,
 				8341AB771E4DAB3500FDC5A4 /* 收藏.png in Resources */,
+				FA6045B71EBB781900C93734 /* XIU_OrderSegmentView.xib in Resources */,
 				8341AB8B1E4DAB3500FDC5A4 /* second_selected@2x.png in Resources */,
 				8341AB701E4DAB3500FDC5A4 /* share_btn_qq@2x.png in Resources */,
 				8341AB841E4DAB3500FDC5A4 /* navigationbar_background@2x.png in Resources */,
@@ -1762,6 +1778,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83E2D2F71E5DD7AC0071D9A8 /* XIU_DeliverAddressEditViewController.m in Sources */,
+				FA6045B01EBB74A900C93734 /* XIU_OrderViewController.m in Sources */,
 				8341ACE41E57E17E00FDC5A4 /* UIImageView+Badge.m in Sources */,
 				8341ABFF1E4DAB3500FDC5A4 /* NSString+Encryption.m in Sources */,
 				8341AB681E4DAB3500FDC5A4 /* XIU_HomeViewController.m in Sources */,
@@ -1824,6 +1841,7 @@
 				8341ABD31E4DAB3500FDC5A4 /* MASCompositeConstraint.m in Sources */,
 				8386FC4A1E4DA7F90029E653 /* AppDelegate.m in Sources */,
 				832798B61E5C43C100930000 /* XIU_ScanQRCodeManager.m in Sources */,
+				FA6045B31EBB77DB00C93734 /* XIU_OrderSegmentView.m in Sources */,
 				8341ABCD1E4DAB3500FDC5A4 /* AFSecurityPolicy.m in Sources */,
 				8341AC061E4DAB3500FDC5A4 /* UITableView+Common.m in Sources */,
 				8341AB981E4DAB3500FDC5A4 /* XIU_ResignPhoneNumberVC.m in Sources */,

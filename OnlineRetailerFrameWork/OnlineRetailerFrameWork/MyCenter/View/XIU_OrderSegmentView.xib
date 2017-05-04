@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XIU_OrderSegmentView">
+            <rect key="frame" x="0.0" y="0.0" width="868" height="145"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoS-EP-Kbr">
+                    <rect key="frame" x="0.0" y="0.0" width="173.5" height="145"/>
+                    <state key="normal" title="全部"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTK-EY-xBH">
+                    <rect key="frame" x="173.5" y="0.0" width="173.5" height="145"/>
+                    <state key="normal" title="待付款"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Pe-j3-wGX">
+                    <rect key="frame" x="347" y="0.0" width="174" height="145"/>
+                    <state key="normal" title="待发货"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIr-1y-ZCM">
+                    <rect key="frame" x="521" y="0.0" width="173.5" height="145"/>
+                    <state key="normal" title="待收货"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iT1-S2-AcX">
+                    <rect key="frame" x="694" y="0.0" width="173.5" height="145"/>
+                    <state key="normal" title="退款中"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="iT1-S2-AcX" secondAttribute="bottom" id="01P-EG-cGF"/>
+                <constraint firstItem="LIr-1y-ZCM" firstAttribute="leading" secondItem="6Pe-j3-wGX" secondAttribute="trailing" id="1rb-EQ-Vmy"/>
+                <constraint firstItem="jTK-EY-xBH" firstAttribute="leading" secondItem="FoS-EP-Kbr" secondAttribute="trailing" id="7O3-0L-uX8"/>
+                <constraint firstItem="jTK-EY-xBH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Brp-61-1gm"/>
+                <constraint firstItem="jTK-EY-xBH" firstAttribute="width" secondItem="FoS-EP-Kbr" secondAttribute="width" id="Eti-6P-Jfb"/>
+                <constraint firstItem="LIr-1y-ZCM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FZT-PM-2wO"/>
+                <constraint firstItem="FoS-EP-Kbr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="HAW-gz-hlW"/>
+                <constraint firstItem="iT1-S2-AcX" firstAttribute="width" secondItem="FoS-EP-Kbr" secondAttribute="width" id="HgH-Mm-Wmj"/>
+                <constraint firstItem="6Pe-j3-wGX" firstAttribute="leading" secondItem="jTK-EY-xBH" secondAttribute="trailing" id="KFE-6O-Y0E"/>
+                <constraint firstAttribute="trailing" secondItem="iT1-S2-AcX" secondAttribute="trailing" id="NQT-gP-efu"/>
+                <constraint firstItem="LIr-1y-ZCM" firstAttribute="width" secondItem="FoS-EP-Kbr" secondAttribute="width" id="Nwm-gP-mbJ"/>
+                <constraint firstItem="iT1-S2-AcX" firstAttribute="leading" secondItem="LIr-1y-ZCM" secondAttribute="trailing" id="Oce-YQ-R3c"/>
+                <constraint firstItem="iT1-S2-AcX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="OpY-R6-Ag4"/>
+                <constraint firstAttribute="bottom" secondItem="jTK-EY-xBH" secondAttribute="bottom" id="QSq-PV-evl"/>
+                <constraint firstAttribute="bottom" secondItem="FoS-EP-Kbr" secondAttribute="bottom" id="QuJ-B6-b5K"/>
+                <constraint firstAttribute="bottom" secondItem="6Pe-j3-wGX" secondAttribute="bottom" id="SWn-9f-rm7"/>
+                <constraint firstItem="6Pe-j3-wGX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Uvu-7I-ese"/>
+                <constraint firstAttribute="bottom" secondItem="LIr-1y-ZCM" secondAttribute="bottom" id="WDz-zz-yEg"/>
+                <constraint firstItem="FoS-EP-Kbr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eSf-bm-WNS"/>
+                <constraint firstItem="6Pe-j3-wGX" firstAttribute="width" secondItem="FoS-EP-Kbr" secondAttribute="width" id="fCC-Gs-BGB"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="allBtn" destination="FoS-EP-Kbr" id="UNl-zO-jNy"/>
+                <outlet property="getBtn" destination="LIr-1y-ZCM" id="Ukp-jr-TFw"/>
+                <outlet property="payBtn" destination="jTK-EY-xBH" id="jaD-nX-gIl"/>
+                <outlet property="refundBtn" destination="iT1-S2-AcX" id="Usl-Qg-qZ5"/>
+                <outlet property="sendBtn" destination="6Pe-j3-wGX" id="Hf2-gi-9zD"/>
+            </connections>
+            <point key="canvasLocation" x="4" y="-57"/>
+        </view>
+    </objects>
+</document>

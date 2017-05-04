@@ -11,7 +11,9 @@
 
 static NSInteger heightOfMyPurchase = 30;
 @interface XIU_MyCenterPurchaseInformationCell ()
-
+{
+    
+}
 @property (weak, nonatomic) IBOutlet UIView *AllOrdersView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *AllOrdersViewHeightConstraint; //我的订单高度
 
@@ -25,13 +27,17 @@ static NSInteger heightOfMyPurchase = 30;
 @property (weak, nonatomic) IBOutlet UIImageView *WaitEvaluateImageView;
 
 @end
-
 @implementation XIU_MyCenterPurchaseInformationCell
+@synthesize style;
 
 - (void)awakeFromNib {
     [super awakeFromNib];
      self.selectionStyle = UITableViewCellSelectionStyleNone;
     [self setUpCellUI];
+    [_AllOrdersView bk_whenTapped:^{
+        style = PurchaseInformationStyle_All;
+        [_delegate clickPurchaseInformationWithType:style];
+    }];
     
 }
 

@@ -18,11 +18,6 @@
     return [[NSUserDefaults standardUserDefaults] valueForKey:KBASEURL] ?: KBASEURL;
 }
 
-
-
-
-
-
 //返回错误代码
 -(id)handleResponse:(id)responseJSON autoShowError:(BOOL)autoShowError {
     NSError *error = nil;
