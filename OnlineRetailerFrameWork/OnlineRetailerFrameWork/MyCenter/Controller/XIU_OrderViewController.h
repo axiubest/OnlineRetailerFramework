@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XIU_OrderSegmentView.h"
 
 @interface XIU_OrderViewController : XIU_HiddenTabBarController
+
+@property (nonatomic, assign)OrderSegmentStyle style;
 
 @end

@@ -8,32 +8,111 @@
 
 #import "XIU_OrderViewController.h"
 
-@interface XIU_OrderViewController ()
+@interface XIU_OrderViewController ()<UITableViewDelegate, UITableViewDataSource,XIU_OrderSegmentDelegate>
 
+@property (nonatomic, weak)XIU_OrderSegmentView *segmentView;
+@property (nonatomic, weak)UITableView *XIUTableView;
+@property (nonatomic, strong) NSMutableArray *dataArray;
 @end
 
+#define segmentHeight 40
 @implementation XIU_OrderViewController
 
 
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return self.dataArray.count;
+    
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return CGFLOAT_MIN;
+    }
+    return 5;
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell  =[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
+    return cell;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.navigationItem.title = @"我的订单";
+    [self.view addSubview:self.segmentView];
+    UITableView *table = [[UITableView alloc] initWithFrame:CGRectMake(0, NaigationBarHeight + segmentHeight, KWIDTH, KHEIGHT - NaigationBarHeight + segmentHeight) style:UITableViewStyleGrouped];
+
+    table.dataSource = self;
+    table.delegate = self;
+    table.separatorStyle = UITableViewCellSeparatorStyleNone;
+    _XIUTableView = table;
+    [self.view addSubview:_XIUTableView];
+
+    [self request];
+}
+
+- (void)request {
+    [self.dataArray addObject:@""];
+    [self.dataArray addObject:@""];
+    [self.dataArray addObject:@""];
+    [self.dataArray addObject:@""];
+    [self.dataArray addObject:@""];
+
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark segment-Delegate
+- (void)clickSegmentType:(OrderSegmentStyle)style {
+    switch (style) {
+        case OrderSegmentStyle_all:
+            
+            break;
+        case OrderSegmentStyle_get:
+            
+            break;
+        case OrderSegmentStyle_pay:
+            
+            break;
+        case OrderSegmentStyle_send:
+            
+            break;
+        case OrderSegmentStyle_refund:
+            
+            break;
+            
+        default:
+            break;
+    }
 }
-*/
+
+-(void)setStyle:(OrderSegmentStyle)style {
+    _style = style;
+    self.segmentView.segmentStyle = style;
+}
+
+-(NSMutableArray *)dataArray {
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray array];
+    }
+    return _dataArray;
+}
+
+-(XIU_OrderSegmentView *)segmentView {
+    if (!_segmentView) {
+        XIU_OrderSegmentView *segment = [[[NSBundle mainBundle] loadNibNamed:[XIU_OrderSegmentView XIU_ClassIdentifier] owner:self options:nil] lastObject];
+        segment.frame = CGRectMake(0, NaigationBarHeight, KWIDTH, segmentHeight);
+        segment.delegate = self;
+        _segmentView  = segment;
+    }
+    return _segmentView;
+}
 
 @end

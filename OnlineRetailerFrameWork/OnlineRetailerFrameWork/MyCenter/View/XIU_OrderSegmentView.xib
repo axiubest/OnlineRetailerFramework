@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,23 +18,45 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoS-EP-Kbr">
                     <rect key="frame" x="0.0" y="0.0" width="173.5" height="145"/>
                     <state key="normal" title="全部"/>
+                    <connections>
+                        <action selector="clickBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="ta6-7E-BUT"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTK-EY-xBH">
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTK-EY-xBH">
                     <rect key="frame" x="173.5" y="0.0" width="173.5" height="145"/>
                     <state key="normal" title="待付款"/>
+                    <connections>
+                        <action selector="clickBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="DNo-Wu-Tbk"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Pe-j3-wGX">
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Pe-j3-wGX">
                     <rect key="frame" x="347" y="0.0" width="174" height="145"/>
                     <state key="normal" title="待发货"/>
+                    <connections>
+                        <action selector="clickBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="Xc7-M8-eNo"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIr-1y-ZCM">
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIr-1y-ZCM">
                     <rect key="frame" x="521" y="0.0" width="173.5" height="145"/>
                     <state key="normal" title="待收货"/>
+                    <connections>
+                        <action selector="clickBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="woa-Rw-ljj"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iT1-S2-AcX">
+                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iT1-S2-AcX">
                     <rect key="frame" x="694" y="0.0" width="173.5" height="145"/>
                     <state key="normal" title="退款中"/>
+                    <connections>
+                        <action selector="clickBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="lfe-hM-nDo"/>
+                    </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xku-xS-qr9" userLabel="bottomline">
+                    <rect key="frame" x="0.0" y="144" width="868" height="1"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="tdU-eC-gI9"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -47,17 +69,20 @@
                 <constraint firstItem="FoS-EP-Kbr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="HAW-gz-hlW"/>
                 <constraint firstItem="iT1-S2-AcX" firstAttribute="width" secondItem="FoS-EP-Kbr" secondAttribute="width" id="HgH-Mm-Wmj"/>
                 <constraint firstItem="6Pe-j3-wGX" firstAttribute="leading" secondItem="jTK-EY-xBH" secondAttribute="trailing" id="KFE-6O-Y0E"/>
+                <constraint firstAttribute="trailing" secondItem="xku-xS-qr9" secondAttribute="trailing" id="KbJ-pm-BHO"/>
                 <constraint firstAttribute="trailing" secondItem="iT1-S2-AcX" secondAttribute="trailing" id="NQT-gP-efu"/>
                 <constraint firstItem="LIr-1y-ZCM" firstAttribute="width" secondItem="FoS-EP-Kbr" secondAttribute="width" id="Nwm-gP-mbJ"/>
                 <constraint firstItem="iT1-S2-AcX" firstAttribute="leading" secondItem="LIr-1y-ZCM" secondAttribute="trailing" id="Oce-YQ-R3c"/>
                 <constraint firstItem="iT1-S2-AcX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="OpY-R6-Ag4"/>
                 <constraint firstAttribute="bottom" secondItem="jTK-EY-xBH" secondAttribute="bottom" id="QSq-PV-evl"/>
                 <constraint firstAttribute="bottom" secondItem="FoS-EP-Kbr" secondAttribute="bottom" id="QuJ-B6-b5K"/>
+                <constraint firstItem="xku-xS-qr9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="SH3-M5-Hr9"/>
                 <constraint firstAttribute="bottom" secondItem="6Pe-j3-wGX" secondAttribute="bottom" id="SWn-9f-rm7"/>
                 <constraint firstItem="6Pe-j3-wGX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Uvu-7I-ese"/>
                 <constraint firstAttribute="bottom" secondItem="LIr-1y-ZCM" secondAttribute="bottom" id="WDz-zz-yEg"/>
                 <constraint firstItem="FoS-EP-Kbr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eSf-bm-WNS"/>
                 <constraint firstItem="6Pe-j3-wGX" firstAttribute="width" secondItem="FoS-EP-Kbr" secondAttribute="width" id="fCC-Gs-BGB"/>
+                <constraint firstAttribute="bottom" secondItem="xku-xS-qr9" secondAttribute="bottom" id="j5W-Il-F6T"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -68,7 +93,7 @@
                 <outlet property="refundBtn" destination="iT1-S2-AcX" id="Usl-Qg-qZ5"/>
                 <outlet property="sendBtn" destination="6Pe-j3-wGX" id="Hf2-gi-9zD"/>
             </connections>
-            <point key="canvasLocation" x="4" y="-57"/>
+            <point key="canvasLocation" x="4" y="-57.5"/>
         </view>
     </objects>
 </document>
