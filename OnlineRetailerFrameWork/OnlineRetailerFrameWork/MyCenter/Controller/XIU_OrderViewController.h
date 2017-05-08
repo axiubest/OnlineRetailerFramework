@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "XIU_OrderSegmentView.h"
-
+#import "XIU_MyCenterGlobalEnum.h"
 @interface XIU_OrderViewController : XIU_HiddenTabBarController
 
-@property (nonatomic, assign)OrderSegmentStyle style;
+@property (nonatomic, assign)PurchaseInformationStyle style;
 
 @end

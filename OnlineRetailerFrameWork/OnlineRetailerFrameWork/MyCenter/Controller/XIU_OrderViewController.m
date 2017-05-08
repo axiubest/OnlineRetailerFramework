@@ -70,21 +70,21 @@
 
 
 #pragma mark segment-Delegate
-- (void)clickSegmentType:(OrderSegmentStyle)style {
+- (void)clickSegmentType:(PurchaseInformationStyle)style {
     switch (style) {
-        case OrderSegmentStyle_all:
+        case PurchaseInformationStyle_All:
             
             break;
-        case OrderSegmentStyle_get:
+        case PurchaseInformationStyle_Get:
             
             break;
-        case OrderSegmentStyle_pay:
+        case PurchaseInformationStyle_Pay:
             
             break;
-        case OrderSegmentStyle_send:
+        case PurchaseInformationStyle_Send:
             
             break;
-        case OrderSegmentStyle_refund:
+        case PurchaseInformationStyle_retund:
             
             break;
             
@@ -93,9 +93,9 @@
     }
 }
 
--(void)setStyle:(OrderSegmentStyle)style {
+-(void)setStyle:(PurchaseInformationStyle)style {
     _style = style;
-    self.segmentView.segmentStyle = style;
+    self.segmentView.style = style;
 }
 
 -(NSMutableArray *)dataArray {
@@ -109,6 +109,7 @@
     if (!_segmentView) {
         XIU_OrderSegmentView *segment = [[[NSBundle mainBundle] loadNibNamed:[XIU_OrderSegmentView XIU_ClassIdentifier] owner:self options:nil] lastObject];
         segment.frame = CGRectMake(0, NaigationBarHeight, KWIDTH, segmentHeight);
+        segment.style = _style;
         segment.delegate = self;
         _segmentView  = segment;
     }

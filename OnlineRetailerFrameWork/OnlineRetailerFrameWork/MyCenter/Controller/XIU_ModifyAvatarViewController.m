@@ -38,7 +38,6 @@
     self.title = @"个人信息";
     self.curUser =[XIU_Login curLoginUser];
     
-    //    添加myTableView
     _XIUTableView = ({
         UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
         tableView.backgroundColor = [UIColor xiu_tableViewBackgroundColor];

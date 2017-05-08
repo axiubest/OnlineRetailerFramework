@@ -15,37 +15,47 @@
             <rect key="frame" x="0.0" y="0.0" width="868" height="145"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoS-EP-Kbr">
+                <button opaque="NO" tag="1000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoS-EP-Kbr">
                     <rect key="frame" x="0.0" y="0.0" width="173.5" height="145"/>
-                    <state key="normal" title="全部"/>
+                    <state key="normal" title="全部">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="clickBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="ta6-7E-BUT"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTK-EY-xBH">
+                <button opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTK-EY-xBH">
                     <rect key="frame" x="173.5" y="0.0" width="173.5" height="145"/>
-                    <state key="normal" title="待付款"/>
+                    <state key="normal" title="待付款">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="clickBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="DNo-Wu-Tbk"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Pe-j3-wGX">
+                <button opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Pe-j3-wGX">
                     <rect key="frame" x="347" y="0.0" width="174" height="145"/>
-                    <state key="normal" title="待发货"/>
+                    <state key="normal" title="待发货">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="clickBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="Xc7-M8-eNo"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIr-1y-ZCM">
+                <button opaque="NO" tag="1003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIr-1y-ZCM">
                     <rect key="frame" x="521" y="0.0" width="173.5" height="145"/>
-                    <state key="normal" title="待收货"/>
+                    <state key="normal" title="待收货">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="clickBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="woa-Rw-ljj"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iT1-S2-AcX">
+                <button opaque="NO" tag="1004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iT1-S2-AcX">
                     <rect key="frame" x="694" y="0.0" width="173.5" height="145"/>
-                    <state key="normal" title="退款中"/>
+                    <state key="normal" title="退款中">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="clickBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="lfe-hM-nDo"/>
                     </connections>

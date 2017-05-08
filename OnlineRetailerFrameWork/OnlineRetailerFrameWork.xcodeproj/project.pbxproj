@@ -241,6 +241,7 @@
 		FA6045B01EBB74A900C93734 /* XIU_OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6045AF1EBB74A900C93734 /* XIU_OrderViewController.m */; };
 		FA6045B31EBB77DB00C93734 /* XIU_OrderSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6045B21EBB77DB00C93734 /* XIU_OrderSegmentView.m */; };
 		FA6045B71EBB781900C93734 /* XIU_OrderSegmentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6045B61EBB781900C93734 /* XIU_OrderSegmentView.xib */; };
+		FAB15F431EC055050091B4C4 /* XIU_MyCenterGlobalEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB15F421EC055050091B4C4 /* XIU_MyCenterGlobalEnum.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -636,6 +637,8 @@
 		FA6045B11EBB77DB00C93734 /* XIU_OrderSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_OrderSegmentView.h; sourceTree = "<group>"; };
 		FA6045B21EBB77DB00C93734 /* XIU_OrderSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_OrderSegmentView.m; sourceTree = "<group>"; };
 		FA6045B61EBB781900C93734 /* XIU_OrderSegmentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XIU_OrderSegmentView.xib; sourceTree = "<group>"; };
+		FAB15F411EC055050091B4C4 /* XIU_MyCenterGlobalEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_MyCenterGlobalEnum.h; sourceTree = "<group>"; };
+		FAB15F421EC055050091B4C4 /* XIU_MyCenterGlobalEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_MyCenterGlobalEnum.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -985,6 +988,8 @@
 				8341AA8D1E4DAB3500FDC5A4 /* XIU_SettingMineInfoVC.m */,
 				8341AA8E1E4DAB3500FDC5A4 /* XIU_SettingTextViewController.h */,
 				8341AA8F1E4DAB3500FDC5A4 /* XIU_SettingTextViewController.m */,
+				FAB15F411EC055050091B4C4 /* XIU_MyCenterGlobalEnum.h */,
+				FAB15F421EC055050091B4C4 /* XIU_MyCenterGlobalEnum.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1796,6 +1801,7 @@
 				8341AB961E4DAB3500FDC5A4 /* XIU_LoginViewController.m in Sources */,
 				8341ABB71E4DAB3500FDC5A4 /* XIU_SettingMineInfoVC.m in Sources */,
 				8341ABC01E4DAB3500FDC5A4 /* XIU_MyCenterUtilitiesCell.m in Sources */,
+				FAB15F431EC055050091B4C4 /* XIU_MyCenterGlobalEnum.m in Sources */,
 				8341AB9F1E4DAB3500FDC5A4 /* XIU_CommodityDetailBaseController.m in Sources */,
 				8341ABB21E4DAB3500FDC5A4 /* XIU_HiddenTabBarController.m in Sources */,
 				8341ABD51E4DAB3500FDC5A4 /* MASConstraintMaker.m in Sources */,

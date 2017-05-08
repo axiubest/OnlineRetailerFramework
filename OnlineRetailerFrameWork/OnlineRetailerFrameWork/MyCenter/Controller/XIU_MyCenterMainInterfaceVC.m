@@ -25,6 +25,8 @@ static NSInteger NAVBAR_CHANGE_POINT = 50;
 
 static  NSString *const NavgationBarRightImageName = @"设置";
 
+
+//个人中心
 @interface XIU_MyCenterMainInterfaceVC ()<UITableViewDelegate, UITableViewDataSource,SettingMineInfoDelegate, XIU_LoginViewControllerDelegate, XIU_MyCenterUserHeaderViewDelegate,XIU_MyCenterPurchaseInformationDelegate>
 {
     UIImageView *navBarHairlineImageView;
@@ -44,7 +46,7 @@ static  NSString *const NavgationBarRightImageName = @"设置";
         tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         tableView.delegate = self;
         tableView.dataSource = self;
-        tableView.sectionHeaderHeight = 0.00001;
+        tableView.sectionHeaderHeight = CGFLOAT_MIN;
         tableView.backgroundColor = [UIColor xiu_tableViewSectionBackgroundColor];
         [self.view addSubview:tableView];
         _XIUTableViw = tableView;
@@ -199,16 +201,8 @@ static  NSString *const NavgationBarRightImageName = @"设置";
 }
 
 - (void)clickPurchaseInformationWithType:(PurchaseInformationStyle)type {
-    switch (type) {
-        case PurchaseInformationStyle_All: {
-            XIU_OrderViewController *order = [[XIU_OrderViewController alloc] init];
-            [self.navigationController pushViewController:order animated:YES];
-        }
-         
-            break;
-            
-        default:
-            break;
-    }
+        XIU_OrderViewController *order = [[XIU_OrderViewController alloc] init];
+        order.style = type;
+        [self.navigationController pushViewController:order animated:YES];
 }
 @end
