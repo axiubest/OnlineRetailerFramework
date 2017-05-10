@@ -11,8 +11,16 @@
 
 static NSInteger heightOfMyPurchase = 30;
 @interface XIU_MyCenterPurchaseInformationCell ()
-
+{
+    
+}
 @property (weak, nonatomic) IBOutlet UIView *AllOrdersView;
+@property (weak, nonatomic) IBOutlet UIView *PayView;
+@property (weak, nonatomic) IBOutlet UIView *SendView;
+@property (weak, nonatomic) IBOutlet UIView *GetView;
+@property (weak, nonatomic) IBOutlet UIView *RefundView;
+
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *AllOrdersViewHeightConstraint; //我的订单高度
 
 
@@ -24,15 +32,44 @@ static NSInteger heightOfMyPurchase = 30;
 
 @property (weak, nonatomic) IBOutlet UIImageView *WaitEvaluateImageView;
 
-@end
 
+
+@end
 @implementation XIU_MyCenterPurchaseInformationCell
+@synthesize style;
 
 - (void)awakeFromNib {
     [super awakeFromNib];
      self.selectionStyle = UITableViewCellSelectionStyleNone;
     [self setUpCellUI];
+    [_AllOrdersView bk_whenTapped:^{
+        style = PurchaseInformationStyle_All;
+        [self clickWithStyle:style];
+    }];
+    [_GetView bk_whenTapped:^{
+        style = PurchaseInformationStyle_Get;
+        [self clickWithStyle:style];
+    }];
+    [_SendView bk_whenTapped:^{
+        style = PurchaseInformationStyle_Send;
+        [self clickWithStyle:style];
+    }];
+    [_PayView bk_whenTapped:^{
+        style = PurchaseInformationStyle_Pay;
+        [self clickWithStyle:style];
+    }];
+    [_RefundView bk_whenTapped:^{
+        style = PurchaseInformationStyle_retund;
+        [self clickWithStyle:style];
+    }];
     
+}
+
+- (void)clickWithStyle:(PurchaseInformationStyle)type {
+    
+    if ([self.delegate respondsToSelector:@selector(clickPurchaseInformationWithType:)]) {
+        [self.delegate clickPurchaseInformationWithType:type];
+    }
 }
 
 - (void)setUpCellUI {
