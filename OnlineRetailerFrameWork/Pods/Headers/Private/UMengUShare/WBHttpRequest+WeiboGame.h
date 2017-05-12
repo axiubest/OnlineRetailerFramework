@@ -1,1 +1,1 @@
-../../../UMengUShare/UShareSDK/SocialLibraries/Sina/WBHttpRequest+WeiboGame.h
+../../../UMengUShare/UShareSDK/SocialLibraries/Sina/SinaSDK/WBHttpRequest+WeiboGame.h

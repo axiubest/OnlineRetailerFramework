@@ -1,1 +1,1 @@
-../../../UMengUShare/UShareSDK/SocialLibraries/Sina/WBHttpRequest+WeiboShare.h
+../../../UMengUShare/UShareSDK/SocialLibraries/Sina/SinaSDK/WBHttpRequest+WeiboShare.h

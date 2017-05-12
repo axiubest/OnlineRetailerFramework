@@ -1,1 +1,1 @@
-../../../UMengUShare/UShareSDK/SocialLibraries/Sina/WBSDKBasicButton.h
+../../../UMengUShare/UShareSDK/SocialLibraries/Sina/SinaSDK/WBSDKBasicButton.h

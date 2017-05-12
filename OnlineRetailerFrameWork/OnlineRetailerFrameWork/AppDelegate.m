@@ -11,9 +11,10 @@
 #import "XIU_BaseRootTool.h"
 #import "XIU_NetWorkReachability.h"
 #import "XIU_UMManager.h"
-#import "XIU_JSPachManager.h"
+#import "XIU_PayManager.h"
+#import "WXApi.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<WXApiDelegate>
 @property (strong, nonatomic) UIViewController *viewController;
 
 @property (nonatomic,strong) XIU_NetWorkReachability *hostReachability;
@@ -41,17 +42,19 @@
     // UM_Analytics
     [XIU_UMManager UmengMobClickFunc];
     
-    //JSPatch
-    [XIU_JSPachManager contextManager];
-    
-    
-    
+    [XIU_PayManager pay];
+
     return YES;
 }
 //设置系统回调
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-    return  [XIU_UMManager UMengShareWithBlockOpenURL:url sourceApplication:sourceApplication];
+    
+    BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url];
+    if (!result) {
+        result = [WXApi handleOpenURL:url delegate:self];
+    }
+    return result;
 }
 
 
@@ -62,6 +65,12 @@
     self.hostReachability = reachability;
     [reachability startNotifier];
     
+}
+
+
+-(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    
+    return [WXApi handleOpenURL:url delegate:self];
 }
 
 

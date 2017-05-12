@@ -9,7 +9,7 @@
 #import "XIU_SettingMineInfoVC.h"
 
 
-#import "JPViewController.h"
+
 
 static CGFloat const Row_Height = 44.f;
 static CGFloat const Section_HeaderHeight = 20.f;
@@ -108,8 +108,6 @@ static CGFloat const Section_HeaderHeight = 20.f;
             break;
         case SettingMenuItemType_Help_feedback:
         {
-            JPViewController *jp = [[JPViewController alloc] init];
-            [self.navigationController pushViewController:jp animated:YES];
   
         }
             break;

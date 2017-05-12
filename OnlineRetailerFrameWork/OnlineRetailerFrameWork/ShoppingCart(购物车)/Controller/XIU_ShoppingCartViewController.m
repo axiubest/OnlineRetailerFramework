@@ -13,6 +13,7 @@
 #import "XIU_ShoppingCartHeaderView.h"
 #import "XIU_ShoppingCartCalculationView.h"
 #import "XIU_ShoppingCartEmptyView.h"
+#import "XIU_ConfirmPayViewController.h"
 
 #import "XIU_CommodityDetailBaseController.h"
 
@@ -359,11 +360,15 @@ static NSInteger CartRowHeight = 100;
 }
 #pragma mark XIU_ShoppingCartCalculationViewDelegate
 - (void)clickResultPrice {
+    XIU_ConfirmPayViewController *confirm = [[XIU_ConfirmPayViewController alloc] init];
+    [self.navigationController pushViewController:confirm animated:YES];
+
     if (self.selectedArray.count > 0) {
         for (XIU_ShoppingCart_GoodsModel *model in self.selectedArray) {
             NSLog(@"选择的商品>>%@>>>%ld",model,(long)model.count);
-        }
+                }
     } else {
+       
         
         NSLog(@"你还没有选择任何商品");
         

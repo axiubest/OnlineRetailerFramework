@@ -7,6 +7,4 @@ pod 'UMengUShare/Social/WeChat'
 pod 'UMengUShare/Social/QQ'
 pod 'UMengAnalytics'
 pod 'ReactiveCocoa',  '~> 2.4.7’
-
-pod 'JSPatch'
 end

@@ -95,14 +95,6 @@
 
 }
 
-//回调
-+ (BOOL)UMengShareWithBlockOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication {
-    BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url];
-    if (!result) {
-        // 其他如支付等SDK的回调
-    }
-    return result;
-}
 
 
 

@@ -171,9 +171,6 @@
 		8341AC071E4DAB3500FDC5A4 /* UIView+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AB4C1E4DAB3500FDC5A4 /* UIView+Common.m */; };
 		8341AC081E4DAB3500FDC5A4 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AB4E1E4DAB3500FDC5A4 /* UIView+Frame.m */; };
 		8341AC091E4DAB3500FDC5A4 /* UIView+RunTime_FontSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AB501E4DAB3500FDC5A4 /* UIView+RunTime_FontSize.m */; };
-		8341AC0A1E4DAB3500FDC5A4 /* demo.js in Resources */ = {isa = PBXBuildFile; fileRef = 8341AB521E4DAB3500FDC5A4 /* demo.js */; };
-		8341AC0B1E4DAB3500FDC5A4 /* JPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AB541E4DAB3500FDC5A4 /* JPViewController.m */; };
-		8341AC0C1E4DAB3500FDC5A4 /* XIU_JSPachManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AB561E4DAB3500FDC5A4 /* XIU_JSPachManager.m */; };
 		8341AC0D1E4DAB3500FDC5A4 /* XIU_NetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AB581E4DAB3500FDC5A4 /* XIU_NetAPIClient.m */; };
 		8341AC0E1E4DAB3500FDC5A4 /* XIU_NetAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AB5A1E4DAB3500FDC5A4 /* XIU_NetAPIManager.m */; };
 		8341AC0F1E4DAB3500FDC5A4 /* XIU_UMManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341AB5C1E4DAB3500FDC5A4 /* XIU_UMManager.m */; };
@@ -229,7 +226,6 @@
 		83ABA01B1E614D5A00F9B529 /* 垃圾箱.png in Resources */ = {isa = PBXBuildFile; fileRef = 83ABA01A1E614D5A00F9B529 /* 垃圾箱.png */; };
 		83E2D2DC1E5D32230071D9A8 /* 相册.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E2D2DB1E5D32230071D9A8 /* 相册.png */; };
 		83E2D2E01E5D40620071D9A8 /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E2D2DF1E5D40620071D9A8 /* UMMobClick.framework */; };
-		83E2D2E21E5D40780071D9A8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E2D2E11E5D40780071D9A8 /* CoreTelephony.framework */; };
 		83E2D2E41E5D40830071D9A8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E2D2E31E5D40830071D9A8 /* libz.tbd */; };
 		83E2D2E61E5D40A60071D9A8 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E2D2E51E5D40A60071D9A8 /* libsqlite3.0.tbd */; };
 		83E2D2ED1E5D8DA80071D9A8 /* XIU_DeliveryAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D2EC1E5D8DA80071D9A8 /* XIU_DeliveryAddressViewController.m */; };
@@ -241,6 +237,14 @@
 		FA6045B01EBB74A900C93734 /* XIU_OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6045AF1EBB74A900C93734 /* XIU_OrderViewController.m */; };
 		FA6045B31EBB77DB00C93734 /* XIU_OrderSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6045B21EBB77DB00C93734 /* XIU_OrderSegmentView.m */; };
 		FA6045B71EBB781900C93734 /* XIU_OrderSegmentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6045B61EBB781900C93734 /* XIU_OrderSegmentView.xib */; };
+		FA66C87A1EC5772A00B37D33 /* XIU_ConfirmPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA66C8781EC5772A00B37D33 /* XIU_ConfirmPayViewController.m */; };
+		FA66C87B1EC5772A00B37D33 /* XIU_ConfirmPayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA66C8791EC5772A00B37D33 /* XIU_ConfirmPayViewController.xib */; };
+		FA66C8821EC5829E00B37D33 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA66C87E1EC5829E00B37D33 /* libWeChatSDK.a */; };
+		FA66C8851EC583DD00B37D33 /* XIU_PayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA66C8841EC583DD00B37D33 /* XIU_PayManager.m */; };
+		FA66C8871EC5857900B37D33 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA66C8861EC5857900B37D33 /* SystemConfiguration.framework */; };
+		FA66C8891EC5859100B37D33 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FA66C8881EC5859100B37D33 /* libc++.tbd */; };
+		FA66C88B1EC5859B00B37D33 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA66C88A1EC5859B00B37D33 /* Security.framework */; };
+		FA66C8901EC585AC00B37D33 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA66C88F1EC585AC00B37D33 /* CFNetwork.framework */; };
 		FAB15F431EC055050091B4C4 /* XIU_MyCenterGlobalEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB15F421EC055050091B4C4 /* XIU_MyCenterGlobalEnum.m */; };
 /* End PBXBuildFile section */
 
@@ -532,11 +536,6 @@
 		8341AB4E1E4DAB3500FDC5A4 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		8341AB4F1E4DAB3500FDC5A4 /* UIView+RunTime_FontSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RunTime_FontSize.h"; sourceTree = "<group>"; };
 		8341AB501E4DAB3500FDC5A4 /* UIView+RunTime_FontSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RunTime_FontSize.m"; sourceTree = "<group>"; };
-		8341AB521E4DAB3500FDC5A4 /* demo.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = demo.js; sourceTree = "<group>"; };
-		8341AB531E4DAB3500FDC5A4 /* JPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPViewController.h; sourceTree = "<group>"; };
-		8341AB541E4DAB3500FDC5A4 /* JPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPViewController.m; sourceTree = "<group>"; };
-		8341AB551E4DAB3500FDC5A4 /* XIU_JSPachManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_JSPachManager.h; sourceTree = "<group>"; };
-		8341AB561E4DAB3500FDC5A4 /* XIU_JSPachManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_JSPachManager.m; sourceTree = "<group>"; };
 		8341AB571E4DAB3500FDC5A4 /* XIU_NetAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_NetAPIClient.h; sourceTree = "<group>"; };
 		8341AB581E4DAB3500FDC5A4 /* XIU_NetAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_NetAPIClient.m; sourceTree = "<group>"; };
 		8341AB591E4DAB3500FDC5A4 /* XIU_NetAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_NetAPIManager.h; sourceTree = "<group>"; };
@@ -637,6 +636,19 @@
 		FA6045B11EBB77DB00C93734 /* XIU_OrderSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_OrderSegmentView.h; sourceTree = "<group>"; };
 		FA6045B21EBB77DB00C93734 /* XIU_OrderSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_OrderSegmentView.m; sourceTree = "<group>"; };
 		FA6045B61EBB781900C93734 /* XIU_OrderSegmentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XIU_OrderSegmentView.xib; sourceTree = "<group>"; };
+		FA66C8771EC5772A00B37D33 /* XIU_ConfirmPayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_ConfirmPayViewController.h; sourceTree = "<group>"; };
+		FA66C8781EC5772A00B37D33 /* XIU_ConfirmPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_ConfirmPayViewController.m; sourceTree = "<group>"; };
+		FA66C8791EC5772A00B37D33 /* XIU_ConfirmPayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XIU_ConfirmPayViewController.xib; sourceTree = "<group>"; };
+		FA66C87E1EC5829E00B37D33 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		FA66C87F1EC5829E00B37D33 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		FA66C8801EC5829E00B37D33 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		FA66C8811EC5829E00B37D33 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		FA66C8831EC583DD00B37D33 /* XIU_PayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_PayManager.h; sourceTree = "<group>"; };
+		FA66C8841EC583DD00B37D33 /* XIU_PayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_PayManager.m; sourceTree = "<group>"; };
+		FA66C8861EC5857900B37D33 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FA66C8881EC5859100B37D33 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		FA66C88A1EC5859B00B37D33 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FA66C88F1EC585AC00B37D33 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		FAB15F411EC055050091B4C4 /* XIU_MyCenterGlobalEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_MyCenterGlobalEnum.h; sourceTree = "<group>"; };
 		FAB15F421EC055050091B4C4 /* XIU_MyCenterGlobalEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_MyCenterGlobalEnum.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -646,9 +658,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA66C8901EC585AC00B37D33 /* CFNetwork.framework in Frameworks */,
+				FA66C88B1EC5859B00B37D33 /* Security.framework in Frameworks */,
+				FA66C8891EC5859100B37D33 /* libc++.tbd in Frameworks */,
+				FA66C8871EC5857900B37D33 /* SystemConfiguration.framework in Frameworks */,
 				83E2D2E61E5D40A60071D9A8 /* libsqlite3.0.tbd in Frameworks */,
 				83E2D2E41E5D40830071D9A8 /* libz.tbd in Frameworks */,
-				83E2D2E21E5D40780071D9A8 /* CoreTelephony.framework in Frameworks */,
+				FA66C8821EC5829E00B37D33 /* libWeChatSDK.a in Frameworks */,
 				2C0F21655B799AF5AEB00E80 /* libPods-OnlineRetailerFrameWork.a in Frameworks */,
 				83E2D2E01E5D40620071D9A8 /* UMMobClick.framework in Frameworks */,
 			);
@@ -1042,6 +1058,9 @@
 			children = (
 				8341AC491E4F389600FDC5A4 /* XIU_ShoppingCartViewController.h */,
 				8341AC4A1E4F389600FDC5A4 /* XIU_ShoppingCartViewController.m */,
+				FA66C8771EC5772A00B37D33 /* XIU_ConfirmPayViewController.h */,
+				FA66C8781EC5772A00B37D33 /* XIU_ConfirmPayViewController.m */,
+				FA66C8791EC5772A00B37D33 /* XIU_ConfirmPayViewController.xib */,
 				8341AC271E4EBC0F00FDC5A4 /* ShopCarNew.plist */,
 			);
 			path = Controller;
@@ -1076,6 +1095,7 @@
 		8341AAA81E4DAB3500FDC5A4 /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				FA66C87C1EC5829E00B37D33 /* WechatOpenSDK */,
 				8341AAA91E4DAB3500FDC5A4 /* ActionSheetPicker */,
 				8341AABB1E4DAB3500FDC5A4 /* AFNetworking */,
 				8341AAC91E4DAB3500FDC5A4 /* BlocksKit */,
@@ -1373,17 +1393,14 @@
 		8341AB511E4DAB3500FDC5A4 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				8341AB521E4DAB3500FDC5A4 /* demo.js */,
-				8341AB531E4DAB3500FDC5A4 /* JPViewController.h */,
-				8341AB541E4DAB3500FDC5A4 /* JPViewController.m */,
-				8341AB551E4DAB3500FDC5A4 /* XIU_JSPachManager.h */,
-				8341AB561E4DAB3500FDC5A4 /* XIU_JSPachManager.m */,
 				8341AB571E4DAB3500FDC5A4 /* XIU_NetAPIClient.h */,
 				8341AB581E4DAB3500FDC5A4 /* XIU_NetAPIClient.m */,
 				8341AB591E4DAB3500FDC5A4 /* XIU_NetAPIManager.h */,
 				8341AB5A1E4DAB3500FDC5A4 /* XIU_NetAPIManager.m */,
 				8341AB5B1E4DAB3500FDC5A4 /* XIU_UMManager.h */,
 				8341AB5C1E4DAB3500FDC5A4 /* XIU_UMManager.m */,
+				FA66C8831EC583DD00B37D33 /* XIU_PayManager.h */,
+				FA66C8841EC583DD00B37D33 /* XIU_PayManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -1559,6 +1576,10 @@
 		CE6E3DB050FA266C68E95202 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA66C88F1EC585AC00B37D33 /* CFNetwork.framework */,
+				FA66C88A1EC5859B00B37D33 /* Security.framework */,
+				FA66C8881EC5859100B37D33 /* libc++.tbd */,
+				FA66C8861EC5857900B37D33 /* SystemConfiguration.framework */,
 				83E2D2E51E5D40A60071D9A8 /* libsqlite3.0.tbd */,
 				83E2D2E31E5D40830071D9A8 /* libz.tbd */,
 				83E2D2E11E5D40780071D9A8 /* CoreTelephony.framework */,
@@ -1575,6 +1596,25 @@
 				630E178D7E0BAF639AF17DC8 /* Pods-OnlineRetailerFrameWork.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FA66C87C1EC5829E00B37D33 /* WechatOpenSDK */ = {
+			isa = PBXGroup;
+			children = (
+				FA66C87D1EC5829E00B37D33 /* OpenSDK1.7.7 */,
+			);
+			path = WechatOpenSDK;
+			sourceTree = "<group>";
+		};
+		FA66C87D1EC5829E00B37D33 /* OpenSDK1.7.7 */ = {
+			isa = PBXGroup;
+			children = (
+				FA66C87E1EC5829E00B37D33 /* libWeChatSDK.a */,
+				FA66C87F1EC5829E00B37D33 /* WechatAuthSDK.h */,
+				FA66C8801EC5829E00B37D33 /* WXApi.h */,
+				FA66C8811EC5829E00B37D33 /* WXApiObject.h */,
+			);
+			path = OpenSDK1.7.7;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1649,6 +1689,7 @@
 				8341ACDC1E57D98600FDC5A4 /* 收货地址.png in Resources */,
 				83ABA0081E60170B00F9B529 /* Address.plist in Resources */,
 				8341AB861E4DAB3500FDC5A4 /* navigationbar_background_tall@2x.png in Resources */,
+				FA66C87B1EC5772A00B37D33 /* XIU_ConfirmPayViewController.xib in Resources */,
 				8341AB791E4DAB3500FDC5A4 /* yes_btn_select.png in Resources */,
 				83ABA0141E6137E500F9B529 /* XIU_SearchShoppingListViewController.storyboard in Resources */,
 				8341ABBD1E4DAB3500FDC5A4 /* XIU_MyCenterPurchaseInformationCell.xib in Resources */,
@@ -1694,7 +1735,6 @@
 				8341AC421E4EFFBF00FDC5A4 /* cart_selected_btn.png in Resources */,
 				83ABA0191E614BE900F9B529 /* 放大镜.png in Resources */,
 				8341ACDF1E57D98600FDC5A4 /* 浏览记录.png in Resources */,
-				8341AC0A1E4DAB3500FDC5A4 /* demo.js in Resources */,
 				8341AB921E4DAB3500FDC5A4 /* third_selected.png in Resources */,
 				8341AB761E4DAB3500FDC5A4 /* 店铺.png in Resources */,
 				8341AB6E1E4DAB3500FDC5A4 /* share_btn_copylink@2x.png in Resources */,
@@ -1742,7 +1782,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		871B5940A18989D9E172AC83 /* [CP] Copy Pods Resources */ = {
@@ -1814,7 +1854,6 @@
 				8341ABE41E4DAB3500FDC5A4 /* NSObject+MJCoding.m in Sources */,
 				8341AB951E4DAB3500FDC5A4 /* XIU_GetVerificationCodeVC.m in Sources */,
 				8341ABB31E4DAB3500FDC5A4 /* XIU_ViewController.m in Sources */,
-				8341AC0C1E4DAB3500FDC5A4 /* XIU_JSPachManager.m in Sources */,
 				8341ABE11E4DAB3500FDC5A4 /* MJPropertyKey.m in Sources */,
 				8341ABC91E4DAB3500FDC5A4 /* DistancePickerView.m in Sources */,
 				8341ABAD1E4DAB3500FDC5A4 /* XIU_SearchBarCell.m in Sources */,
@@ -1838,7 +1877,6 @@
 				8341ABB11E4DAB3500FDC5A4 /* RDVTabBarItem.m in Sources */,
 				8341AC071E4DAB3500FDC5A4 /* UIView+Common.m in Sources */,
 				8341ABCF1E4DAB3500FDC5A4 /* AFURLResponseSerialization.m in Sources */,
-				8341AC0B1E4DAB3500FDC5A4 /* JPViewController.m in Sources */,
 				8341ABC81E4DAB3500FDC5A4 /* ActionSheetStringPicker.m in Sources */,
 				8341ABAE1E4DAB3500FDC5A4 /* XIU_SearchBarViewController.m in Sources */,
 				8341AC081E4DAB3500FDC5A4 /* UIView+Frame.m in Sources */,
@@ -1847,6 +1885,7 @@
 				8341ABD31E4DAB3500FDC5A4 /* MASCompositeConstraint.m in Sources */,
 				8386FC4A1E4DA7F90029E653 /* AppDelegate.m in Sources */,
 				832798B61E5C43C100930000 /* XIU_ScanQRCodeManager.m in Sources */,
+				FA66C87A1EC5772A00B37D33 /* XIU_ConfirmPayViewController.m in Sources */,
 				FA6045B31EBB77DB00C93734 /* XIU_OrderSegmentView.m in Sources */,
 				8341ABCD1E4DAB3500FDC5A4 /* AFSecurityPolicy.m in Sources */,
 				8341AC061E4DAB3500FDC5A4 /* UITableView+Common.m in Sources */,
@@ -1900,6 +1939,7 @@
 				8341ABD41E4DAB3500FDC5A4 /* MASConstraint.m in Sources */,
 				8341ABE31E4DAB3500FDC5A4 /* NSObject+MJClass.m in Sources */,
 				83E2D2ED1E5D8DA80071D9A8 /* XIU_DeliveryAddressViewController.m in Sources */,
+				FA66C8851EC583DD00B37D33 /* XIU_PayManager.m in Sources */,
 				8341ABD61E4DAB3500FDC5A4 /* MASLayoutConstraint.m in Sources */,
 				8341AC051E4DAB3500FDC5A4 /* UINavigationBar+Awesome.m in Sources */,
 				83AB9FF51E5E744000F9B529 /* XIU_DeliveryAddressEditLocationCell.m in Sources */,
@@ -1985,8 +2025,13 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/OnlineRetailerFrameWork/ThirdLibrary/WechatOpenSDK\"";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-Objc",
+					"-all_load",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2027,7 +2072,12 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/OnlineRetailerFrameWork/ThirdLibrary/WechatOpenSDK\"";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"-Objc",
+					"-all_load",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -2048,6 +2098,10 @@
 				INFOPLIST_FILE = OnlineRetailerFrameWork/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OnlineRetailerFrameWork/ThirdLibrary/WechatOpenSDK/OpenSDK1.7.7",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.OnlineRetailerFrameWork.www.OnlineRetailerFrameWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -2067,6 +2121,10 @@
 				INFOPLIST_FILE = OnlineRetailerFrameWork/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OnlineRetailerFrameWork/ThirdLibrary/WechatOpenSDK/OpenSDK1.7.7",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.OnlineRetailerFrameWork.www.OnlineRetailerFrameWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

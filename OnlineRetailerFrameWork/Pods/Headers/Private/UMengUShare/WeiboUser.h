@@ -1,1 +1,1 @@
-../../../UMengUShare/UShareSDK/SocialLibraries/Sina/WeiboUser.h
+../../../UMengUShare/UShareSDK/SocialLibraries/Sina/SinaSDK/WeiboUser.h

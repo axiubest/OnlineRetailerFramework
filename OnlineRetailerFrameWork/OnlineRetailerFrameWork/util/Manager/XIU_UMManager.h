@@ -18,7 +18,6 @@
 
 + (void)shareObjectWithSnsName:(NSString *)snsName WithMessageValue:(XIU_ShareModel *)model;
 
-+ (BOOL)UMengShareWithBlockOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication;
 
 + (NSMutableArray *)removeObjOfUninstallProduct:(NSMutableArray *)resultSnsValues;
 @end
