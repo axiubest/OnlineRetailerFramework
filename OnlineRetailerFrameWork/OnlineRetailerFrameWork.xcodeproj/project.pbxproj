@@ -245,6 +245,10 @@
 		FA66C8891EC5859100B37D33 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FA66C8881EC5859100B37D33 /* libc++.tbd */; };
 		FA66C88B1EC5859B00B37D33 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA66C88A1EC5859B00B37D33 /* Security.framework */; };
 		FA66C8901EC585AC00B37D33 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA66C88F1EC585AC00B37D33 /* CFNetwork.framework */; };
+		FA66C8941EC5A39F00B37D33 /* XIU_ConfirmPayAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA66C8921EC5A39F00B37D33 /* XIU_ConfirmPayAddressCell.m */; };
+		FA66C8951EC5A39F00B37D33 /* XIU_ConfirmPayAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA66C8931EC5A39F00B37D33 /* XIU_ConfirmPayAddressCell.xib */; };
+		FA87FA961EC6DD7D00F5CE5E /* 51494656373.png in Resources */ = {isa = PBXBuildFile; fileRef = FA87FA951EC6DD7D00F5CE5E /* 51494656373.png */; };
+		FA87FA981EC6DDD500F5CE5E /* 定位.png in Resources */ = {isa = PBXBuildFile; fileRef = FA87FA971EC6DDD500F5CE5E /* 定位.png */; };
 		FAB15F431EC055050091B4C4 /* XIU_MyCenterGlobalEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB15F421EC055050091B4C4 /* XIU_MyCenterGlobalEnum.m */; };
 /* End PBXBuildFile section */
 
@@ -649,6 +653,11 @@
 		FA66C8881EC5859100B37D33 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		FA66C88A1EC5859B00B37D33 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FA66C88F1EC585AC00B37D33 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		FA66C8911EC5A39F00B37D33 /* XIU_ConfirmPayAddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_ConfirmPayAddressCell.h; sourceTree = "<group>"; };
+		FA66C8921EC5A39F00B37D33 /* XIU_ConfirmPayAddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_ConfirmPayAddressCell.m; sourceTree = "<group>"; };
+		FA66C8931EC5A39F00B37D33 /* XIU_ConfirmPayAddressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XIU_ConfirmPayAddressCell.xib; sourceTree = "<group>"; };
+		FA87FA951EC6DD7D00F5CE5E /* 51494656373.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 51494656373.png; sourceTree = "<group>"; };
+		FA87FA971EC6DDD500F5CE5E /* 定位.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "定位.png"; sourceTree = "<group>"; };
 		FAB15F411EC055050091B4C4 /* XIU_MyCenterGlobalEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_MyCenterGlobalEnum.h; sourceTree = "<group>"; };
 		FAB15F421EC055050091B4C4 /* XIU_MyCenterGlobalEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_MyCenterGlobalEnum.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -783,7 +792,9 @@
 				8341AA1B1E4DAB3500FDC5A4 /* share_btn_sina@2x.png */,
 				8341AA1C1E4DAB3500FDC5A4 /* share_btn_wxsession@2x.png */,
 				8341AA1D1E4DAB3500FDC5A4 /* share_btn_wxtimeline@2x.png */,
+				FA87FA951EC6DD7D00F5CE5E /* 51494656373.png */,
 				8341AA1E1E4DAB3500FDC5A4 /* 客服.png */,
+				FA87FA971EC6DDD500F5CE5E /* 定位.png */,
 				8341AA1F1E4DAB3500FDC5A4 /* 店铺.png */,
 				8341AA201E4DAB3500FDC5A4 /* 收藏.png */,
 				8341AA211E4DAB3500FDC5A4 /* 照相机.png */,
@@ -1088,6 +1099,9 @@
 				8341AC2A1E4EBDD400FDC5A4 /* XIU_ShoppingCartHeaderView.m */,
 				8341AC3D1E4EECDD00FDC5A4 /* XIU_ShoppingCartCalculationView.h */,
 				8341AC3E1E4EECDD00FDC5A4 /* XIU_ShoppingCartCalculationView.m */,
+				FA66C8911EC5A39F00B37D33 /* XIU_ConfirmPayAddressCell.h */,
+				FA66C8921EC5A39F00B37D33 /* XIU_ConfirmPayAddressCell.m */,
+				FA66C8931EC5A39F00B37D33 /* XIU_ConfirmPayAddressCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1719,6 +1733,7 @@
 				8341AB6A1E4DAB3500FDC5A4 /* arrow_buttom.png in Resources */,
 				8341AB7C1E4DAB3500FDC5A4 /* 显示.png in Resources */,
 				83E2D2DC1E5D32230071D9A8 /* 相册.png in Resources */,
+				FA87FA981EC6DDD500F5CE5E /* 定位.png in Resources */,
 				8341AB751E4DAB3500FDC5A4 /* 客服.png in Resources */,
 				8341ACD51E575C6700FDC5A4 /* 待收货.png in Resources */,
 				8341AB891E4DAB3500FDC5A4 /* second_normal@2x.png in Resources */,
@@ -1738,6 +1753,7 @@
 				8341AB921E4DAB3500FDC5A4 /* third_selected.png in Resources */,
 				8341AB761E4DAB3500FDC5A4 /* 店铺.png in Resources */,
 				8341AB6E1E4DAB3500FDC5A4 /* share_btn_copylink@2x.png in Resources */,
+				FA66C8951EC5A39F00B37D33 /* XIU_ConfirmPayAddressCell.xib in Resources */,
 				8341ABA71E4DAB3500FDC5A4 /* XIU_CommodityDetialBaseStoreInformationCell.xib in Resources */,
 				8341AB6D1E4DAB3500FDC5A4 /* land_weibo.png in Resources */,
 				8341AC281E4EBC0F00FDC5A4 /* ShopCarNew.plist in Resources */,
@@ -1745,6 +1761,7 @@
 				8341AC3A1E4EC24A00FDC5A4 /* cart_default_bg.png in Resources */,
 				8341AB871E4DAB3500FDC5A4 /* navigationbar_search_simulator.png in Resources */,
 				8341AB7F1E4DAB3500FDC5A4 /* first_normal.png in Resources */,
+				FA87FA961EC6DD7D00F5CE5E /* 51494656373.png in Resources */,
 				832798AB1E5C039200930000 /* 返回.png in Resources */,
 				8341AB8A1E4DAB3500FDC5A4 /* second_selected.png in Resources */,
 				8341AC381E4EC24900FDC5A4 /* cart_cutBtn_highlight@2x.png in Resources */,
@@ -1851,6 +1868,7 @@
 				8341ABDF1E4DAB3500FDC5A4 /* MJFoundation.m in Sources */,
 				8341ABC41E4DAB3500FDC5A4 /* ActionSheetCustomPicker.m in Sources */,
 				8341ABE91E4DAB3500FDC5A4 /* NSData+ImageContentType.m in Sources */,
+				FA66C8941EC5A39F00B37D33 /* XIU_ConfirmPayAddressCell.m in Sources */,
 				8341ABE41E4DAB3500FDC5A4 /* NSObject+MJCoding.m in Sources */,
 				8341AB951E4DAB3500FDC5A4 /* XIU_GetVerificationCodeVC.m in Sources */,
 				8341ABB31E4DAB3500FDC5A4 /* XIU_ViewController.m in Sources */,
@@ -2102,7 +2120,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/OnlineRetailerFrameWork/ThirdLibrary/WechatOpenSDK/OpenSDK1.7.7",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.OnlineRetailerFrameWork.www.OnlineRetailerFrameWork;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leemine.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -2125,7 +2143,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/OnlineRetailerFrameWork/ThirdLibrary/WechatOpenSDK/OpenSDK1.7.7",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.OnlineRetailerFrameWork.www.OnlineRetailerFrameWork;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leemine.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

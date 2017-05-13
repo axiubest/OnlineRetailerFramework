@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="110" id="KGk-i7-Jjw" customClass="XIU_ConfirmPayAddressCell">
+            <rect key="frame" x="0.0" y="0.0" width="433" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="433" height="110"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="51494656373.png" translatesAutoresizingMaskIntoConstraints="NO" id="xek-dr-ZQ6">
+                        <rect key="frame" x="0.0" y="105.5" width="433" height="4"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="4" id="tXU-M1-Put"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="定位.png" translatesAutoresizingMaskIntoConstraints="NO" id="fKZ-21-Ast">
+                        <rect key="frame" x="20" y="43.5" width="20" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="fKZ-21-Ast" secondAttribute="height" multiplier="1:1.1" id="Q2k-UR-mdu"/>
+                            <constraint firstAttribute="width" constant="20" id="p8L-Z5-CCd"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="下一步.png" translatesAutoresizingMaskIntoConstraints="NO" id="JBI-ee-ABL">
+                        <rect key="frame" x="401" y="47.5" width="12" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="12" id="Kpa-TB-wrA"/>
+                            <constraint firstAttribute="width" secondItem="JBI-ee-ABL" secondAttribute="height" multiplier="8:9" id="dk2-An-XgI"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收货人：章三" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnf-p8-ZYR">
+                        <rect key="frame" x="60" y="21" width="92" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17666666666" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5j-cD-gCy">
+                        <rect key="frame" x="298" y="22" width="93" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收货地址：浙江省杭州市拱墅区浙江省杭州市西湖区浙江省杭州市江干区" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t47-Zh-fLt">
+                        <rect key="frame" x="60" y="49" width="321" height="31.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="xek-dr-ZQ6" secondAttribute="trailing" id="7s0-aP-7OD"/>
+                    <constraint firstItem="JBI-ee-ABL" firstAttribute="leading" secondItem="t47-Zh-fLt" secondAttribute="trailing" constant="20" id="A62-Qf-swN"/>
+                    <constraint firstItem="t47-Zh-fLt" firstAttribute="top" secondItem="wnf-p8-ZYR" secondAttribute="bottom" constant="10" id="E9Y-yS-7m5"/>
+                    <constraint firstAttribute="trailing" secondItem="JBI-ee-ABL" secondAttribute="trailing" constant="20" id="Jam-8R-4Qd"/>
+                    <constraint firstItem="a5j-cD-gCy" firstAttribute="centerY" secondItem="wnf-p8-ZYR" secondAttribute="centerY" id="MaN-sV-jXX"/>
+                    <constraint firstItem="fKZ-21-Ast" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="O9B-dP-oG0"/>
+                    <constraint firstItem="t47-Zh-fLt" firstAttribute="centerY" secondItem="fKZ-21-Ast" secondAttribute="centerY" constant="10" id="Uxx-Ey-hMB"/>
+                    <constraint firstItem="xek-dr-ZQ6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="V9U-Jg-S1F"/>
+                    <constraint firstAttribute="bottom" secondItem="xek-dr-ZQ6" secondAttribute="bottom" id="Zt0-ex-Tqo"/>
+                    <constraint firstItem="t47-Zh-fLt" firstAttribute="leading" secondItem="fKZ-21-Ast" secondAttribute="trailing" constant="20" id="bxv-Wi-L0Q"/>
+                    <constraint firstItem="wnf-p8-ZYR" firstAttribute="leading" secondItem="t47-Zh-fLt" secondAttribute="leading" id="juz-bQ-9kS"/>
+                    <constraint firstItem="JBI-ee-ABL" firstAttribute="leading" secondItem="a5j-cD-gCy" secondAttribute="trailing" constant="10" id="moo-Js-ui4"/>
+                    <constraint firstItem="JBI-ee-ABL" firstAttribute="centerY" secondItem="fKZ-21-Ast" secondAttribute="centerY" id="wav-QL-dVG"/>
+                    <constraint firstItem="fKZ-21-Ast" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="xcO-Q5-gvr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="addressLab" destination="t47-Zh-fLt" id="5yt-I0-e9E"/>
+                <outlet property="consigneeLab" destination="wnf-p8-ZYR" id="aKE-40-Rbe"/>
+                <outlet property="phoneLab" destination="a5j-cD-gCy" id="Ihd-ma-VSi"/>
+            </connections>
+            <point key="canvasLocation" x="-297" y="35"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="51494656373.png" width="719" height="11"/>
+        <image name="下一步.png" width="128" height="128"/>
+        <image name="定位.png" width="64" height="64"/>
+    </resources>
+</document>
