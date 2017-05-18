@@ -22,20 +22,21 @@
 -(id)handleResponse:(id)responseJSON autoShowError:(BOOL)autoShowError {
     NSError *error = nil;
     //code为非0值时，表示有错
-    NSInteger errorCode = [(NSNumber *)[responseJSON valueForKeyPath:@"code"] integerValue];
+    NSInteger errorCode = [(NSNumber *)[responseJSON valueForKeyPath:@"error"] integerValue];
     
     if (errorCode != 0) {
         error = [NSError errorWithDomain:[NSObject baseURLStr] code:errorCode userInfo:responseJSON];
         if (errorCode == 1) {//wrong password
-            [NSObject showHudTipStr:responseJSON[@"msg"]];
+//            [NSObject showHudTipStr:responseJSON[@"msg"]];
+            [NSObject showHudTipStr:@"账号或密码错误"];
+
         }
         if (errorCode == 1000 || errorCode == 3207) {//用户未登录
             if ([XIU_Login isLogin]) {
                 [XIU_Login doLogOut];//已登录的状态要抹掉
                 //更新 UI 要延迟 >1.0 秒，否则屏幕可能会不响应触摸事件。。暂不知为何
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    //                    [((AppDelegate *)[UIApplication sharedApplication].delegate) setupLoginViewController];
-                    //                    kTipAlert(@"%@", [NSObject tipFromError:error]);
+
                 });
             }
         }

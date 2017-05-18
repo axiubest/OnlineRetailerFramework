@@ -65,13 +65,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0 && indexPath.row == 0) {
-        XIU_MyCenterModifyAvatarCell *cell = [tableView dequeueReusableCellWithIdentifier:[XIU_MyCenterModifyAvatarCell XIU_ClassIdentifier] forIndexPath:indexPath];
+        
+        XIU_MyCenterModifyAvatarCell *cell = [[XIU_MyCenterModifyAvatarCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[XIU_MyCenterModifyAvatarCell XIU_ClassIdentifier]];
         cell.curUser = _curUser;
         [tableView addLineforPlainCell:cell forRowAtIndexPath:indexPath withLeftSpace:kPaddingLeftWidth];
         return cell;
     }else {
-        
-        XIU_MyCenterTitleValueMoreCell *cell = [tableView dequeueReusableCellWithIdentifier:[XIU_MyCenterTitleValueMoreCell XIU_ClassIdentifier] forIndexPath:indexPath];
+           XIU_MyCenterTitleValueMoreCell *cell = [[XIU_MyCenterTitleValueMoreCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[XIU_MyCenterTitleValueMoreCell XIU_ClassIdentifier]];
         if (indexPath.section == 1) {
             switch (indexPath.row) {
                 case 0:

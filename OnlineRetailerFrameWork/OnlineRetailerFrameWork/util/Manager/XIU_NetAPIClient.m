@@ -90,6 +90,7 @@ static dispatch_once_t onceToken;
 
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 
+                
             }];
         }
             break;
@@ -151,6 +152,7 @@ static dispatch_once_t onceToken;
         
 //        NSString *imgFilePath = [filePath path];// 将NSURL转成NSString
 //        UIImage *img = [UIImage imageWithContentsOfFile:imgFilePath];
+        
         
     }];
 }
