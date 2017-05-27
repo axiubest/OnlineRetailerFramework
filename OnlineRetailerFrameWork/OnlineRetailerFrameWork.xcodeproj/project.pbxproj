@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2C0F21655B799AF5AEB00E80 /* libPods-OnlineRetailerFrameWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48427B43B62B810785216F04 /* libPods-OnlineRetailerFrameWork.a */; };
-		832798A11E5BF92500930000 /* 设置.png in Resources */ = {isa = PBXBuildFile; fileRef = 832798A01E5BF92500930000 /* 设置.png */; };
 		832798A71E5C008100930000 /* XIU_ScanQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832798A61E5C008100930000 /* XIU_ScanQRCodeViewController.m */; };
 		832798AB1E5C039200930000 /* 返回.png in Resources */ = {isa = PBXBuildFile; fileRef = 832798AA1E5C039200930000 /* 返回.png */; };
 		832798AE1E5C089000930000 /* XIU_ScanQRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 832798AD1E5C089000930000 /* XIU_ScanQRCodeView.m */; };
@@ -234,6 +233,12 @@
 		83E2D2F41E5D94BB0071D9A8 /* XIU_DeliveryAddressListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D2F31E5D94BB0071D9A8 /* XIU_DeliveryAddressListCell.m */; };
 		83E2D2F71E5DD7AC0071D9A8 /* XIU_DeliverAddressEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D2F61E5DD7AC0071D9A8 /* XIU_DeliverAddressEditViewController.m */; };
 		83E2D2F91E5DD7BF0071D9A8 /* XIU_DeliverAddressEditViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E2D2F81E5DD7BF0071D9A8 /* XIU_DeliverAddressEditViewController.storyboard */; };
+		FA0DE8101ED27A6F00072226 /* PullDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0DE80F1ED27A6F00072226 /* PullDownMenu.m */; };
+		FA0DE8121ED28DA000072226 /* 1.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA0DE8111ED28DA000072226 /* 1.plist */; };
+		FA0DE81F1ED28E1700072226 /* XIU_HomeWaterFallModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0DE81E1ED28E1700072226 /* XIU_HomeWaterFallModel.m */; };
+		FA0DE8221ED28FCC00072226 /* XIU_WaterFallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0DE8211ED28FCC00072226 /* XIU_WaterFallLayout.m */; };
+		FA0DE8281ED293A700072226 /* XIU_HomeWaterFallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0DE8271ED293A700072226 /* XIU_HomeWaterFallCell.m */; };
+		FA0DE82A1ED2D61400072226 /* 设置.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0DE8291ED2D61400072226 /* 设置.png */; };
 		FA6045B01EBB74A900C93734 /* XIU_OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6045AF1EBB74A900C93734 /* XIU_OrderViewController.m */; };
 		FA6045B31EBB77DB00C93734 /* XIU_OrderSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6045B21EBB77DB00C93734 /* XIU_OrderSegmentView.m */; };
 		FA6045B71EBB781900C93734 /* XIU_OrderSegmentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6045B61EBB781900C93734 /* XIU_OrderSegmentView.xib */; };
@@ -254,7 +259,6 @@
 /* Begin PBXFileReference section */
 		48427B43B62B810785216F04 /* libPods-OnlineRetailerFrameWork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OnlineRetailerFrameWork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		630E178D7E0BAF639AF17DC8 /* Pods-OnlineRetailerFrameWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineRetailerFrameWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnlineRetailerFrameWork/Pods-OnlineRetailerFrameWork.release.xcconfig"; sourceTree = "<group>"; };
-		832798A01E5BF92500930000 /* 设置.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "设置.png"; sourceTree = "<group>"; };
 		832798A51E5C008100930000 /* XIU_ScanQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_ScanQRCodeViewController.h; sourceTree = "<group>"; };
 		832798A61E5C008100930000 /* XIU_ScanQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_ScanQRCodeViewController.m; sourceTree = "<group>"; };
 		832798AA1E5C039200930000 /* 返回.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回.png"; sourceTree = "<group>"; };
@@ -634,6 +638,16 @@
 		83E2D2F81E5DD7BF0071D9A8 /* XIU_DeliverAddressEditViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XIU_DeliverAddressEditViewController.storyboard; sourceTree = "<group>"; };
 		ED2BFCE96CB7DAB98451ED2B /* Pods-OnlineRetailerFrameWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineRetailerFrameWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnlineRetailerFrameWork/Pods-OnlineRetailerFrameWork.debug.xcconfig"; sourceTree = "<group>"; };
 		FA04F77E1EA7BAF9007D4835 /* UMengHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMengHeader.h; sourceTree = "<group>"; };
+		FA0DE80E1ED27A6F00072226 /* PullDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullDownMenu.h; sourceTree = "<group>"; };
+		FA0DE80F1ED27A6F00072226 /* PullDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullDownMenu.m; sourceTree = "<group>"; };
+		FA0DE8111ED28DA000072226 /* 1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 1.plist; sourceTree = "<group>"; };
+		FA0DE81D1ED28E1700072226 /* XIU_HomeWaterFallModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_HomeWaterFallModel.h; sourceTree = "<group>"; };
+		FA0DE81E1ED28E1700072226 /* XIU_HomeWaterFallModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_HomeWaterFallModel.m; sourceTree = "<group>"; };
+		FA0DE8201ED28FCC00072226 /* XIU_WaterFallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_WaterFallLayout.h; sourceTree = "<group>"; };
+		FA0DE8211ED28FCC00072226 /* XIU_WaterFallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_WaterFallLayout.m; sourceTree = "<group>"; };
+		FA0DE8261ED293A700072226 /* XIU_HomeWaterFallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_HomeWaterFallCell.h; sourceTree = "<group>"; };
+		FA0DE8271ED293A700072226 /* XIU_HomeWaterFallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_HomeWaterFallCell.m; sourceTree = "<group>"; };
+		FA0DE8291ED2D61400072226 /* 设置.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "设置.png"; sourceTree = "<group>"; };
 		FA6045AE1EBB74A900C93734 /* XIU_OrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_OrderViewController.h; sourceTree = "<group>"; };
 		FA6045AF1EBB74A900C93734 /* XIU_OrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_OrderViewController.m; sourceTree = "<group>"; };
 		FA6045B11EBB77DB00C93734 /* XIU_OrderSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_OrderSegmentView.h; sourceTree = "<group>"; };
@@ -708,9 +722,9 @@
 		8341AA091E4DAB3400FDC5A4 /* Home(首页) */ = {
 			isa = PBXGroup;
 			children = (
-				8341AA0A1E4DAB3400FDC5A4 /* Controller */,
-				8341AA0D1E4DAB3400FDC5A4 /* Model */,
 				8341AA0E1E4DAB3400FDC5A4 /* View */,
+				8341AA0A1E4DAB3400FDC5A4 /* Controller */,
+				FA0DE81C1ED28E0700072226 /* Model */,
 			);
 			path = "Home(首页)";
 			sourceTree = "<group>";
@@ -718,17 +732,11 @@
 		8341AA0A1E4DAB3400FDC5A4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FA0DE8111ED28DA000072226 /* 1.plist */,
 				8341AA0B1E4DAB3400FDC5A4 /* XIU_HomeViewController.h */,
 				8341AA0C1E4DAB3400FDC5A4 /* XIU_HomeViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		8341AA0D1E4DAB3400FDC5A4 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		8341AA0E1E4DAB3400FDC5A4 /* View */ = {
@@ -736,6 +744,8 @@
 			children = (
 				8341AA0F1E4DAB3400FDC5A4 /* XIU_SearchBarSimulationView.h */,
 				8341AA101E4DAB3500FDC5A4 /* XIU_SearchBarSimulationView.m */,
+				FA0DE8261ED293A700072226 /* XIU_HomeWaterFallCell.h */,
+				FA0DE8271ED293A700072226 /* XIU_HomeWaterFallCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -754,12 +764,12 @@
 				8341AA241E4DAB3500FDC5A4 /* 头像占位图.png */,
 				83ABA01A1E614D5A00F9B529 /* 垃圾箱.png */,
 				83E2D2F01E5D925A0071D9A8 /* 编辑.png */,
+				FA0DE8291ED2D61400072226 /* 设置.png */,
 				83AB9FF91E5E8C5600F9B529 /* 下一步.png */,
 				83ABA0181E614BE900F9B529 /* 放大镜.png */,
 				83E2D2DB1E5D32230071D9A8 /* 相册.png */,
 				832798AA1E5C039200930000 /* 返回.png */,
 				8341ACD21E575C6700FDC5A4 /* 待发货.png */,
-				832798A01E5BF92500930000 /* 设置.png */,
 				8341ACD31E575C6700FDC5A4 /* 待收货.png */,
 				8341AA251E4DAB3500FDC5A4 /* 显示.png */,
 				8341AA271E4DAB3500FDC5A4 /* 隐藏.png */,
@@ -1415,6 +1425,8 @@
 		8341AB5D1E4DAB3500FDC5A4 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				FA0DE80E1ED27A6F00072226 /* PullDownMenu.h */,
+				FA0DE80F1ED27A6F00072226 /* PullDownMenu.m */,
 				8341AB5E1E4DAB3500FDC5A4 /* SMPageControl.h */,
 				8341AB5F1E4DAB3500FDC5A4 /* SMPageControl.m */,
 				8341AB601E4DAB3500FDC5A4 /* XIU_BaseRootTool.h */,
@@ -1425,6 +1437,8 @@
 				8341AB651E4DAB3500FDC5A4 /* XIU_ShareModel.m */,
 				8341AB661E4DAB3500FDC5A4 /* XIU_ShareView.h */,
 				8341AB671E4DAB3500FDC5A4 /* XIU_ShareView.m */,
+				FA0DE8201ED28FCC00072226 /* XIU_WaterFallLayout.h */,
+				FA0DE8211ED28FCC00072226 /* XIU_WaterFallLayout.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -1605,6 +1619,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FA0DE81C1ED28E0700072226 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA0DE81D1ED28E1700072226 /* XIU_HomeWaterFallModel.h */,
+				FA0DE81E1ED28E1700072226 /* XIU_HomeWaterFallModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1668,7 +1691,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				83E2D2F11E5D925A0071D9A8 /* 编辑.png in Resources */,
-				832798A11E5BF92500930000 /* 设置.png in Resources */,
 				8341ABC11E4DAB3500FDC5A4 /* XIU_MyCenterUtilitiesCell.xib in Resources */,
 				8341AB6F1E4DAB3500FDC5A4 /* share_btn_inform@2x.png in Resources */,
 				8341ABA51E4DAB3500FDC5A4 /* XIU_CommodityDetialBaseProductInformationCell.xib in Resources */,
@@ -1690,6 +1712,7 @@
 				8341AB7A1E4DAB3500FDC5A4 /* yes_btn_unselect.png in Resources */,
 				83E2D2F91E5DD7BF0071D9A8 /* XIU_DeliverAddressEditViewController.storyboard in Resources */,
 				8341AB771E4DAB3500FDC5A4 /* 收藏.png in Resources */,
+				FA0DE82A1ED2D61400072226 /* 设置.png in Resources */,
 				FA6045B71EBB781900C93734 /* XIU_OrderSegmentView.xib in Resources */,
 				8341AB8B1E4DAB3500FDC5A4 /* second_selected@2x.png in Resources */,
 				8341AB701E4DAB3500FDC5A4 /* share_btn_qq@2x.png in Resources */,
@@ -1747,6 +1770,7 @@
 				8386FC551E4DA7F90029E653 /* Assets.xcassets in Resources */,
 				8341ACD41E575C6700FDC5A4 /* 待发货.png in Resources */,
 				8341AC371E4EC24900FDC5A4 /* cart_addBtn_nomal@2x.png in Resources */,
+				FA0DE8121ED28DA000072226 /* 1.plist in Resources */,
 				8341AB7B1E4DAB3500FDC5A4 /* 头像占位图.png in Resources */,
 				8341ACCF1E574FE700FDC5A4 /* 待评价.png in Resources */,
 				8341ACE01E57D98600FDC5A4 /* shop.png in Resources */,
@@ -1848,6 +1872,7 @@
 				8341ABB31E4DAB3500FDC5A4 /* XIU_ViewController.m in Sources */,
 				8341ABE11E4DAB3500FDC5A4 /* MJPropertyKey.m in Sources */,
 				8341ABC91E4DAB3500FDC5A4 /* DistancePickerView.m in Sources */,
+				FA0DE81F1ED28E1700072226 /* XIU_HomeWaterFallModel.m in Sources */,
 				8341ABAD1E4DAB3500FDC5A4 /* XIU_SearchBarCell.m in Sources */,
 				8341ABAF1E4DAB3500FDC5A4 /* RDVTabBar.m in Sources */,
 				8341AC4B1E4F389600FDC5A4 /* XIU_ShoppingCartViewController.m in Sources */,
@@ -1862,6 +1887,7 @@
 				8341ABCA1E4DAB3500FDC5A4 /* SWActionSheet.m in Sources */,
 				8341ABF11E4DAB3500FDC5A4 /* UIButton+WebCache.m in Sources */,
 				8341ABB81E4DAB3500FDC5A4 /* XIU_SettingTextViewController.m in Sources */,
+				FA0DE8101ED27A6F00072226 /* PullDownMenu.m in Sources */,
 				8341AB9C1E4DAB3500FDC5A4 /* XIU_LoginService.m in Sources */,
 				8341ABF21E4DAB3500FDC5A4 /* UIImage+GIF.m in Sources */,
 				8341AC041E4DAB3500FDC5A4 /* UIColor+Hex.m in Sources */,
@@ -1909,7 +1935,9 @@
 				8341AC3F1E4EECDD00FDC5A4 /* XIU_ShoppingCartCalculationView.m in Sources */,
 				8341AC021E4DAB3500FDC5A4 /* UIBarButtonItem+Common.m in Sources */,
 				8341ABC51E4DAB3500FDC5A4 /* ActionSheetDatePicker.m in Sources */,
+				FA0DE8221ED28FCC00072226 /* XIU_WaterFallLayout.m in Sources */,
 				8341ABDA1E4DAB3500FDC5A4 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				FA0DE8281ED293A700072226 /* XIU_HomeWaterFallCell.m in Sources */,
 				8341ABBC1E4DAB3500FDC5A4 /* XIU_MyCenterPurchaseInformationCell.m in Sources */,
 				8341ABD11E4DAB3500FDC5A4 /* UIGestureRecognizer+BlocksKit.m in Sources */,
 				83AB9FFD1E5EE74C00F9B529 /* XIU_DeliveryAddressPickerView.m in Sources */,

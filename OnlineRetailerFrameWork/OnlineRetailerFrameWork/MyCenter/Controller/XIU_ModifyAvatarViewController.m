@@ -50,7 +50,6 @@
         [tableView registerNib:[XIU_MyCenterModifyAvatarCell XIU_ClassNib] forCellReuseIdentifier:[XIU_MyCenterModifyAvatarCell XIU_ClassIdentifier]];
         [tableView registerNib:[UserInfoDetailTagCell XIU_ClassNib] forCellReuseIdentifier:[UserInfoDetailTagCell XIU_ClassIdentifier]];
 
-        
         [self.view addSubview:tableView];
         [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.view);
