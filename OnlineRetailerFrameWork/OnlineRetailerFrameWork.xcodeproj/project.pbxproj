@@ -251,6 +251,7 @@
 		FA66C8901EC585AC00B37D33 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA66C88F1EC585AC00B37D33 /* CFNetwork.framework */; };
 		FA66C8941EC5A39F00B37D33 /* XIU_ConfirmPayAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA66C8921EC5A39F00B37D33 /* XIU_ConfirmPayAddressCell.m */; };
 		FA66C8951EC5A39F00B37D33 /* XIU_ConfirmPayAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA66C8931EC5A39F00B37D33 /* XIU_ConfirmPayAddressCell.xib */; };
+		FA7723971ED96FBD006FBD01 /* XIU_DeliverAdderssModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7723961ED96FBD006FBD01 /* XIU_DeliverAdderssModel.m */; };
 		FA87FA961EC6DD7D00F5CE5E /* 51494656373.png in Resources */ = {isa = PBXBuildFile; fileRef = FA87FA951EC6DD7D00F5CE5E /* 51494656373.png */; };
 		FA87FA981EC6DDD500F5CE5E /* 定位.png in Resources */ = {isa = PBXBuildFile; fileRef = FA87FA971EC6DDD500F5CE5E /* 定位.png */; };
 		FAB15F431EC055050091B4C4 /* XIU_MyCenterGlobalEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB15F421EC055050091B4C4 /* XIU_MyCenterGlobalEnum.m */; };
@@ -665,6 +666,8 @@
 		FA66C8911EC5A39F00B37D33 /* XIU_ConfirmPayAddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_ConfirmPayAddressCell.h; sourceTree = "<group>"; };
 		FA66C8921EC5A39F00B37D33 /* XIU_ConfirmPayAddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_ConfirmPayAddressCell.m; sourceTree = "<group>"; };
 		FA66C8931EC5A39F00B37D33 /* XIU_ConfirmPayAddressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XIU_ConfirmPayAddressCell.xib; sourceTree = "<group>"; };
+		FA7723951ED96FBD006FBD01 /* XIU_DeliverAdderssModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_DeliverAdderssModel.h; sourceTree = "<group>"; };
+		FA7723961ED96FBD006FBD01 /* XIU_DeliverAdderssModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_DeliverAdderssModel.m; sourceTree = "<group>"; };
 		FA87FA951EC6DD7D00F5CE5E /* 51494656373.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 51494656373.png; sourceTree = "<group>"; };
 		FA87FA971EC6DDD500F5CE5E /* 定位.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "定位.png"; sourceTree = "<group>"; };
 		FAB15F411EC055050091B4C4 /* XIU_MyCenterGlobalEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_MyCenterGlobalEnum.h; sourceTree = "<group>"; };
@@ -1550,8 +1553,8 @@
 		83E2D2E71E5D8D4C0071D9A8 /* DeliveryAddress-收货地址 */ = {
 			isa = PBXGroup;
 			children = (
+				FA7723941ED96F94006FBD01 /* Model */,
 				83E2D2E81E5D8D4C0071D9A8 /* Controller */,
-				83E2D2E91E5D8D4C0071D9A8 /* Model */,
 				83E2D2EA1E5D8D4C0071D9A8 /* View */,
 			);
 			path = "DeliveryAddress-收货地址";
@@ -1568,13 +1571,6 @@
 				83E2D2F81E5DD7BF0071D9A8 /* XIU_DeliverAddressEditViewController.storyboard */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		83E2D2E91E5D8D4C0071D9A8 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		83E2D2EA1E5D8D4C0071D9A8 /* View */ = {
@@ -1624,6 +1620,15 @@
 			children = (
 				FA0DE81D1ED28E1700072226 /* XIU_HomeWaterFallModel.h */,
 				FA0DE81E1ED28E1700072226 /* XIU_HomeWaterFallModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA7723941ED96F94006FBD01 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA7723951ED96FBD006FBD01 /* XIU_DeliverAdderssModel.h */,
+				FA7723961ED96FBD006FBD01 /* XIU_DeliverAdderssModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1925,6 +1930,7 @@
 				8341ABF31E4DAB3500FDC5A4 /* UIImage+MultiFormat.m in Sources */,
 				8341ABA21E4DAB3500FDC5A4 /* XIU_AddShoppingCartPopView.m in Sources */,
 				8341ABF51E4DAB3500FDC5A4 /* UIImageView+HighlightedWebCache.m in Sources */,
+				FA7723971ED96FBD006FBD01 /* XIU_DeliverAdderssModel.m in Sources */,
 				8341ABFC1E4DAB3500FDC5A4 /* NSDictionary+Common.m in Sources */,
 				8341ABE81E4DAB3500FDC5A4 /* MKAnnotationView+WebCache.m in Sources */,
 				8341ABDD1E4DAB3500FDC5A4 /* MBProgressHUD.m in Sources */,

@@ -9,6 +9,7 @@
 #import "XIU_DeliveryAddressViewController.h"
 #import "XIU_DeliverAddressEditViewController.h"
 #import "XIU_DeliveryAddressListCell.h"
+#import "XIU_DeliverAdderssModel.h"
 
 @interface XIU_DeliveryAddressViewController ()<UITableViewDelegate, UITableViewDataSource, XIU_DeliveryAddressListCellDelegate>
 {
@@ -72,10 +73,15 @@
 
 - (void)editFunc {
     //编辑状体下传入模型进入新建地址
-    [self pushXIU_DeliverAddressEditViewControllerWithModel:@"1"];
+    XIU_DeliverAdderssModel *model = [[XIU_DeliverAdderssModel alloc] init];
+    model.getPerson = @"dffd";
+    model.phoneNumber = @"1787878787";
+    model.Location = @"dsfsfsadfasfadsfdsfsf";
+    model.detialLocation = @"中国浙江省杭州市中国浙江省杭州市中国浙江省杭州市中国浙江省杭州市中国浙江省杭州市";
+    [self pushXIU_DeliverAddressEditViewControllerWithModel:model];
 }
 
-- (void)pushXIU_DeliverAddressEditViewControllerWithModel:(NSString *)model {
+- (void)pushXIU_DeliverAddressEditViewControllerWithModel:(XIU_DeliverAdderssModel *)model {
     UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:XIU_DeliverAddressEditID bundle:nil];
     
     XIU_DeliverAddressEditViewController *deliverAddress= [mainStoryBoard instantiateViewControllerWithIdentifier:XIU_DeliverAddressEditID];

@@ -68,6 +68,16 @@
 }
 
 
+
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application
+{
+    // 1. 停止所有下载
+    [[SDWebImageManager sharedManager] cancelAll];
+    
+    // 2. 清除缓存
+    [[SDWebImageManager sharedManager].imageCache clearMemory];
+}
+
 -(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
     
     return [WXApi handleOpenURL:url delegate:self];

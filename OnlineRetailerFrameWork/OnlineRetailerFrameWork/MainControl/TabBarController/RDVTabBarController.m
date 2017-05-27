@@ -215,7 +215,9 @@
         }
         
         if (!weakSelf.tabBarHidden) {
-            tabBarStartingY = viewSize.height - tabBarHeight;
+            
+            //解决下方1px线bug
+            tabBarStartingY = viewSize.height - tabBarHeight + 1;
             if (![[weakSelf tabBar] isTranslucent]) {
                 contentViewHeight -= ([[weakSelf tabBar] minimumContentHeight] ?: tabBarHeight);
             }

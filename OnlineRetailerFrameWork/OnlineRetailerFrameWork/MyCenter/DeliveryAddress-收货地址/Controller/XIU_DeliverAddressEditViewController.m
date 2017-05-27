@@ -36,8 +36,14 @@
 @implementation XIU_DeliverAddressEditViewController
 
 
--(NSString *)model {
-         self.navigationItem.title = _model ? @"修改地址" : @"添加新地址";
+
+-(XIU_DeliverAdderssModel *)model {
+    if (_model) {
+        self.navigationItem.title =@"修改地址";
+    }else {
+        self.navigationItem.title = @"添加新地址";
+    }
+    
     return _model;
 }
 
@@ -75,28 +81,33 @@
     switch (indexPath.section) {
         case 0:
             switch (indexPath.row) {
-                case DeliverAddressEditType_Person: {          XIU_DeliveryAddressEditInformationCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XIU_DeliveryAddressEditInformationCell"];
+                case DeliverAddressEditType_Person: {          XIU_DeliveryAddressEditInformationCell *cell = [tableView dequeueReusableCellWithIdentifier:[XIU_DeliveryAddressEditInformationCell XIU_ClassIdentifier]];
                     personCell = cell;
                     cell.indexPath = indexPath;
+                    if (self.model) {
+                        cell.InformationTexfField.text = self.model.getPerson;
+                    }
                     return cell;
                 }
                     break;
-                case DeliverAddressEditType_Phone: {XIU_DeliveryAddressEditInformationCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XIU_DeliveryAddressEditInformationCell"];
+                case DeliverAddressEditType_Phone: {XIU_DeliveryAddressEditInformationCell *cell = [tableView dequeueReusableCellWithIdentifier:[XIU_DeliveryAddressEditInformationCell XIU_ClassIdentifier]];
                     phoneCell = cell;
+                    cell.InformationTexfField.text = self.model.phoneNumber;
                      cell.indexPath = indexPath;
                     return cell;
                 }
                     break;
                 case DeliverAddressEditType_Location: {
-                    XIU_DeliveryAddressEditLocationCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XIU_DeliveryAddressEditLocationCell"];
+                    XIU_DeliveryAddressEditLocationCell *cell = [tableView dequeueReusableCellWithIdentifier:[XIU_DeliveryAddressEditLocationCell XIU_ClassIdentifier]];
                     locationCell = cell;
-//                    cell.indexPath = indexPath;
+                    cell.locationLabel.text = self.model.Location;
                     return cell;
                 }
                     break;
                 case DeliverAddressEditType_Distribtion: {
-                    XIU_DeliveryAddressEditDestribtionLocCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XIU_DeliveryAddressEditDestribtionLocCell"];
+                    XIU_DeliveryAddressEditDestribtionLocCell *cell = [tableView dequeueReusableCellWithIdentifier:[XIU_DeliveryAddressEditDestribtionLocCell XIU_ClassIdentifier]];
                     DestribtionCell = cell;
+                    cell.Legitimate = self.model.detialLocation;
                     return cell;
                 }
                     break;

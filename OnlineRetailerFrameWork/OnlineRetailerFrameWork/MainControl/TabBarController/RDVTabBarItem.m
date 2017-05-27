@@ -42,6 +42,7 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+
         [self commonInitialization];
     }
     return self;
@@ -61,8 +62,7 @@
 
 - (void)commonInitialization {
     // Setup defaults
-    
-    [self setBackgroundColor:[UIColor clearColor]];
+
     
     _title = @"";
     _titlePositionAdjustment = UIOffsetZero;

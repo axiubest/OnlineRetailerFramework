@@ -7,7 +7,7 @@
 //
 
 #import "XIU_HiddenTabBarController.h"
-
+#import "XIU_DeliverAdderssModel.h"
 
 
 //修改地址界面和添加地址界面
@@ -25,7 +25,7 @@ static NSString *const XIU_DeliverAddressEditID = @"XIU_DeliverAddressEditViewCo
 
 
 
-#pragma mark 模型传入判暂用字符串
-@property (nonatomic,strong) NSString * model;
+
+@property (nonatomic,strong) XIU_DeliverAdderssModel * model;
 
 @end

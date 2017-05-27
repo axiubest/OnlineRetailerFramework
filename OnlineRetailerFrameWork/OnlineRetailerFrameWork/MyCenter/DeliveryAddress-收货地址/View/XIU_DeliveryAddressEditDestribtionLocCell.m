@@ -30,7 +30,8 @@ static NSString * const EditDestribtionLoc_tooLong = @"地址输入不得超过6
         [self alertViewWithString:EditDestribtionLoc_tooLong];
         return nil;
     }
-    return _TextView.text;
+    _TextView.text = _Legitimate;
+    return _Legitimate;
 }
 
 - (void)awakeFromNib {

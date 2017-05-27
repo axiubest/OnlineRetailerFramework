@@ -66,7 +66,7 @@
     
     [[self backgroundView] setFrame:CGRectMake(0, frameSize.height - minimumContentHeight,
                                             frameSize.width, frameSize.height)];
-    
+    self.backgroundColor= [UIColor whiteColor];
     [self setItemWidth:roundf((frameSize.width - [self contentEdgeInsets].left -
                                [self contentEdgeInsets].right) / [[self items] count])];
     
@@ -80,7 +80,7 @@
         if (!itemHeight) {
             itemHeight = frameSize.height;
         }
-        
+        item.backgroundColor = [UIColor whiteColor];
         [item setFrame:CGRectMake(self.contentEdgeInsets.left + (index * self.itemWidth),
                                   roundf(frameSize.height - itemHeight) - self.contentEdgeInsets.top,
                                   self.itemWidth, itemHeight - self.contentEdgeInsets.bottom)];
@@ -105,6 +105,7 @@
     
     _items = [items copy];
     for (RDVTabBarItem *item in _items) {
+        item.backgroundColor = [UIColor whiteColor];
         [item addTarget:self action:@selector(tabBarItemWasSelected:) forControlEvents:UIControlEventTouchDown];
         [self addSubview:item];
     }
