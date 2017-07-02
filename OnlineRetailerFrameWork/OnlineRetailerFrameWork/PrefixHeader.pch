@@ -12,15 +12,29 @@
 
 static NSInteger HUDProgress_Time = 1;
 
+
+//-------------font----------------
 #define NB_FONT(r) [UIFont fontWithName:@"PingFang-SC-Regular" size:r]
+/***  粗体 */
+#define kBoldFont(size) [UIFont boldSystemFontOfSize:size * kScreenWidthRatio]
+/***  普通字体 */
+#define kFont(size) [UIFont systemFontOfSize:size * kScreenWidthRatio]
+//-------------font----------------
+
+
 
 //-------------color----------------
 #define Color(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 //-------------color----------------
 
 
+//-------------notification----------------
+#define NOTIF_ADD(n, f)     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(f) name:n object:nil]
+#define NOTIF_POST(n, o)    [[NSNotificationCenter defaultCenter] postNotificationName:n object:o]
+#define NOTIF_REMV()        [[NSNotificationCenter defaultCenter] removeObserver:self]
+//-------------notification----------------
 
-//-------------网络参数设置----------------
+
 
 
 //搜索记录plist参数
@@ -59,10 +73,7 @@ static NSString *const KBASEURL = @"http://112.74.28.179:8080/Chislim/";
 
 /***  屏宽比例 */
 #define kScreenWidthRatio (KWIDTH / (kiPhone6_W * 1.0))
-/***  粗体 */
-#define kBoldFont(size) [UIFont boldSystemFontOfSize:size * kScreenWidthRatio]
-/***  普通字体 */
-#define kFont(size) [UIFont systemFontOfSize:size * kScreenWidthRatio]
+
 
 static NSInteger const  NaigationBarHeight = 64;
 static NSInteger const  TabBarHeight = 49;

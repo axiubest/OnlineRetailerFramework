@@ -36,7 +36,7 @@ static CGFloat const BOTTOM_POP_VIEW_HEIGHT = 200;
     // 图文详情开关，
     BOOL isShowDetail;
     
- 
+    
     // 倒计时
     NSTimer *showTimer;
     NSDate *endDate;
@@ -110,7 +110,7 @@ static CGFloat const BOTTOM_POP_VIEW_HEIGHT = 200;
     
     self.XIUscrollView = [[XIU_CommodityDetailPopView alloc] initWithFrame:CGRectMake(30, 0, self.view.width, self.view.height / 2)];
     self.XIUscrollView.delegate = self;
- 
+    
     self.XIUscrollView.itmeArray = self.itmeArray;
     [_popTopView addSubview:self.XIUscrollView];
     
@@ -132,7 +132,7 @@ static CGFloat const BOTTOM_POP_VIEW_HEIGHT = 200;
 
 - (UIView *)popView {
     if (!_popView) {
-     
+        
         _popView = [[XIU_AddShoppingCartPopView alloc] initWithFrame:CGRectMake(0, KHEIGHT, KWIDTH, KHEIGHT- BOTTOM_POP_VIEW_HEIGHT) WithDataModel:nil];
     }
     return _popView;
@@ -197,10 +197,10 @@ static CGFloat const BOTTOM_POP_VIEW_HEIGHT = 200;
 - (void)registerNib {
     
     
-    [self.tableView registerNib:[UINib nibWithNibName:@"XIU_CommodityDetialBaseProductInformationCell" bundle:nil] forCellReuseIdentifier:XIU_CommodityDetialBaseProductInformationIdentifier];
-    [self.tableView registerNib:[UINib nibWithNibName:@"XIU_CommodityDetialBaseStoreInformationCell" bundle:nil] forCellReuseIdentifier:@"XIU_CommodityDetialBaseStoreInformationCell"];
-    [self.tableView registerNib:[UINib nibWithNibName:@"XIU_CommodityDetialBaseUserEvaluationCell" bundle:nil] forCellReuseIdentifier:@"XIU_CommodityDetialBaseUserEvaluationCell"];
-    [self.tableView registerClass:[XIU_CommodityDetialSelectTypeCell class]forCellReuseIdentifier:@"XIU_CommodityDetialSelectTypeCell"];
+    [self.tableView registerNib:[XIU_CommodityDetialBaseProductInformationCell XIU_ClassNib]  forCellReuseIdentifier:[XIU_CommodityDetialBaseProductInformationCell XIU_ClassIdentifier]];
+    [self.tableView registerNib:[XIU_CommodityDetialBaseStoreInformationCell XIU_ClassNib] forCellReuseIdentifier:[XIU_CommodityDetialBaseStoreInformationCell XIU_ClassIdentifier]];
+    [self.tableView registerNib:[XIU_CommodityDetialBaseUserEvaluationCell XIU_ClassNib] forCellReuseIdentifier:[XIU_CommodityDetialBaseUserEvaluationCell XIU_ClassIdentifier]];
+    [self.tableView registerClass:[XIU_CommodityDetialSelectTypeCell class]forCellReuseIdentifier:[XIU_CommodityDetialSelectTypeCell XIU_ClassIdentifier]];
 }
 
 - (void)setupHeadView {
@@ -263,7 +263,7 @@ static CGFloat const BOTTOM_POP_VIEW_HEIGHT = 200;
     
     switch (_CommodityDetailType) {
         case CommodityDetailCellType_ProductInformation: {
-            XIU_CommodityDetialBaseProductInformationCell *basicInfoCell = [tableView dequeueReusableCellWithIdentifier:XIU_CommodityDetialBaseProductInformationIdentifier forIndexPath:indexPath];
+            XIU_CommodityDetialBaseProductInformationCell *basicInfoCell = [tableView dequeueReusableCellWithIdentifier:[XIU_CommodityDetialBaseProductInformationCell XIU_ClassIdentifier] forIndexPath:indexPath];
             XIU_WeakSelf(self);
             basicInfoCell.block = ^(NSInteger index){
                 switch (index) {
@@ -283,8 +283,8 @@ static CGFloat const BOTTOM_POP_VIEW_HEIGHT = 200;
         }
             break;
         case CommodityDetailCellType_StoreInformation: {
-            XIU_CommodityDetialBaseStoreInformationCell *shopInfoCell = [tableView dequeueReusableCellWithIdentifier:@"XIU_CommodityDetialBaseStoreInformationCell" forIndexPath:indexPath];
-
+            XIU_CommodityDetialBaseStoreInformationCell *shopInfoCell = [tableView dequeueReusableCellWithIdentifier:[XIU_CommodityDetialBaseStoreInformationCell XIU_ClassIdentifier] forIndexPath:indexPath];
+            
             XIU_WeakSelf(self);
             shopInfoCell.block = ^(NSInteger index){
                 switch (index) {
@@ -301,21 +301,21 @@ static CGFloat const BOTTOM_POP_VIEW_HEIGHT = 200;
         }
             break;
         case CommodityDetailCellType_UserEvaluation: {
-            XIU_CommodityDetialBaseUserEvaluationCell *commentCell = [tableView dequeueReusableCellWithIdentifier:@"XIU_CommodityDetialBaseUserEvaluationCell" forIndexPath:indexPath];
+            XIU_CommodityDetialBaseUserEvaluationCell *commentCell = [tableView dequeueReusableCellWithIdentifier:[XIU_CommodityDetialBaseUserEvaluationCell XIU_ClassIdentifier] forIndexPath:indexPath];
             return commentCell;
         }
             break;
         case CommodityDetailCellType_SelectTypeCell: {
-            XIU_CommodityDetialSelectTypeCell *selectTypeCell = [tableView dequeueReusableCellWithIdentifier:@"XIU_CommodityDetialSelectTypeCell" forIndexPath:indexPath];
+            XIU_CommodityDetialSelectTypeCell *selectTypeCell = [tableView dequeueReusableCellWithIdentifier:[XIU_CommodityDetialSelectTypeCell XIU_ClassIdentifier] forIndexPath:indexPath];
             XIU_WeakSelf(self);
-
+            
             [selectTypeCell bk_whenTapped:^{
                 [weakself open];
             }];
             return selectTypeCell;
         }
             break;
-
+            
     }
     return nil;
 }
@@ -334,7 +334,7 @@ static CGFloat const BOTTOM_POP_VIEW_HEIGHT = 200;
         case CommodityDetailCellType_SelectTypeCell:
             return 44.0f;
             break;
-
+            
         default:
             return 0.0f;
             break;
@@ -351,7 +351,7 @@ static CGFloat const BOTTOM_POP_VIEW_HEIGHT = 200;
         if (self.tableView.contentOffset.y >= 0 &&  self.tableView.contentOffset.y <= HEADER_VIEW_HEIGHT) {
             self.scrollView.contentOffset = CGPointMake(self.scrollView.contentOffset.x, -offset / 2.0f);
             self.navigationView.alpha = offset / HEADER_VIEW_HEIGHT;
-//            self.backButton.alpha = -(offset / HEADER_VIEW_HEIGHT);
+            //            self.backButton.alpha = -(offset / HEADER_VIEW_HEIGHT);
         } else if (self.tableView.contentOffset.y < 0) {
             self.navigationView.alpha = 0.0f;
             self.backButton.alpha = 1.f;
