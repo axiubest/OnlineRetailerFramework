@@ -7,8 +7,9 @@
 
 ### 1 Net-request
 
-网络请求采用双层封装意在最少减轻controller中代码量
-XIU_NetAPIClient对AFNetwork进行封装暴露出request接口，供XIU_NetAPIManager接口类调用，该类为单粒全局仅此一个。所有网络接口共同调用。
+* 网络请求采用双层封装意在最少减轻controller中代码量
+* XIU_NetAPIClient对AFNetwork进行封装暴露出request接口，供XIU_NetAPIManager接口类调用，该类为单粒全局仅此一个。所有网络接口共同调用。
+* XIU_NetAPIClient中对网络请求进行了缓存处理，缓存位置在本地plist文件中。
 
 ```Objective-C
 //XIU_NetAPIClient
