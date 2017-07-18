@@ -10,6 +10,17 @@
 网络请求采用双层封装意在最少减轻controller中代码量
 XIU_NetAPIClient对AFNetwork进行封装暴露出request接口，供XIU_NetAPIManager接口类调用，该类为单粒全局仅此一个。所有网络接口共同调用。
 
+```Objective-C
++ (id)sharedJsonClient;
+
+- (void)requestJsonDataWithPath:(NSString *)aPath
+                     withParams:(NSDictionary*)params
+                 withMethodType:(NetworkMethod)method
+                       andBlock:(void (^)(id data, NSError *error))block;
+
+
+```
+
 #### 1
 ![image](https://github.com/axiubest/OnlineRetailerFramework/blob/master/OnlineRetailerFrameWork/showImg/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-07-18%20%E4%B8%8B%E5%8D%883.56.59.png)
 
