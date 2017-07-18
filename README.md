@@ -11,6 +11,8 @@
 XIU_NetAPIClient对AFNetwork进行封装暴露出request接口，供XIU_NetAPIManager接口类调用，该类为单粒全局仅此一个。所有网络接口共同调用。
 
 ```Objective-C
+//XIU_NetAPIClient
+
 + (id)sharedJsonClient;
 
 - (void)requestJsonDataWithPath:(NSString *)aPath
@@ -18,6 +20,15 @@ XIU_NetAPIClient对AFNetwork进行封装暴露出request接口，供XIU_NetAPIMa
                  withMethodType:(NetworkMethod)method
                        andBlock:(void (^)(id data, NSError *error))block;
 
+
+```
+
+```Objective-C
+//XIU_NetAPIManager接口根类
++ (instancetype)sharedManager；
+
+#pragma mark----login
+- (void)request_Login_WithPath:(NSString *)path Params:(id)params andBlock:(void (^)(id data, NSError *error))block;
 
 ```
 
