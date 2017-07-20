@@ -9,7 +9,7 @@
 #import "XIU_NetAPIClient.h"
 #import "NSObject+Cache.h"
 @implementation XIU_NetAPIClient
-
+static AFHTTPSessionManager *_manager;
 static XIU_NetAPIClient *_sharedClient = nil;
 static dispatch_once_t onceToken;
 
@@ -26,15 +26,37 @@ static dispatch_once_t onceToken;
     if (!self) {
         return nil;
     }
-    self.responseSerializer = [AFJSONResponseSerializer serializer];
-    self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json", @"text/html", nil];
+
     
-    [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    [self.requestSerializer setValue:url.absoluteString forHTTPHeaderField:@"Referer"];
+    _manager = [AFHTTPSessionManager manager];
+    AFHTTPRequestSerializer *requestSerializer =  [AFJSONRequestSerializer serializer];
+    //    _manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    _manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    NSDictionary *headerFieldValueDictionary = @{@"Authorization": @"Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==",@"Accept": @"application/json"};
+    if (headerFieldValueDictionary != nil) {
+        for (NSString *httpHeaderField in headerFieldValueDictionary.allKeys) {
+            NSString *value = headerFieldValueDictionary[httpHeaderField];
+            [requestSerializer setValue:value forHTTPHeaderField:httpHeaderField];
+        }
+    }
+    _manager.requestSerializer = requestSerializer;
+    _manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json", @"text/plain", @"text/html", nil];
     
-    self.securityPolicy.allowInvalidCertificates = YES;
     
     return self;
+    
+    
+    
+    //不同设置类型 ----解开可用
+//    self.responseSerializer = [AFJSONResponseSerializer serializer];
+//    self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json", @"text/html", nil];
+//    
+//    [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+//    [self.requestSerializer setValue:url.absoluteString forHTTPHeaderField:@"Referer"];
+//    
+//    self.securityPolicy.allowInvalidCertificates = YES;
+//    
+//    return self;
 }
 
 
@@ -58,7 +80,7 @@ static dispatch_once_t onceToken;
     aPath = [aPath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     switch (method) {
         case Get: {
-            //所有 Get 请求，增加缓存机制
+            //所有 Post 请求，增加缓存机制
             NSMutableString *localPath = [aPath mutableCopy];
             if (params) {
                 [localPath appendString:params.description];
@@ -95,7 +117,49 @@ static dispatch_once_t onceToken;
         }
             break;
         case Post: {
+            //所有 post 请求，增加缓存机制
             
+            NSMutableString *localPath = [aPath mutableCopy];
+            if (params) {
+                [localPath appendString:params.description];
+                
+                
+            }
+            
+            [_manager POST:aPath parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+                
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                
+                NSString * jsonStr = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
+                
+                NSData * data1 = [[NSData alloc]initWithData:[jsonStr dataUsingEncoding:NSUTF8StringEncoding]];
+                
+                
+                
+                NSDictionary * jsonData = [NSJSONSerialization JSONObjectWithData:data1 options:NSJSONReadingMutableContainers error:nil];
+                
+                //                               NSLog(@"\n===========response===========\n%@:\n%@", aPath, jsonData);
+                
+                if ([jsonData isKindOfClass:[NSDictionary class]]) {
+                    //判断数据是否符合预期，给出提示
+                    if ([jsonData[@"data"] isKindOfClass:[NSDictionary class]]) {
+                        if (jsonData[@"data"][@"too_many_files"]) {
+                            if (autoShowError) {
+                                //                                    [NSObject showHudTipStr:@"文件太多，不能正常显示"];
+                            }
+                        }
+                    }
+                    
+                }
+                block(jsonData, nil);
+                
+                
+                
+                
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                NSLog(@"error = %@", error);
+                
+            }];
             
         }
             break;
