@@ -30,6 +30,14 @@
 #define kPaddingLeftWidth 15.0
 @implementation XIU_ModifyAvatarViewController
 
+-(BOOL)navigationShouldPopOnBackButton {
+    
+    if ([@"s" isEqualToString:@"s"]) {
+        return NO;
+    }
+    return YES; // Process 'Back' button click and Pop view controler
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

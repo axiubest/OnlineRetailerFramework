@@ -31,6 +31,15 @@ static CGFloat const Section_HeaderHeight = 20.f;
     return _titleArray;
 }
 
+-(BOOL)navigationShouldPopOnBackButton {
+    
+    if ([@"s" isEqualToString:@"s"]) {
+        return NO;
+    }
+    return YES; // Process 'Back' button click and Pop view controler
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

@@ -239,6 +239,7 @@
 		FA0DE8221ED28FCC00072226 /* XIU_WaterFallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0DE8211ED28FCC00072226 /* XIU_WaterFallLayout.m */; };
 		FA0DE8281ED293A700072226 /* XIU_HomeWaterFallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0DE8271ED293A700072226 /* XIU_HomeWaterFallCell.m */; };
 		FA0DE82A1ED2D61400072226 /* 设置.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0DE8291ED2D61400072226 /* 设置.png */; };
+		FA2B1C501F2CE322000D889D /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2B1C4F1F2CE322000D889D /* UIViewController+BackButtonHandler.m */; };
 		FA6045B01EBB74A900C93734 /* XIU_OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6045AF1EBB74A900C93734 /* XIU_OrderViewController.m */; };
 		FA6045B31EBB77DB00C93734 /* XIU_OrderSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6045B21EBB77DB00C93734 /* XIU_OrderSegmentView.m */; };
 		FA6045B71EBB781900C93734 /* XIU_OrderSegmentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6045B61EBB781900C93734 /* XIU_OrderSegmentView.xib */; };
@@ -649,6 +650,8 @@
 		FA0DE8261ED293A700072226 /* XIU_HomeWaterFallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_HomeWaterFallCell.h; sourceTree = "<group>"; };
 		FA0DE8271ED293A700072226 /* XIU_HomeWaterFallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_HomeWaterFallCell.m; sourceTree = "<group>"; };
 		FA0DE8291ED2D61400072226 /* 设置.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "设置.png"; sourceTree = "<group>"; };
+		FA2B1C4E1F2CE322000D889D /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
+		FA2B1C4F1F2CE322000D889D /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
 		FA6045AE1EBB74A900C93734 /* XIU_OrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_OrderViewController.h; sourceTree = "<group>"; };
 		FA6045AF1EBB74A900C93734 /* XIU_OrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIU_OrderViewController.m; sourceTree = "<group>"; };
 		FA6045B11EBB77DB00C93734 /* XIU_OrderSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_OrderSegmentView.h; sourceTree = "<group>"; };
@@ -1370,6 +1373,8 @@
 		8341AB2E1E4DAB3500FDC5A4 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				FA2B1C4E1F2CE322000D889D /* UIViewController+BackButtonHandler.h */,
+				FA2B1C4F1F2CE322000D889D /* UIViewController+BackButtonHandler.m */,
 				8341AB2F1E4DAB3500FDC5A4 /* NSDate+Common.h */,
 				8341AB301E4DAB3500FDC5A4 /* NSDate+Common.m */,
 				8341AB311E4DAB3500FDC5A4 /* NSDate+convenience.h */,
@@ -1964,6 +1969,7 @@
 				8341AC0F1E4DAB3500FDC5A4 /* XIU_UMManager.m in Sources */,
 				8341ABD41E4DAB3500FDC5A4 /* MASConstraint.m in Sources */,
 				8341ABE31E4DAB3500FDC5A4 /* NSObject+MJClass.m in Sources */,
+				FA2B1C501F2CE322000D889D /* UIViewController+BackButtonHandler.m in Sources */,
 				83E2D2ED1E5D8DA80071D9A8 /* XIU_DeliveryAddressViewController.m in Sources */,
 				FA66C8851EC583DD00B37D33 /* XIU_PayManager.m in Sources */,
 				8341ABD61E4DAB3500FDC5A4 /* MASLayoutConstraint.m in Sources */,
