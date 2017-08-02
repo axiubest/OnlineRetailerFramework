@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		185CA2AC1F31936D00F34699 /* UIImage+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 185CA2AB1F31936D00F34699 /* UIImage+Common.m */; };
 		2C0F21655B799AF5AEB00E80 /* libPods-OnlineRetailerFrameWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48427B43B62B810785216F04 /* libPods-OnlineRetailerFrameWork.a */; };
 		832798A71E5C008100930000 /* XIU_ScanQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832798A61E5C008100930000 /* XIU_ScanQRCodeViewController.m */; };
 		832798AB1E5C039200930000 /* 返回.png in Resources */ = {isa = PBXBuildFile; fileRef = 832798AA1E5C039200930000 /* 返回.png */; };
@@ -259,6 +260,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		185CA2AA1F31936D00F34699 /* UIImage+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Common.h"; sourceTree = "<group>"; };
+		185CA2AB1F31936D00F34699 /* UIImage+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Common.m"; sourceTree = "<group>"; };
 		48427B43B62B810785216F04 /* libPods-OnlineRetailerFrameWork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OnlineRetailerFrameWork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		630E178D7E0BAF639AF17DC8 /* Pods-OnlineRetailerFrameWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineRetailerFrameWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnlineRetailerFrameWork/Pods-OnlineRetailerFrameWork.release.xcconfig"; sourceTree = "<group>"; };
 		832798A51E5C008100930000 /* XIU_ScanQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIU_ScanQRCodeViewController.h; sourceTree = "<group>"; };
@@ -1411,6 +1414,8 @@
 				8341AB501E4DAB3500FDC5A4 /* UIView+RunTime_FontSize.m */,
 				8341ACE21E57E17E00FDC5A4 /* UIImageView+Badge.h */,
 				8341ACE31E57E17E00FDC5A4 /* UIImageView+Badge.m */,
+				185CA2AA1F31936D00F34699 /* UIImage+Common.h */,
+				185CA2AB1F31936D00F34699 /* UIImage+Common.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1899,6 +1904,7 @@
 				8341ABB81E4DAB3500FDC5A4 /* XIU_SettingTextViewController.m in Sources */,
 				FA0DE8101ED27A6F00072226 /* PullDownMenu.m in Sources */,
 				8341AB9C1E4DAB3500FDC5A4 /* XIU_LoginService.m in Sources */,
+				185CA2AC1F31936D00F34699 /* UIImage+Common.m in Sources */,
 				8341ABF21E4DAB3500FDC5A4 /* UIImage+GIF.m in Sources */,
 				8341AC041E4DAB3500FDC5A4 /* UIColor+Hex.m in Sources */,
 				8341ABBB1E4DAB3500FDC5A4 /* XIU_MyCenterModifyAvatarCell.m in Sources */,
