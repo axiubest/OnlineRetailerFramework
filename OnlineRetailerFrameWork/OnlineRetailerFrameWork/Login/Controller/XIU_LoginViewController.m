@@ -177,6 +177,13 @@
 #pragma mark chicked login button method
 - (IBAction)chickedLoginBtn:(id)sender {
     
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissVC" object:nil];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[NSNumber numberWithBool:YES] forKey:@"login_status"];
+    [self.navigationController popViewControllerAnimated:YES];
+    
+    
     [self.signInService signInWithUsername:self.PhoneNumTextField.text
   password:self.PasswordTextField.text
   complete:^(BOOL success) {
